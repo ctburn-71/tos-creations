@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TOS Creations | Apps Made Personal</title>
+  <meta name="description"
+        content="Discover creative applications from TOS Creations.">
+
+  <style>
+    :root {
+      --background: #10151e;
+      --surface: #1c2532;
+      --accent: #d5ad72;
+      --text: #f6f3ed;
+      --muted: #adb8c5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      border-bottom: 1px solid #ffffff18;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 110px 20px 100px;
+      background: radial-gradient(
+        ellipse at top,
+        #34465b 0%,
+        #10151e 72%
+      );
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      margin: 0;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      margin: 18px auto;
+      max-width: 650px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 24px;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 35px;
+    }
+
+    .app-card {
+      background: var(--surface);
+      border: 1px solid #ffffff18;
+      border-radius: 22px;
+      padding: 36px;
+      margin-bottom: 22px;
+    }
+
+    .app-card h3 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .app-card p {
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #151515;
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .button:hover {
+      background: #e7c79a;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #ffffff18;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .app-card {
+        padding: 25px;
+      }
+
+      .secondary-link {
+        display: block;
+        margin: 20px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">TOS <span class="accent">CREATIONS</span></div>
+
+    <nav>
+      <a href="#apps">Our Apps</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>TOS <span class="accent">CREATIONS</span></h1>
+    <p>Creating experiences that matter.</p>
+    <p>
+      Thoughtfully designed applications that bring
+      creativity, technology, and everyday life together.
+    </p>
+  </section>
+
+  <section id="apps" class="section">
+    <h2>Our Applications</h2>
+    <p class="section-intro">
+      Explore what we're creating.
+    </p>
+
+    <div class="app-card">
+      <h3>📚 My Books: Creative Library</h3>
+      <p class="accent">Your stories. Your way.</p>
+
+      <p>
+        Turn your memories and ideas into beautiful digital
+        books. Create scrapbooks, journals, cookbooks,
+        family memory collections, and more.
+      </p>
+
+      <a class="button" href="my-books/">
+        My Books Support
+      </a>
+    </div>
+
+    <div class="app-card">
+      <h3>More From TOS Creations</h3>
+      <p>
+        We're developing new experiences that combine
+        creativity, personal expression, and technology.
+        More information will be available as each
+        application launches.
+      </p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About TOS Creations</h2>
+
+    <p>
+      TOS Creations is an independent app development brand
+      focused on building thoughtful, useful, and engaging
+      digital experiences.
+    </p>
+
+    <p>
+      From preserving family memories to exploring new
+      creative possibilities, our goal is simple:
+      make technology feel more personal.
+    </p>
+  </section>
+
+  <section id="support" class="section">
+    <h2>Support</h2>
+
+    <p>
+      Need assistance with one of our applications?
+      Visit the application's dedicated support page
+      for information, troubleshooting, and contact options.
+    </p>
+
+    <a class="button" href="my-books/">
+      Get My Books Support
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2026 TOS Creations. All rights reserved.
+  </footer>
+
+</body>
+</html>
