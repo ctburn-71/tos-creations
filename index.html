@@ -228,15 +228,158 @@
       </a>
     </div>
 
-    <div class="app-card">
-      <h3>More From TOS Creations</h3>
-      <p>
-        We're developing new experiences that combine
-        creativity, personal expression, and technology.
-        More information will be available as each
-        application launches.
-      </p>
-    </div>
+    <!-- TOS CREATIONS APP GALLERY -->
+
+<h2 style="margin-top: 65px;">Explore Our Apps</h2>
+
+<p class="section-intro">
+  Discover what we're creating and testing at TOS Creations.
+</p>
+
+<style>
+  .app-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+  }
+
+  .gallery-card {
+    background: #1c2532;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    padding: 28px;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border-color: #d5ad72;
+  }
+
+  .gallery-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .gallery-card h3 {
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: #f6f3ed;
+  }
+
+  .gallery-card p {
+    color: #adb8c5;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .gallery-status {
+    display: inline-block;
+    margin-top: 14px;
+    color: #d5ad72;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-card {
+      transition: none;
+    }
+    .gallery-card:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<div class="app-gallery">
+
+  <!-- CROSSWORD JIGSAW -->
+  <article class="gallery-card">
+    <img
+      src="crossword-icon.png"
+      alt="Crossword Jigsaw app icon"
+      class="gallery-icon"
+    >
+
+    <h3>Crossword Jigsaw</h3>
+
+    <p>
+      Solve crossword clues to unlock puzzle pieces
+      and reveal beautiful hidden pictures.
+      A relaxing blend of words and visual discovery.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+  </article>
+
+  <!-- MUSIC MASHUP -->
+  <article class="gallery-card">
+    <img
+      src="mashup-icon.png"
+      alt="Music Mashup app icon"
+      class="gallery-icon"
+    >
+
+    <h3>Music Mashup Project</h3>
+
+    <p>
+      Explore your creativity through music.
+      Experiment with sounds and discover
+      new ways to bring musical ideas together.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+  </article>
+
+  <!-- BLOCKS GAME -->
+  <article class="gallery-card">
+    <img
+      src="blocks-icon.png"
+      alt="TOS Creations Blocks Game icon"
+      class="gallery-icon"
+    >
+
+    <h3>TOS Creations Blocks Game</h3>
+
+    <p>
+      Enjoy an arcade-inspired puzzle experience
+      that combines colorful gameplay,
+      strategy, and entertaining challenges.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+  </article>
+
+  <!-- MY MUSIC OS -->
+  <article class="gallery-card">
+    <img
+      src="music-os-icon.png"
+      alt="My Music OS app icon"
+      class="gallery-icon"
+    >
+
+    <h3>My Music OS</h3>
+
+    <p>
+      A personalized music experience focused
+      on creativity, exploration, and bringing
+      your favorite sounds together.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+  </article>
+
+</div>
   </section>
 
   <section id="about" class="section">
