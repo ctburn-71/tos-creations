@@ -497,6 +497,226 @@
   }
 </style>
   </section>
+  <!-- TOS CREATIONS DIGITAL BOOKSHELF -->
+
+<section class="bookshelf-showcase" id="digital-bookshelf">
+
+  <div class="bookshelf-heading">
+    <p class="bookshelf-eyebrow">TOS CREATIONS PRESENTS</p>
+    <h2>Beyond the App Store</h2>
+    <p>
+      Every story deserves a beautiful beginning.
+    </p>
+  </div>
+
+  <div class="digital-bookshelf">
+
+    <!-- OUR ROAD TO FOREVER -->
+    <div class="showcase-book">
+
+      <div class="book-cover">
+        <img
+          src="book-previews/road-to-forever-cover.png"
+          alt="Our Road to Forever scrapbook cover"
+          loading="lazy"
+        >
+      </div>
+
+      <h3>Our Road to Forever</h3>
+
+      <p>
+        A journey of love, memories, and the
+        moments that lead to forever.
+      </p>
+
+      <span class="book-preview-label">
+        INTERACTIVE PREVIEW COMING SOON
+      </span>
+
+    </div>
+
+    <!-- THE WAIT FOR JULIUS -->
+    <div class="showcase-book">
+
+      <div class="book-cover">
+        <img
+          src="book-previews/julius-cover.png"
+          alt="The Wait for Julius scrapbook cover"
+          loading="lazy"
+        >
+      </div>
+
+      <h3>The Wait for Julius</h3>
+
+      <p>
+        A little boy. A whole new adventure.
+        Big dreams, little feet, and a lifetime of love.
+      </p>
+
+      <span class="book-preview-label">
+        INTERACTIVE PREVIEW COMING SOON
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="bookshelf-wood"></div>
+
+  <p class="bookshelf-closing">
+    More than apps. Life's stories.
+  </p>
+
+</section>
+
+<style>
+
+.bookshelf-showcase {
+  margin-top: 90px;
+  padding: 60px 35px;
+  background: radial-gradient(
+    ellipse at top,
+    #1c3041 0%,
+    #10151e 75%
+  );
+  border-radius: 25px;
+  border: 1px solid rgba(213,173,114,0.15);
+  overflow: hidden;
+}
+
+.bookshelf-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.bookshelf-eyebrow {
+  color: #d5ad72;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bookshelf-heading h2 {
+  color: #f6f3ed;
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 15px 0;
+}
+
+.bookshelf-heading p {
+  color: #adb8c5;
+}
+
+.digital-bookshelf {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 55px;
+  align-items: end;
+  max-width: 850px;
+  margin: auto;
+}
+
+.showcase-book {
+  text-align: center;
+  min-width: 0;
+}
+
+.book-cover {
+  position: relative;
+  width: min(100%, 260px);
+  margin: 0 auto 25px;
+  border-radius: 5px 12px 12px 5px;
+  box-shadow:
+    -12px 10px 0 rgba(0,0,0,0.25),
+    0 20px 35px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.book-cover:hover {
+  transform: translateY(-12px) rotate(-2deg);
+}
+
+.book-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.showcase-book h3 {
+  color: #f6f3ed;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.showcase-book p {
+  color: #adb8c5;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 330px;
+  margin: 0 auto 18px;
+}
+
+.book-preview-label {
+  display: inline-block;
+  color: #d5ad72;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bookshelf-wood {
+  height: 23px;
+  max-width: 950px;
+  margin: 35px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    #ad7547 0%,
+    #704020 45%,
+    #351c11 100%
+  );
+  box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+}
+
+.bookshelf-closing {
+  text-align: center;
+  color: #d5ad72;
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+
+  .bookshelf-showcase {
+    padding: 45px 18px;
+  }
+
+  .digital-bookshelf {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .book-cover {
+    width: min(100%, 240px);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-cover {
+    transition: none;
+  }
+
+  .book-cover:hover {
+    transform: none;
+  }
+}
+
+</style>
 
   <section id="about" class="section">
     <h2>About TOS Creations</h2>
