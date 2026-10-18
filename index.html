@@ -667,17 +667,36 @@
 }
 
 .bookshelf-wood {
-  height: 23px;
-  max-width: 950px;
-  margin: 35px auto 0;
-  border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    #ad7547 0%,
-    #704020 45%,
-    #351c11 100%
-  );
-  box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+  position: relative;
+  height: 48px;
+  max-width: 1050px;
+  margin: 12px auto 0;
+  border-radius: 5px 5px 12px 12px;
+
+  background:
+    repeating-linear-gradient(
+      174deg,
+      transparent 0px,
+      rgba(30, 12, 4, 0.14) 3px,
+      transparent 6px,
+      transparent 23px
+    ),
+    linear-gradient(
+      180deg,
+      #b17a49 0%,
+      #8a532c 12%,
+      #603718 35%,
+      #45230f 70%,
+      #281409 100%
+    );
+
+  border-top: 5px solid #c28a52;
+  border-bottom: 5px solid #241208;
+
+  box-shadow:
+    inset 0 3px 5px rgba(255, 220, 160, 0.15),
+    inset 0 -8px 12px rgba(0, 0, 0, 0.35),
+    0 16px 22px rgba(0, 0, 0, 0.55);
 }
 
 .bookshelf-closing {
