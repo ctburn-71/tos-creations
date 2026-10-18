@@ -504,16 +504,13 @@
   <div class="bookshelf-heading">
     <p class="bookshelf-eyebrow">TOS CREATIONS PRESENTS</p>
     <h2>Beyond the App Store</h2>
-    <p>
-      Every story deserves a beautiful beginning.
-    </p>
+    <p>Every story deserves a beautiful beginning.</p>
   </div>
 
+  <!-- BOOK COVERS -->
   <div class="digital-bookshelf">
 
-    <!-- OUR ROAD TO FOREVER -->
     <div class="showcase-book">
-
       <div class="book-cover">
         <img
           src="book-previews/road-to-forever-cover.png"
@@ -521,23 +518,9 @@
           loading="lazy"
         >
       </div>
-
-      <h3>Our Road to Forever</h3>
-
-      <p>
-        A journey of love, memories, and the
-        moments that lead to forever.
-      </p>
-
-      <span class="book-preview-label">
-        INTERACTIVE PREVIEW COMING SOON
-      </span>
-
     </div>
 
-    <!-- THE WAIT FOR JULIUS -->
     <div class="showcase-book">
-
       <div class="book-cover">
         <img
           src="book-previews/julius-cover.png"
@@ -545,30 +528,126 @@
           loading="lazy"
         >
       </div>
-
-      <h3>The Wait for Julius</h3>
-
-      <p>
-        A little boy. A whole new adventure.
-        Big dreams, little feet, and a lifetime of love.
-      </p>
-
-      <span class="book-preview-label">
-        INTERACTIVE PREVIEW COMING SOON
-      </span>
-
     </div>
 
   </div>
 
+  <!-- THICK RUSTIC SHELF -->
   <div class="bookshelf-wood"></div>
+
+  <!-- BOOK DESCRIPTIONS -->
+  <div class="bookshelf-details">
+
+    <div class="book-details">
+      <h3>Our Road to Forever</h3>
+      <p>
+        A journey of love, memories, and the
+        moments that lead to forever.
+      </p>
+      <span class="book-preview-label">
+        INTERACTIVE PREVIEW COMING SOON
+      </span>
+    </div>
+
+    <div class="book-details">
+      <h3>The Wait for Julius</h3>
+      <p>
+        A little boy. A whole new adventure.
+        Big dreams, little feet, and a lifetime of love.
+      </p>
+      <span class="book-preview-label">
+        INTERACTIVE PREVIEW COMING SOON
+      </span>
+    </div>
+
+  </div>
 
   <p class="bookshelf-closing">
     More than apps. Life's stories.
   </p>
 
 </section>
+/* Position the books directly on the wooden shelf */
 
+.digital-bookshelf {
+  align-items: end;
+}
+
+.book-cover {
+  margin-bottom: 0;
+  border-left: 8px solid #51301e;
+  transform-origin: bottom center;
+  box-shadow:
+    inset 5px 0 8px rgba(0,0,0,0.35),
+    -10px 10px 0 rgba(0,0,0,0.25),
+    0 18px 30px rgba(0,0,0,0.4);
+}
+
+/* Preserve the existing hover effect */
+
+.book-cover:hover {
+  transform: translateY(-12px) rotate(-2deg);
+}
+
+/* Bring the shelf directly beneath the covers */
+
+.bookshelf-wood {
+  margin-top: 0;
+}
+
+/* Titles and descriptions beneath the shelf */
+
+.bookshelf-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 55px;
+  max-width: 850px;
+  margin: 35px auto 0;
+  text-align: center;
+}
+
+.book-details {
+  min-width: 0;
+}
+
+.book-details h3 {
+  color: #f6f3ed;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  margin: 10px 0 15px;
+}
+
+.book-details p {
+  color: #adb8c5;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 330px;
+  margin: 0 auto 18px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .bookshelf-details {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .digital-bookshelf {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .book-cover {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-cover:hover {
+    transform: none;
+  }
+}
 <style>
 
 .bookshelf-showcase {
