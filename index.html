@@ -427,6 +427,224 @@
   Join Fitness OS Beta ↗
 </a>
 
+<!-- FITNESS OS EXPANDABLE DETAILS -->
+
+<details class="fitness-more">
+  <summary>Explore Fitness OS Details</summary>
+
+  <div class="fitness-tabs">
+
+    <input type="radio" name="fitness-tabs"
+           id="fitness-description" checked>
+    <input type="radio" name="fitness-tabs"
+           id="fitness-testing">
+
+    <div class="fitness-tab-buttons">
+      <label for="fitness-description">Description</label>
+      <label for="fitness-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="fitness-tab-panel fitness-description-panel">
+
+      <h3>Fitness OS — Build a Better You</h3>
+
+      <p>Fitness OS helps you build a training routine that fits your goals, experience, and available time.</p>
+
+      <p>Create reusable workouts in My Routines, choose a guided Boot Camp, or explore individual exercises. Boot Camp is included with Fitness OS at no extra charge and offers estimated 20-, 30-, and 45-minute sessions with exercises to review before you begin.</p>
+
+      <p>Record completed sets, repetitions, weights, and timed holds where supported. Pause and resume a workout, adjust supported exercises, or end a session early while keeping a record of what you completed. Workout history and progress tracking help you reflect on your training over time.</p>
+
+      <p>The AI Coach offers personalized training guidance using the goals, preferences, and workout information you share with Fitness OS. Ask questions, discuss how a session felt, and explore possible next steps. AI coaching has a usage allowance; your routines, workout logging, and history remain available when that allowance is used up.</p>
+
+      <p>You can also save private practice recordings and review them alongside your training. Automated video form analysis is not currently available.</p>
+
+      <p>Fitness OS is being developed for people with different backgrounds, abilities, and levels of training experience. This beta will help us understand where the app feels clear and useful—and where it needs to improve.</p>
+
+      <p>AI guidance can be inaccurate and does not replace professional medical advice or an individualized assessment by a qualified trainer.</p>
+
+      <p><strong>Build a better you, at your own pace.</strong></p>
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="fitness-tab-panel fitness-testing-panel">
+
+      <h3>Help Us Test Fitness OS</h3>
+
+      <p>Thank you for helping test Fitness OS. We want to learn whether the app is understandable and useful for people with different experience levels and abilities. You do not need to complete a demanding workout to provide valuable feedback.</p>
+
+      <h4>First Impressions and Navigation</h4>
+      <ul>
+        <li>Create an account and explore before asking for help.</li>
+        <li>Is it obvious where to start a workout?</li>
+        <li>Can you explain the difference between My Routines, Boot Camp, and the Exercise Library?</li>
+        <li>Is it clear that Boot Camp is included at no extra charge?</li>
+        <li>Note any screen where you feel lost or unsure what to tap next.</li>
+      </ul>
+
+      <h4>Workout Flow</h4>
+      <ul>
+        <li>Create a short routine, edit its targets, and reorder exercises.</li>
+        <li>Review a Boot Camp and explore available exercise swaps.</li>
+        <li>Log sets, repetitions, weights, or timed holds where available.</li>
+        <li>Pause, switch tabs, and find your workout again.</li>
+        <li>Finish a workout—or end early—and check that your completed work appears correctly in history.</li>
+        <li>Return later and repeat a saved routine.</li>
+      </ul>
+
+      <h4>AI Coach</h4>
+      <ul>
+        <li>Ask about choosing a workout, adjusting an exercise, or understanding your progress.</li>
+        <li>Check whether responses reflect the information you actually provided.</li>
+        <li>Report confusing, inaccurate, overly confident, or unsuitable advice.</li>
+        <li>Is the AI usage allowance easy to understand?</li>
+      </ul>
+
+      <h4>Recordings and Reliability</h4>
+      <ul>
+        <li>If comfortable, record a short practice clip, save it, play it back, and delete it.</li>
+        <li>Recording currently supports personal review, not automated form analysis.</li>
+        <li>Try closing and reopening the app during a workout.</li>
+        <li>If a connection fails, check whether retrying works without losing or duplicating records.</li>
+        <li>Test password-reset email delivery.</li>
+      </ul>
+
+      <h4>Accessibility and Comfort</h4>
+      <ul>
+        <li>Are text and buttons readable and easy to use?</li>
+        <li>Try larger phone text settings or VoiceOver if you normally use them.</li>
+        <li>Tell us where instructions, exercise choices, or targets don't fit your needs. Don't push through discomfort for testing.</li>
+      </ul>
+
+      <h4>When Reporting Feedback</h4>
+
+      <p>Include your app version/build number, iPhone model, what you were trying to do, what happened, and what you expected. Screenshots are helpful, but avoid sharing passwords, reset codes, or private recordings.</p>
+
+      <p>Our highest priorities are crashes, missing or duplicated workout data, getting stuck, and unclear navigation.</p>
+
+      <p><strong>What one change would make your next workout easier?</strong></p>
+
+    </div>
+
+  </div>
+</details>
+
+<!-- FITNESS OS TAB STYLING -->
+
+<style>
+.fitness-more {
+  margin-top: 28px;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+  background: #141e2b;
+}
+
+.fitness-more > summary {
+  cursor: pointer;
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.fitness-more > summary:hover {
+  background: #202c3b;
+}
+
+.fitness-more > summary:focus-visible,
+.fitness-tab-buttons label:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: -2px;
+}
+
+.fitness-tabs {
+  padding: 18px 22px 26px;
+}
+
+.fitness-tabs input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.fitness-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.fitness-tab-buttons label {
+  cursor: pointer;
+  padding: 11px 19px;
+  border-radius: 9px;
+  color: #adb8c5;
+  background: #253244;
+  font-weight: 600;
+}
+
+#fitness-description:checked ~ .fitness-tab-buttons
+label[for="fitness-description"],
+#fitness-testing:checked ~ .fitness-tab-buttons
+label[for="fitness-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.fitness-tab-panel {
+  display: none;
+  color: #c4ccd6;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+#fitness-description:checked ~ .fitness-description-panel,
+#fitness-testing:checked ~ .fitness-testing-panel {
+  display: block;
+}
+
+.fitness-tab-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.fitness-tab-panel h4 {
+  color: #d5ad72;
+  margin: 27px 0 8px;
+  font-size: 17px;
+}
+
+.fitness-tab-panel p {
+  margin: 0 0 17px;
+}
+
+.fitness-tab-panel ul {
+  padding-left: 23px;
+  margin: 0 0 18px;
+}
+
+.fitness-tab-panel li {
+  margin-bottom: 8px;
+}
+
+.fitness-tab-panel strong {
+  color: #d5ad72;
+}
+
+@media (max-width: 600px) {
+  .fitness-tabs {
+    padding: 14px;
+  }
+
+  .fitness-tab-buttons label {
+    flex: 1;
+    text-align: center;
+  }
+}
+</style>
+
 <style>
   .fitness-feature {
     margin-top: 65px;
