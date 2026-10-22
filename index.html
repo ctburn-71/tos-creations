@@ -417,15 +417,95 @@
 </section>
     <!-- FITNESS OS TESTFLIGHT -->
 
-<a
-  href="https://testflight.apple.com/join/aj5GQsMA"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="button"
-  style="margin-top: 20px;"
->
-  Join Fitness OS Beta ↗
-</a>
+
+<!-- FITNESS OS LINKS -->
+
+<div class="fitness-links">
+
+  <a
+    href="https://testflight.apple.com/join/aj5GQsMA"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fitness-link-primary"
+  >
+    Join Fitness OS Beta ↗
+  </a>
+
+  <a
+    href="fitness-os/"
+    class="fitness-link-secondary"
+  >
+    Support
+  </a>
+
+  <a
+    href="fitness-os/privacy.html"
+    class="fitness-link-secondary"
+  >
+    Privacy Policy
+  </a>
+
+</div>
+
+<style>
+.fitness-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.fitness-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.fitness-link-primary {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.fitness-link-primary:hover {
+  background: #e7c79a;
+  transform: translateY(-2px);
+}
+
+.fitness-link-secondary {
+  color: #d5ad72;
+  background: #1c2532;
+  border: 1px solid rgba(213,173,114,.45);
+}
+
+.fitness-link-secondary:hover {
+  background: #29384a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .fitness-links a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fitness-links a {
+    transition: none;
+  }
+
+  .fitness-links a:hover {
+    transform: none;
+  }
+}
+</style>
+
 
 <!-- FITNESS OS EXPANDABLE DETAILS -->
 
