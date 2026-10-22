@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Fitness OS Privacy Policy | TOS Creations</title>
+<meta name="description"
+ content="Privacy Policy for Fitness OS by TOS Creations.">
+
+<style>
+:root {
+  --background: #10151e;
+  --surface: #1c2532;
+  --accent: #d5ad72;
+  --text: #f6f3ed;
+  --muted: #adb8c5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+header {
+  padding: 24px 8%;
+  border-bottom: 1px solid #ffffff20;
+}
+
+header a, footer a, main a {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: radial-gradient(
+    ellipse at top,
+    #34465b,
+    #10151e 75%
+  );
+}
+
+.hero img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin: 20px 0 5px;
+}
+
+.hero p { color: var(--muted); }
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 35px 24px 75px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #ffffff18;
+  border-radius: 17px;
+  padding: 28px;
+  margin: 22px 0;
+}
+
+.card h2 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.card p, .card li {
+  color: var(--muted);
+}
+
+.card li { margin-bottom: 8px; }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ffffff20;
+  padding: 30px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .card { padding: 21px; }
+  .hero { padding: 55px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="./">← Fitness OS Support</a>
+</header>
+
+<section class="hero">
+  <img src="../fitness-os-icon.png"
+       alt="Fitness OS app icon">
+
+  <h1>Privacy Policy</h1>
+  <p>Fitness OS | TOS Creations</p>
+  <p>Effective Date: October 21, 2026</p>
+</section>
+
+<main class="container">
+
+<div class="card">
+  <h2>Our Commitment to Privacy</h2>
+
+  <p>
+    Fitness OS is developed by TOS Creations.
+    We recognize that fitness information,
+    personal goals, and practice recordings
+    deserve careful handling.
+  </p>
+
+  <p>
+    This policy describes how Fitness OS
+    collects, uses, stores, and processes
+    information when you use the application.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Information We Process</h2>
+
+  <p>
+    Depending on the features you use,
+    Fitness OS processes information such as:
+  </p>
+
+  <ul>
+    <li>Account information, including email address</li>
+    <li>Authentication and account-management information</li>
+    <li>Fitness goals and preferences</li>
+    <li>Saved routines and exercise selections</li>
+    <li>Workout sets, repetitions, weights, and timed holds</li>
+    <li>Workout history and progress information</li>
+    <li>Information you provide to the AI Coach</li>
+    <li>Practice recordings you choose to upload</li>
+    <li>Associated technical and session information</li>
+  </ul>
+
+  <p>
+    We use this information to operate the app,
+    provide requested features, maintain accounts,
+    support troubleshooting, and improve
+    service reliability.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Accounts and Authentication</h2>
+
+  <p>
+    Fitness OS uses accounts so users can
+    access their personal workout information
+    and saved training activity.
+  </p>
+
+  <p>
+    Account credentials are used for
+    authentication, access control,
+    and account-management features.
+  </p>
+
+  <p>
+    Users can initiate account deletion
+    from the Me screen within Fitness OS.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Workout and Fitness Information</h2>
+
+  <p>
+    Fitness OS stores workout information
+    associated with your account, including
+    routines, training goals, completed
+    activity, and progress records.
+  </p>
+
+  <p>
+    These records support workout planning,
+    logging, history, and personalized
+    training features.
+  </p>
+</div>
+
+<div class="card">
+  <h2>AI Coach and OpenAI</h2>
+
+  <p>
+    Fitness OS uses OpenAI services to
+    provide AI-supported coaching.
+  </p>
+
+  <p>
+    When you use the AI Coach, information
+    from your questions and relevant fitness
+    context may be transmitted to OpenAI
+    for processing and response generation.
+  </p>
+
+  <p>
+    This may include goals, preferences,
+    workout information, and details
+    you choose to share with the AI Coach.
+  </p>
+
+  <p>
+    AI-generated responses may be inaccurate.
+    They do not replace professional medical
+    advice or an individualized assessment
+    from a qualified fitness professional.
+  </p>
+
+  <p>
+    Users should avoid entering unnecessary
+    sensitive personal information into
+    AI conversations.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Practice Recordings</h2>
+
+  <p>
+    Fitness OS allows users to create practice
+    recordings for personal review.
+  </p>
+
+  <p>
+    Recordings are temporarily stored
+    on the device before submission.
+  </p>
+
+  <p>
+    When you choose to send a clip,
+    Fitness OS uploads the recording,
+    including any captured audio,
+    to our backend hosted on Render.
+  </p>
+
+  <p>
+    Uploaded video files are stored on
+    backend persistent storage and
+    associated with the user's account.
+  </p>
+
+  <p>
+    Recording metadata and file references
+    are stored separately in the
+    application's database.
+  </p>
+
+  <p>
+    Playback requires authentication and
+    an authorization check to verify that
+    the recording belongs to the user
+    requesting it.
+  </p>
+
+  <p>
+    After successful upload, the app
+    attempts to remove temporary device
+    recordings and preview frames.
+  </p>
+
+  <p>
+    Automated AI video analysis is not
+    currently enabled. The current practice
+    recording flow does not send videos
+    or video frames to OpenAI.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Hosting and Service Providers</h2>
+
+  <p>
+    Fitness OS uses the following services:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Render:</strong> Backend hosting,
+      PostgreSQL database hosting, and
+      persistent storage for uploaded recordings.
+    </li>
+    <li>
+      <strong>OpenAI:</strong> AI-supported
+      coaching and response generation.
+    </li>
+  </ul>
+
+  <p>
+    These services process relevant
+    information to support the functionality
+    described in this policy.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Data Security</h2>
+
+  <p>
+    Fitness OS uses authentication and
+    application access controls to protect
+    account-specific information.
+  </p>
+
+  <p>
+    Access to uploaded recordings requires
+    user authentication and an ownership
+    authorization check.
+  </p>
+
+  <p>
+    No method of electronic storage or
+    transmission can guarantee absolute
+    security.
+  </p>
+
+  <p>
+    Please protect your account credentials
+    and contact us if you believe your
+    account has been compromised.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Data Retention and Account Deletion</h2>
+
+  <p>
+    Account and workout information is
+    maintained as needed to provide
+    Fitness OS features.
+  </p>
+
+  <p>
+    Users can request account deletion
+    directly within the application
+    using the Delete Account option
+    on the Me screen.
+  </p>
+
+  <p>
+    Account deletion requires password
+    verification and explicit confirmation.
+  </p>
+
+  <p>
+    The deletion process removes associated
+    account and workout records and queues
+    associated recording files for deletion.
+  </p>
+
+  <p>
+    The timing of physical recording-file
+    removal and any retention in backups
+    may differ from the removal of active
+    account and database records.
+  </p>
+
+  <p>
+    For questions about deletion or
+    remaining information, please contact
+    TOS Creations using the address below.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Information Sharing</h2>
+
+  <p>
+    Fitness OS processes information through
+    service providers required to operate
+    its backend and AI functionality.
+  </p>
+
+  <p>
+    The application does not provide a
+    public social feed of users'
+    private workout records or
+    practice recordings.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Children's Privacy</h2>
+
+  <p>
+    Fitness OS is not specifically designed
+    for children under 13.
+  </p>
+
+  <p>
+    If you believe a child has provided
+    personal information improperly,
+    please contact us.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Your Privacy Choices</h2>
+
+  <p>
+    You can manage certain information
+    within Fitness OS, including saved
+    routines and available recording controls.
+  </p>
+
+  <p>
+    You may initiate account deletion
+    through the application.
+  </p>
+
+  <p>
+    For privacy questions or requests
+    concerning your information, contact
+    TOS Creations.
+  </p>
+</div>
+
+<div class="card">
+  
+<div class="card">
+  <h2>Privacy Policy Updates and Beta Development</h2>
+
+  <p>
+    Fitness OS is currently undergoing beta testing
+    and active development.
+  </p>
+
+  <p>
+    As new builds are released, features are improved,
+    or data-handling practices change, TOS Creations
+    will review and update this Privacy Policy as needed.
+  </p>
+
+  <p>
+    Privacy practices will be reviewed throughout
+    the testing process, including changes involving
+    account information, workout records, AI services,
+    uploaded recordings, and third-party providers.
+  </p>
+
+  <p>
+    Before Fitness OS is released publicly,
+    TOS Creations will conduct a final privacy
+    policy review to ensure the published policy
+    reflects the application's release features
+    and data-handling practices.
+  </p>
+
+  <p>
+    Material changes to how personal information
+    is collected, used, stored, or shared will
+    be reflected in the policy when those changes
+    take effect. Where required, additional notice
+    or consent will be provided.
+  </p>
+
+  <p>
+    The effective date of this Privacy Policy
+    will be updated when revisions are published.
+  </p>
+</div>
+
+
+<div class="card">
+  <h2>Contact TOS Creations</h2>
+
+  <p>
+    Privacy questions, account concerns,
+    and deletion inquiries can be sent to:
+  </p>
+
+  <p>
+    <strong>TOS Creations</strong>
+  </p>
+
+  <p>
+    <a href="mailto:toscreations71@gmail.com?subject=Fitness%20OS%20Privacy">
+      toscreations71@gmail.com
+    </a>
+  </p>
+
+  <p>
+    Please do not email passwords,
+    verification codes, or private
+    practice recordings.
+  </p>
+</div>
+
+</main>
+
+<footer>
+  <p>© 2026 TOS Creations. All rights reserved.</p>
+  <p>
+    <a href="./">Fitness OS Support</a> |
+    <a href="../">TOS Creations Home</a>
+  </p>
+</footer>
+
+</body>
+</html>
