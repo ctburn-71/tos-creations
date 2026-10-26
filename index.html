@@ -448,6 +448,192 @@
   </article>
 
 </div>
+    
+<!-- CROSSWORD JIGSAW DETAILS -->
+
+<details class="crossword-details" id="crossword-details">
+  <summary>Explore Crossword Jigsaw Details</summary>
+
+  <div class="crossword-detail-content">
+
+    <input type="radio" name="crossword-tabs"
+           id="crossword-description" checked>
+    <input type="radio" name="crossword-tabs"
+           id="crossword-testing">
+
+    <div class="crossword-tab-buttons">
+      <label for="crossword-description">Description</label>
+      <label for="crossword-testing">What to Test</label>
+    </div>
+
+    <div class="crossword-panel crossword-description-panel">
+
+      <h3>Crossword Jigsaw</h3>
+      <p><strong>Solve the words. Reveal the picture.</strong></p>
+
+      <p>Crossword Jigsaw brings word clues and picture puzzles together in one relaxing challenge. Solve clues to unlock pieces, then fit them into place to reveal beautiful, realistic artwork.</p>
+
+      <p>Enjoy a quiet puzzle break or give yourself a challenge. Choose your difficulty, play at your own pace, and turn on the optional timer when you want to test your speed.</p>
+
+      <h4>Two Ways to Exercise Your Mind</h4>
+      <p>Use your word knowledge to solve clues and your visual skills to assemble the picture. Each answer brings you closer to the finished image.</p>
+
+      <h4>Beautiful Worlds to Discover</h4>
+      <p>Explore artwork inspired by ancient wonders, coastal scenery, and the world beyond Earth. Watch each scene come together, one piece at a time.</p>
+
+      <h4>A Challenge That Fits Your Mood</h4>
+      <p>Choose Easy, Medium, or Expert puzzles. Add an extra twist with optional piece rotation, or keep things relaxed with untimed play.</p>
+
+      <h4>Build Your Gallery</h4>
+      <p>Every completed puzzle becomes part of your collection. Complete a collection to unlock a larger master puzzle that brings your achievements together.</p>
+
+      <h4>Pick Up Where You Left Off</h4>
+      <p>Your progress saves automatically on your device, so you can step away and return to your unfinished puzzle.</p>
+
+      <p>Whether you love word games, jigsaws, or discovering something a little different, Crossword Jigsaw gives you a satisfying reason to find that next answer—and place that next piece.</p>
+
+      <p><strong>Created by TOS Creations.</strong></p>
+
+    </div>
+
+    <div class="crossword-panel crossword-testing-panel">
+
+      <h3>What to Test</h3>
+
+      <p>Thank you for testing Crossword Jigsaw! Please focus on:</p>
+
+      <ul>
+        <li><strong>Getting started:</strong> Is it clear how solving word clues unlocks jigsaw pieces?</li>
+        <li><strong>Puzzle difficulty:</strong> Try Easy, Medium, and Expert. Are the clues enjoyable, appropriately challenging, and accurate?</li>
+        <li><strong>Puzzle controls:</strong> Check selecting, moving, and placing pieces. Try optional piece rotation and the timer.</li>
+        <li><strong>Saving progress:</strong> Leave a puzzle unfinished, close the app, and reopen it. Confirm your answers and placed pieces are restored.</li>
+        <li><strong>Navigation:</strong> Move between Home, Puzzles, Gallery, and Settings. Report any confusing buttons or screens you cannot exit.</li>
+        <li><strong>Artwork and gallery:</strong> Complete puzzles and confirm their pictures appear in your gallery. If you finish a full collection, try the unlocked master puzzle.</li>
+        <li><strong>Downloads and offline play:</strong> Download available content, then try playing without an internet connection.</li>
+        <li><strong>Display and performance:</strong> Watch for cut-off text, tiny controls, slow loading, freezes, or crashes.</li>
+      </ul>
+
+      <p>We'd also love to hear what feels fun, what feels frustrating, and what would make you want to play again.</p>
+
+      <p>When reporting a problem, please include your iPhone model, what you were doing, what happened, and a screenshot if possible.</p>
+
+    </div>
+
+  </div>
+</details>
+
+<style>
+.crossword-details {
+  margin-top: 28px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.crossword-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.crossword-details > summary:hover {
+  background: #202c3b;
+}
+
+.crossword-detail-content {
+  padding: 20px 24px 28px;
+}
+
+.crossword-detail-content input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.crossword-tab-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.crossword-tab-buttons label {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #253244;
+  border-radius: 9px;
+  color: #adb8c5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#crossword-description:checked ~ .crossword-tab-buttons
+label[for="crossword-description"],
+#crossword-testing:checked ~ .crossword-tab-buttons
+label[for="crossword-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.crossword-panel {
+  display: none;
+  max-width: 850px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+#crossword-description:checked ~ .crossword-description-panel,
+#crossword-testing:checked ~ .crossword-testing-panel {
+  display: block;
+}
+
+.crossword-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.crossword-panel h4 {
+  color: #d5ad72;
+  margin: 24px 0 8px;
+}
+
+.crossword-panel p {
+  margin: 0 0 17px;
+}
+
+.crossword-panel ul {
+  padding-left: 24px;
+}
+
+.crossword-panel li {
+  margin-bottom: 13px;
+}
+
+.crossword-panel strong {
+  color: #f6f3ed;
+}
+
+.crossword-details summary:focus-visible,
+.crossword-tab-buttons label:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .crossword-detail-content {
+    padding: 16px;
+  }
+
+  .crossword-tab-buttons label {
+    flex: 1;
+    text-align: center;
+  }
+}
+</style>
+
     <!-- FITNESS OS - IN TESTFLIGHT -->
 
 <section class="fitness-feature">
