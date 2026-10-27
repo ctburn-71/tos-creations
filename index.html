@@ -730,9 +730,25 @@ label[for="crossword-testing"] {
 
   <div class="mashup-detail-content">
 
-    <div class="mashup-tab-heading">
-      Description
-    </div>
+    
+<!-- MUSIC MASHUP TAB CONTROLS -->
+
+<div class="mashup-tab-buttons">
+  <button type="button"
+    class="mashup-tab active"
+    onclick="showMashupTab('description', this)">
+    Description
+  </button>
+
+  <button type="button"
+    class="mashup-tab"
+    onclick="showMashupTab('testing', this)">
+    What to Test
+  </button>
+</div>
+
+<div id="mashup-description-content">
+
 
     <h3>Music Mashup Project</h3>
 
@@ -785,6 +801,59 @@ label[for="crossword-testing"] {
     </p>
 
   </div>
+    
+</div>
+
+<!-- MUSIC MASHUP WHAT TO TEST -->
+
+<div id="mashup-testing-content" style="display:none;">
+
+  <h3>Help Us Test Music Mashup</h3>
+
+  <p>
+    Please test the complete creative workflow.
+  </p>
+
+  <h4>Getting Started</h4>
+  <ol>
+    <li>Launch the app and review the onboarding flow.</li>
+    <li>Try the demo mix.</li>
+    <li>Open Library and confirm Apple Music permission and library browsing.</li>
+    <li>Tap an Apple Music song to start playback, tap it again to pause, and try another song.</li>
+    <li>Add an Apple Music track to the playback queue.</li>
+    <li>Confirm Apple Music tracks remain playback-only and cannot be edited or exported.</li>
+  </ol>
+
+  <h4>Importing and Editing Audio</h4>
+  <ol start="7">
+    <li>Open Owned Audio and import MP3, WAV, M4A, AAC, or AIFF files from Files.</li>
+    <li>Add at least two imported tracks to the queue.</li>
+    <li>Open Imported Audio Queue.</li>
+    <li>Use the “Edit both tracks together” editor.</li>
+    <li>Adjust Deck A and Deck B start/end sliders.</li>
+    <li>Adjust the transition/crossfade length.</li>
+    <li>Preview each deck and confirm playback can start and stop.</li>
+    <li>Play the edited queue and verify the changes are audible.</li>
+    <li>Test tempo/playback-rate and pitch adjustments.</li>
+    <li>Reorder clips, delete a clip, and add the same clip more than once.</li>
+  </ol>
+
+  <h4>Mixing, Exporting and Projects</h4>
+  <ol start="17">
+    <li>Use Quick Mix with two imported tracks.</li>
+    <li>Export the queue as a WAV file and confirm the file can be saved and played.</li>
+    <li>Create, rename, and delete a project. Confirm the delete confirmation appears.</li>
+    <li>Test the iCloud sync button and confirm the app remains usable if sync is unavailable.</li>
+  </ol>
+
+  <h4>Reliability and Device Testing</h4>
+  <ol start="21">
+    <li>Test the app after resetting simulator state with <code>--reset-state</code>.</li>
+    <li>Check scrolling, tab navigation, text readability, and controls on a physical device.</li>
+  </ol>
+
+</div>
+
 </details>
 
 <style>
@@ -849,6 +918,77 @@ label[for="crossword-testing"] {
   }
 }
 </style>
+    
+<style>
+.mashup-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.mashup-tab {
+  padding: 11px 20px;
+  min-height: 44px;
+  border-radius: 9px;
+  border: 1px solid rgba(213,173,114,.35);
+  background: #253244;
+  color: #adb8c5;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mashup-tab.active {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.mashup-tab:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: 3px;
+}
+
+#mashup-testing-content h4 {
+  color: #d5ad72;
+  margin-top: 28px;
+}
+
+#mashup-testing-content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .mashup-tab {
+    flex: 1;
+  }
+}
+</style>
+
+<script>
+function showMashupTab(tab, button) {
+  const description =
+    document.getElementById("mashup-description-content");
+
+  const testing =
+    document.getElementById("mashup-testing-content");
+
+  if (!description || !testing) return;
+
+  description.style.display =
+    tab === "description" ? "block" : "none";
+
+  testing.style.display =
+    tab === "testing" ? "block" : "none";
+
+  document.querySelectorAll(".mashup-tab")
+    .forEach(item => {
+      item.classList.toggle("active", item === button);
+    });
+}
+</script>
+
 
 
     <!-- FITNESS OS - IN TESTFLIGHT -->
