@@ -317,6 +317,273 @@
 </div>
 
     </div>
+    
+<!-- ======================================= -->
+<!-- MY BOOKS EXPANDABLE DETAILS             -->
+<!-- ======================================= -->
+
+<details class="my-books-details" id="my-books-details">
+  <summary>Explore My Books Details</summary>
+
+  <div class="my-books-detail-content">
+
+    <input type="radio" name="my-books-tabs"
+      id="my-books-description" checked>
+
+    <input type="radio" name="my-books-tabs"
+      id="my-books-testing">
+
+    <div class="my-books-tab-buttons">
+      <label for="my-books-description">Description</label>
+      <label for="my-books-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="my-books-panel my-books-description-panel">
+
+      <h3>My Books — Your Stories, Your Way</h3>
+
+      <p>
+        Turn your memories, ideas, recipes, travels,
+        and everyday moments into beautiful personal books.
+      </p>
+
+      <p>
+        My Books makes it easy to create and organize
+        custom digital books with your own titles,
+        text, photos, colors, fonts, and page styles.
+        Start with a blank book or choose an inspiring
+        idea from the bookshelf, then make it yours.
+      </p>
+
+      <h4>Create Books for Every Occasion</h4>
+      <p>
+        Create cookbooks, journals, scrapbooks,
+        travel memories, family storybooks,
+        wedding books, and more.
+      </p>
+
+      <h4>Make Every Page Your Own</h4>
+      <p>
+        Add photos from your library, write and edit text,
+        move and resize items, rotate images, and arrange
+        each page to match your vision.
+      </p>
+
+      <h4>Personalize Your Bookshelf</h4>
+      <p>
+        Choose different book colors, fonts,
+        flat covers, or spine-out designs.
+        Your books are displayed together in a warm,
+        personal library that grows with you.
+      </p>
+
+      <h4>Preserve What Matters</h4>
+      <p>
+        Whether you're preserving family memories,
+        collecting favorite recipes, planning an adventure,
+        or capturing your thoughts, My Books gives
+        you a creative place to make each story your own.
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="my-books-panel my-books-testing-panel">
+
+      <h3>Help Us Test My Books</h3>
+
+      <p>
+        Thank you for testing My Books: Creative Library!
+        Please explore book creation, editing, customization,
+        and saving. We especially welcome feedback about
+        anything that feels confusing or difficult to use.
+      </p>
+
+      <h4>1. Bookshelf and Cover Customization</h4>
+      <ul>
+        <li>Switch between spine-out and flat book displays.</li>
+        <li>Change book colors and check that your selections appear correctly.</li>
+        <li>Select an inspiration book and confirm the available idea-book selection replenishes as designed.</li>
+        <li>Close and reopen the app to confirm your chosen display settings are retained.</li>
+      </ul>
+
+      <h4>2. Inspiration Books</h4>
+      <ul>
+        <li>Tap an idea book on the Ideas to Keep shelf.</li>
+        <li>Confirm a new book is created with the displayed title.</li>
+        <li>Confirm the new book opens immediately.</li>
+        <li>Return to the shelf and confirm the selected idea book is replaced or removed as expected.</li>
+        <li>Close and reopen the app to verify the previous idea selection does not incorrectly return.</li>
+      </ul>
+
+      <h4>3. Text Editing</h4>
+      <ul>
+        <li>Add a short text item and confirm it appears on the page.</li>
+        <li>Add a long recipe or paragraph and verify text scrolls vertically without turning the page or moving the item.</li>
+        <li>Select text and use Edit mode to move it smoothly and precisely.</li>
+        <li>Try shrinking, enlarging, and rotating text.</li>
+        <li>Test font, size, color, and alignment options.</li>
+      </ul>
+
+      <h4>4. Photo Editing</h4>
+      <ul>
+        <li>Add a photo from your photo library.</li>
+        <li>Try different supported image formats.</li>
+        <li>Add multiple photos and confirm the newly added photo is selected.</li>
+        <li>Move, resize, and rotate photos in Edit mode.</li>
+        <li>Try deleting, duplicating, and changing photo attachments.</li>
+      </ul>
+
+      <h4>5. Page Backgrounds and Controls</h4>
+      <ul>
+        <li>Select the Rustic page background.</li>
+        <li>Check that Preview, Edit, navigation, and editing controls remain readable.</li>
+        <li>Repeat these checks on other background styles.</li>
+        <li>Open text-style settings from a rustic page and check label readability.</li>
+      </ul>
+
+      <h4>6. Saving and Reopening</h4>
+      <ul>
+        <li>Make changes to text, photos, and backgrounds.</li>
+        <li>Leave the book, then reopen it.</li>
+        <li>Confirm all content and formatting remain intact.</li>
+        <li>Check positions, sizes, rotations, colors, and backgrounds.</li>
+      </ul>
+
+      <h4>Reporting Feedback</h4>
+      <p>
+        Please include your device model, app version,
+        what you were trying to do, what happened,
+        and what you expected.
+        Screenshots are helpful when appropriate.
+      </p>
+
+      <p>
+        <strong>
+          What one improvement would make creating
+          your next book easier?
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+</details>
+
+<!-- MY BOOKS DETAILS STYLING -->
+<style>
+
+.my-books-details {
+  margin-top: 18px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.my-books-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.my-books-details > summary:hover {
+  background: #202c3b;
+}
+
+.my-books-detail-content {
+  padding: 28px 32px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+.my-books-detail-content input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.my-books-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.my-books-tab-buttons label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 20px;
+  background: #253244;
+  border-radius: 9px;
+  color: #adb8c5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#my-books-description:checked ~ .my-books-tab-buttons
+label[for="my-books-description"],
+#my-books-testing:checked ~ .my-books-tab-buttons
+label[for="my-books-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.my-books-panel {
+  display: none;
+  max-width: 850px;
+  line-height: 1.8;
+}
+
+#my-books-description:checked ~ .my-books-description-panel,
+#my-books-testing:checked ~ .my-books-testing-panel {
+  display: block;
+}
+
+.my-books-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.my-books-panel h4 {
+  color: #d5ad72;
+  margin: 25px 0 8px;
+}
+
+.my-books-panel p {
+  margin: 0 0 17px;
+}
+
+.my-books-panel ul {
+  padding-left: 26px;
+  margin-bottom: 22px;
+}
+
+.my-books-panel li {
+  margin-bottom: 12px;
+}
+
+.my-books-panel strong {
+  color: #f6f3ed;
+}
+
+@media (max-width: 600px) {
+  .my-books-detail-content {
+    padding: 18px;
+  }
+
+  .my-books-tab-buttons label {
+    flex: 1;
+  }
+}
+
+</style>
+
 
     <!-- TOS CREATIONS APP GALLERY -->
 
