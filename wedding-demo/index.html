@@ -4,256 +4,283 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Our Wedding Day | TOS Creations</title>
-<meta name="description"
-content="Explore a fictional interactive wedding scrapbook demonstration by TOS Creations.">
 
 <style>
 :root {
-  --background:#10151e;
-  --surface:#1c2532;
-  --accent:#d5ad72;
-  --text:#f6f3ed;
-  --muted:#adb8c5;
+  --gold:#d5ad72;
+  --cream:#f6f3ed;
+  --muted:#b6c0cc;
 }
-
-* { box-sizing:border-box; }
+* {box-sizing:border-box}
 
 body {
   margin:0;
   min-height:100vh;
-  background:
-    radial-gradient(ellipse at top,#34465b 0%,#10151e 75%);
-  color:var(--text);
+  background:radial-gradient(ellipse at top,#34465b,#10151e 75%);
+  color:var(--cream);
   font-family:-apple-system,BlinkMacSystemFont,
-    "Segoe UI",Arial,sans-serif;
-  line-height:1.6;
+              "Segoe UI",Arial,sans-serif;
 }
-
 header {
   display:flex;
+  flex-wrap:wrap;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
+  gap:15px;
   padding:20px 6%;
   border-bottom:1px solid #ffffff20;
 }
-
 header strong {
-  letter-spacing:1px;
-  color:var(--accent);
+  color:var(--gold);
+  letter-spacing:1.5px;
 }
-
-a { color:var(--accent); }
-
-.back {
-  text-decoration:none;
-  font-weight:600;
-}
-
+a {color:var(--gold)}
+header a {text-decoration:none;font-weight:600}
 main {
-  max-width:1100px;
-  margin:0 auto;
-  padding:35px 18px 70px;
+  max-width:1200px;
+  margin:auto;
+  padding:35px 15px 65px;
   text-align:center;
 }
-
 h1 {
-  font-family:Georgia,serif;
-  font-size:clamp(34px,5vw,54px);
-  margin:0 0 10px;
+  font:normal clamp(34px,5vw,56px) Georgia,serif;
+  margin:0 0 8px;
 }
-
 .intro {
   color:var(--muted);
-  max-width:650px;
   margin:0 auto 30px;
+  max-width:650px;
+  line-height:1.6;
 }
-
-.book-stage {
-  position:relative;
-  max-width:570px;
-  margin:0 auto;
-  padding:18px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#222b35,#10151e);
+.stage {
+  padding:clamp(12px,3vw,30px);
   border:1px solid #d5ad7233;
-  box-shadow:0 25px 55px #0007;
-  perspective:1400px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#222d3a,#111721);
+  box-shadow:0 24px 55px #0008;
 }
-
+.book-area {
+  max-width:970px;
+  margin:auto;
+  perspective:1800px;
+}
 .book {
   position:relative;
   width:100%;
-  aspect-ratio:1/1;
-  margin:auto;
-  transform-style:preserve-3d;
+  aspect-ratio:2/1;
+  display:flex;
+  isolation:isolate;
+  filter:drop-shadow(0 15px 12px #0008);
 }
-
-.page {
+.book::before {
+  content:"";
   position:absolute;
-  inset:0;
-  transform-origin:left center;
-  backface-visibility:hidden;
-  border-radius:5px 14px 14px 5px;
-  overflow:hidden;
-  box-shadow:-7px 7px 18px #0006;
-  background:#e8d7b8;
+  inset:-7px;
+  border:7px solid #463223;
+  border-radius:8px 16px 16px 8px;
+  box-shadow:0 4px 0 #926c46;
+  pointer-events:none;
 }
-
-.page img {
+.sheet {
+  width:50%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background:#dfccad;
+}
+.sheet.left {
+  border-radius:5px 0 0 5px;
+  box-shadow:inset -13px 0 24px #5e422a55;
+}
+.sheet.right {
+  border-radius:0 5px 5px 0;
+  box-shadow:inset 13px 0 24px #5e422a55;
+}
+.sheet img {
+  display:block;
   width:100%;
   height:100%;
   object-fit:contain;
-  display:block;
+}
+.blank {
+  display:flex;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:
+    radial-gradient(#bba27d55 1px,transparent 1px),
+    #e6d4b6;
+  background-size:12px 12px;
+  color:#766047;
+  font:italic clamp(15px,2vw,26px) Georgia,serif;
+}
+.binding {
+  position:absolute;
+  z-index:3;
+  left:50%;
+  top:0;
+  height:100%;
+  width:17px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,
+    #533b2b99,#e8d5b7aa 45%,#634a35aa);
+  box-shadow:0 0 20px #0003;
+  pointer-events:none;
+}
+.book.closed {
+  width:50%;
+  margin:auto;
+  aspect-ratio:1/1;
+}
+.book.closed::before {
+  border-radius:5px 16px 16px 5px;
+}
+.book.closed .sheet.left,
+.book.closed .binding {display:none}
+.book.closed .sheet.right {
+  width:100%;
+  border-radius:5px 12px 12px 5px;
+  box-shadow:inset 7px 0 10px #0004;
 }
 
-.page.turn-out {
-  animation:turnOut .42s ease-in forwards;
+/* A turning page that swings across the spine */
+.flip {
+  position:absolute;
+  left:50%;
+  top:0;
+  width:50%;
+  height:100%;
+  z-index:5;
+  transform-origin:left center;
+  transform-style:preserve-3d;
+  pointer-events:none;
 }
-
-.page.turn-in {
-  animation:turnIn .42s ease-out forwards;
+.flip-face {
+  position:absolute;
+  inset:0;
+  backface-visibility:hidden;
+  overflow:hidden;
+  background:#e3cfae;
+  box-shadow:0 5px 24px #0007;
 }
-
-@keyframes turnOut {
-  from { transform:rotateY(0deg); opacity:1; }
-  to { transform:rotateY(-85deg); opacity:0; }
+.flip-face img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
-
-@keyframes turnIn {
-  from { transform:rotateY(85deg); opacity:0; }
-  to { transform:rotateY(0deg); opacity:1; }
+.flip-back {
+  transform:rotateY(180deg);
+}
+.flip.forward {
+  animation:flipForward .75s ease-in-out forwards;
+}
+.flip.backward {
+  transform-origin:left center;
+  animation:flipBackward .75s ease-in-out forwards;
+}
+@keyframes flipForward {
+  from {transform:rotateY(0)}
+  to {transform:rotateY(-180deg)}
+}
+@keyframes flipBackward {
+  from {transform:rotateY(-180deg)}
+  to {transform:rotateY(0)}
 }
 
 .controls {
   display:flex;
-  flex-wrap:wrap;
   align-items:center;
   justify-content:center;
-  gap:15px;
-  margin:25px auto 0;
+  flex-wrap:wrap;
+  gap:14px;
+  margin:28px auto 0;
 }
-
 button {
-  min-height:45px;
-  padding:12px 23px;
-  border:1px solid #d5ad72;
+  background:var(--gold);
+  border:1px solid var(--gold);
   border-radius:10px;
-  background:#d5ad72;
+  padding:12px 22px;
+  min-height:46px;
+  font:700 15px inherit;
   color:#10151e;
-  font:inherit;
-  font-weight:700;
   cursor:pointer;
 }
-
-button:hover:not(:disabled) {
-  background:#e7c79a;
+button:hover:not(:disabled) {background:#e8c895}
+button:disabled {opacity:.35;cursor:not-allowed}
+button:focus-visible,a:focus-visible {
+  outline:3px solid white;
+  outline-offset:3px;
 }
-
-button:disabled {
-  opacity:.35;
-  cursor:not-allowed;
-}
-
-button:focus-visible,
-a:focus-visible {
-  outline:3px solid #f6f3ed;
-  outline-offset:4px;
-}
-
 .counter {
-  min-width:112px;
+  min-width:150px;
   color:var(--muted);
   font-size:14px;
 }
-
 .note {
+  color:var(--muted);
   font-size:13px;
-  color:var(--muted);
-  margin-top:25px;
+  margin:25px auto 0;
+  line-height:1.6;
 }
-
 footer {
-  text-align:center;
-  padding:25px;
+  padding:25px 15px;
   border-top:1px solid #ffffff20;
+  text-align:center;
   color:var(--muted);
 }
-
 @media(max-width:600px) {
-  header {
-    padding:16px;
-    flex-wrap:wrap;
-  }
-
-  main { padding:28px 12px 55px; }
-
-  .book-stage { padding:8px; }
-
-  .controls { gap:9px; }
-
-  button { padding:11px 15px; }
+  main {padding:25px 10px 45px}
+  .stage {padding:15px 10px}
+  .binding {width:9px}
+  .controls {gap:9px}
+  button {padding:11px 13px;font-size:13px}
+  .counter {min-width:100%;order:-1}
 }
-
 @media(prefers-reduced-motion:reduce) {
-  .page.turn-out,
-  .page.turn-in {
-    animation:none;
+  .flip.forward,.flip.backward {
+    animation-duration:.01ms;
   }
 }
 </style>
 </head>
-
 <body>
 
 <header>
   <strong>TOS CREATIONS</strong>
-  <a class="back" href="../#digital-bookshelf">
-    ← Return to TOS Creations
-  </a>
+  <a href="../">← Return to TOS Creations</a>
 </header>
 
 <main>
   <h1>Our Wedding Day</h1>
-
   <p class="intro">
-    A little inspiration for the stories waiting to be told.
-    Explore this fictional wedding scrapbook and imagine
-    creating a book of your own.
+    A story told one beautiful page at a time.
+    Explore this fictional wedding scrapbook
+    and imagine creating a book of your own.
   </p>
 
-  <div class="book-stage">
-    <div class="book" aria-label="Interactive wedding scrapbook">
-      <div class="page" id="page">
-        <img
-          id="pageImage"
-          src="00_wedding_cover.png"
-          alt="Our Wedding Day scrapbook cover"
-        >
+  <section class="stage" aria-label="Wedding demo book">
+    <div class="book-area">
+      <div class="book closed" id="book">
+        <div class="sheet left" id="left"></div>
+        <div class="sheet right" id="right"></div>
+        <div class="binding"></div>
       </div>
     </div>
-  </div>
 
-  <div class="controls">
-    <button id="previous" type="button" disabled>
-      ← Previous
-    </button>
-
-    <span class="counter" id="counter" aria-live="polite">
-      Cover · 1 of 6
-    </span>
-
-    <button id="next" type="button">
-      Next →
-    </button>
-  </div>
+    <div class="controls">
+      <button id="previous" disabled>← Previous</button>
+      <span id="counter" class="counter" aria-live="polite">
+        Book Cover
+      </span>
+      <button id="next">Open Book →</button>
+    </div>
+  </section>
 
   <p class="note">
-    Demonstration artwork featuring fictional people and events.
-    The pages illustrate creative possibilities and do not
-    represent a real family scrapbook.
+    A fictional demonstration created for TOS Creations.
+    All wedding characters and events are illustrative.
   </p>
 </main>
 
@@ -263,112 +290,151 @@ footer {
 </footer>
 
 <script>
-const pages = [
-  {
-    src:"00_wedding_cover.png",
-    alt:"Our Wedding Day cover",
-    title:"Cover"
-  },
-  {
-    src:"01_the_proposal.png",
-    alt:"The Proposal scrapbook page",
-    title:"The Proposal"
-  },
-  {
-    src:"02_the_big_day.png",
-    alt:"The Big Day scrapbook page",
-    title:"The Big Day"
-  },
-  {
-    src:"03_family_and_friends.png",
-    alt:"Family and Friends scrapbook page",
-    title:"Family & Friends"
-  },
-  {
-    src:"04_the_celebration.png",
-    alt:"The Celebration scrapbook page",
-    title:"The Celebration"
-  },
-  {
-    src:"05_forever_together.png",
-    alt:"Forever Together scrapbook page",
-    title:"Forever Together"
-  }
+const images = [
+  "00_wedding_cover.png",
+  "01_the_proposal.png",
+  "02_the_big_day.png",
+  "03_family_and_friends.png",
+  "04_the_celebration.png",
+  "05_forever_together.png"
 ];
 
-let current = 0;
-let turning = false;
+const titles = [
+  "Our Wedding Day",
+  "The Proposal",
+  "The Big Day",
+  "Family & Friends",
+  "The Celebration",
+  "Forever Together"
+];
 
-const page = document.getElementById("page");
-const image = document.getElementById("pageImage");
+// 0 = closed cover
+// 1 = proposal + big day
+// 2 = family + celebration
+// 3 = forever + final blank page
+const totalViews = 4;
+let view = 0;
+let busy = false;
+
+const book = document.getElementById("book");
+const left = document.getElementById("left");
+const right = document.getElementById("right");
 const counter = document.getElementById("counter");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 
-function updateControls() {
-  previous.disabled = turning || current === 0;
-  next.disabled = turning || current === pages.length - 1;
+const pageHTML = (index) => {
+  if (index >= images.length) {
+    return '<div class="blank">And so the story continues…</div>';
+  }
+  return '<img src="' + images[index] +
+    '" alt="' + titles[index] + '">';
+};
 
-  counter.textContent =
-    pages[current].title + " · " +
-    (current + 1) + " of " + pages.length;
+function update() {
+  book.classList.toggle("closed",view === 0);
+
+  if (view === 0) {
+    left.innerHTML = "";
+    right.innerHTML = pageHTML(0);
+    counter.textContent = "Book Cover";
+    next.textContent = "Open Book →";
+  } else {
+    const first = 1 + (view - 1) * 2;
+    left.innerHTML = pageHTML(first);
+    right.innerHTML = pageHTML(first + 1);
+    counter.textContent =
+      "Pages " + first + "–" +
+      Math.min(first + 1,5);
+    next.textContent =
+      view === totalViews - 1
+      ? "The End"
+      : "Next →";
+  }
+
+  previous.disabled = busy || view === 0;
+  next.disabled = busy || view === totalViews - 1;
 }
 
-function turnTo(index) {
-  if (turning || index < 0 || index >= pages.length) return;
+function navigate(direction) {
+  const target = view + direction;
+  if (busy || target < 0 || target >= totalViews) return;
 
-  turning = true;
+  busy = true;
   previous.disabled = true;
   next.disabled = true;
 
-  const reducedMotion =
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (reducedMotion) {
-    current = index;
-    image.src = pages[current].src;
-    image.alt = pages[current].alt;
-    turning = false;
-    updateControls();
+  // The closed-cover transition opens the book.
+  // Subsequent turns animate a paper leaf over the binding.
+  if (view === 0 || target === 0) {
+    view = target;
+    update();
+    busy = false;
+    update();
     return;
   }
 
-  page.classList.remove("turn-in");
-  page.classList.add("turn-out");
+  const leaf = document.createElement("div");
+  leaf.className = "flip";
 
-  setTimeout(() => {
-    current = index;
-    image.src = pages[current].src;
-    image.alt = pages[current].alt;
+  const currentRight = right.innerHTML;
+  const incomingLeftIndex = 1 + (target - 1) * 2;
+  const incomingLeft = pageHTML(incomingLeftIndex);
 
-    page.classList.remove("turn-out");
-    void page.offsetWidth;
-    page.classList.add("turn-in");
+  if (direction > 0) {
+    leaf.innerHTML =
+      '<div class="flip-face">' + currentRight + '</div>' +
+      '<div class="flip-face flip-back">' + incomingLeft + '</div>';
+    leaf.classList.add("forward");
+  } else {
+    // Reverse the turning leaf to return to the prior spread.
+    leaf.innerHTML =
+      '<div class="flip-face">' +
+      pageHTML(1 + (target - 1) * 2 + 1) +
+      '</div>' +
+      '<div class="flip-face flip-back">' +
+      left.innerHTML + '</div>';
+    leaf.classList.add("backward");
+  }
 
-    updateControls();
+  book.appendChild(leaf);
 
-    setTimeout(() => {
-      page.classList.remove("turn-in");
-      turning = false;
-      updateControls();
-    }, 420);
-  }, 420);
+  // Show destination spread beneath the turning page.
+  view = target;
+  update();
+
+  leaf.addEventListener("animationend",finish,{once:true});
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) {
+    finish();
+  }
+
+  function finish() {
+    leaf.remove();
+    busy = false;
+    update();
+  }
 }
 
-previous.addEventListener("click", () => turnTo(current - 1));
-next.addEventListener("click", () => turnTo(current + 1));
+previous.addEventListener("click",() => navigate(-1));
+next.addEventListener("click",() => navigate(1));
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowRight") turnTo(current + 1);
-  if (event.key === "ArrowLeft") turnTo(current - 1);
+document.addEventListener("keydown",event => {
+  if(event.key === "ArrowRight") navigate(1);
+  if(event.key === "ArrowLeft") navigate(-1);
 });
 
-pages.forEach((item) => {
-  const preload = new Image();
-  preload.src = item.src;
+// Preload each image for smoother transitions.
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
 });
 
-updateControls();
+update();
 </script>
 
 </body>
