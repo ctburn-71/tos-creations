@@ -244,6 +244,46 @@
   Discover what we're creating and testing at TOS Creations.
 </p>
 
+/* TOS CREATIONS — CONSISTENT APP GALLERY */
+
+/* Keep all four cards equal height */
+.app-gallery {
+  align-items: stretch;
+}
+
+.app-gallery .gallery-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Push status and action buttons to the bottom */
+.app-gallery .gallery-card .gallery-status {
+  display: block;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+/* Make the TestFlight buttons equally wide */
+.app-gallery .gallery-card a[href*="testflight.apple.com/join/"] {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 44px;
+  padding: 10px 5px !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px !important;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+/* Keep the buttons within their cards */
+.app-gallery .gallery-card a {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 <style>
   .app-gallery {
     display: grid;
