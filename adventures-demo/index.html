@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10151e">
+
+<title>The Adventures We Took | TOS Creations</title>
+<meta name="description" content="Explore a fictional travel scrapbook created for TOS Creations.">
+
+<style>
+:root {
+  --gold:#d5ad72;
+  --cream:#f6f3ed;
+  --muted:#b6c0cc;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at top,#34465b,#10151e 75%);
+  color:var(--cream);
+  font-family:-apple-system,BlinkMacSystemFont,
+    "Segoe UI",Arial,sans-serif;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+  padding:20px 6%;
+  border-bottom:1px solid #ffffff20;
+}
+
+header strong {
+  color:var(--gold);
+  letter-spacing:1.5px;
+}
+
+a {
+  color:var(--gold);
+}
+
+header a {
+  text-decoration:none;
+  font-weight:600;
+}
+
+main {
+  max-width:1000px;
+  margin:auto;
+  padding:35px 15px 65px;
+  text-align:center;
+}
+
+h1 {
+  font:normal clamp(32px,5vw,54px) Georgia,serif;
+  margin:0 0 10px;
+}
+
+.intro {
+  max-width:650px;
+  margin:0 auto 30px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.stage {
+  max-width:720px;
+  margin:auto;
+  padding:clamp(12px,3vw,28px);
+  border:1px solid #d5ad7233;
+  border-radius:20px;
+  background:linear-gradient(135deg,#222d3a,#111721);
+  box-shadow:0 24px 55px #0008;
+}
+
+.book {
+  width:100%;
+  max-width:580px;
+  aspect-ratio:1/1;
+  position:relative;
+  margin:auto;
+  perspective:1500px;
+  filter:drop-shadow(0 14px 12px #0008);
+}
+
+.page {
+  position:absolute;
+  inset:0;
+  transform-origin:left center;
+  transform-style:preserve-3d;
+  border-radius:5px 13px 13px 5px;
+  overflow:hidden;
+  background:#e3cfaf;
+  border:5px solid #493525;
+  box-shadow:
+    0 4px 0 #9c754c,
+    0 14px 25px #0006;
+}
+
+.page img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.page.turn-out {
+  animation:turnOut .45s ease-in forwards;
+}
+
+.page.turn-in {
+  animation:turnIn .45s ease-out forwards;
+}
+
+@keyframes turnOut {
+  from {
+    transform:rotateY(0);
+    opacity:1;
+  }
+  to {
+    transform:rotateY(-85deg);
+    opacity:0;
+  }
+}
+
+@keyframes turnIn {
+  from {
+    transform:rotateY(85deg);
+    opacity:0;
+  }
+  to {
+    transform:rotateY(0);
+    opacity:1;
+  }
+}
+
+.controls {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:28px auto 0;
+}
+
+button {
+  min-height:46px;
+  padding:12px 22px;
+  border:1px solid var(--gold);
+  border-radius:10px;
+  background:var(--gold);
+  color:#10151e;
+  font:700 15px -apple-system,BlinkMacSystemFont,
+    "Segoe UI",Arial,sans-serif;
+  cursor:pointer;
+}
+
+button:hover:not(:disabled) {
+  background:#e8c895;
+}
+
+button:disabled {
+  opacity:.35;
+  cursor:not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline:3px solid white;
+  outline-offset:3px;
+}
+
+.counter {
+  min-width:150px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.page-title {
+  margin:20px auto 0;
+  color:var(--gold);
+  font:normal 22px Georgia,serif;
+}
+
+.note {
+  max-width:650px;
+  margin:25px auto 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+footer {
+  text-align:center;
+  padding:25px 15px;
+  color:var(--muted);
+  border-top:1px solid #ffffff20;
+}
+
+@media(max-width:600px) {
+  main {
+    padding:25px 10px 45px;
+  }
+
+  .stage {
+    padding:12px 9px 20px;
+  }
+
+  .page {
+    border-width:3px;
+  }
+
+  .controls {
+    gap:9px;
+  }
+
+  button {
+    padding:11px 15px;
+    font-size:13px;
+  }
+
+  .counter {
+    min-width:100%;
+    order:-1;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .page.turn-out,
+  .page.turn-in {
+    animation:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <strong>TOS CREATIONS</strong>
+  <a href="../">← Return to TOS Creations</a>
+</header>
+
+<main>
+
+  <h1>The Adventures We Took</h1>
+
+  <p class="intro">
+    Roads traveled. Places discovered. Memories made.
+    Explore a fictional travel scrapbook celebrating
+    the adventures we share with the people we love.
+  </p>
+
+  <section class="stage" aria-label="Interactive travel scrapbook">
+
+    <div class="book" id="book">
+      <div class="page" id="page">
+        <img
+          id="pageImage"
+          src="00_adventures_cover.png"
+          alt="The Adventures We Took scrapbook cover"
+        >
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="previous" type="button" disabled>
+        ← Previous
+      </button>
+
+      <span class="counter" id="counter" aria-live="polite">
+        Cover · 1 of 6
+      </span>
+
+      <button id="next" type="button">
+        Next →
+      </button>
+    </div>
+
+    <h2 class="page-title" id="pageTitle">
+      The Adventures We Took
+    </h2>
+
+  </section>
+
+  <p class="note">
+    This is a fictional scrapbook demonstration created
+    for TOS Creations. All people and travel memories
+    shown are illustrative.
+  </p>
+
+</main>
+
+<footer>
+  © 2026 TOS Creations ·
+  <a href="../">Visit Our Applications</a>
+</footer>
+
+<script>
+const pages = [
+  {
+    src:"00_adventures_cover.png",
+    title:"The Adventures We Took"
+  },
+  {
+    src:"01_the_journey.png",
+    title:"The Journey"
+  },
+  {
+    src:"02_the_lake.png",
+    title:"The Lake"
+  },
+  {
+    src:"03_the_beach.png",
+    title:"The Beach"
+  },
+  {
+    src:"04_the_mountains.png",
+    title:"The Mountains"
+  },
+  {
+    src:"05_the_people.png",
+    title:"The People"
+  }
+];
+
+let current = 0;
+let turning = false;
+
+const page = document.getElementById("page");
+const image = document.getElementById("pageImage");
+const previous = document.getElementById("previous");
+const next = document.getElementById("next");
+const counter = document.getElementById("counter");
+const pageTitle = document.getElementById("pageTitle");
+
+function update() {
+  previous.disabled = turning || current === 0;
+  next.disabled = turning || current === pages.length - 1;
+
+  counter.textContent =
+    (current === 0 ? "Cover" : "Page " + current) +
+    " · " + (current + 1) + " of " + pages.length;
+
+  pageTitle.textContent = pages[current].title;
+}
+
+function turnTo(index) {
+  if (
+    turning ||
+    index < 0 ||
+    index >= pages.length ||
+    index === current
+  ) return;
+
+  turning = true;
+  update();
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) {
+    current = index;
+    image.src = pages[current].src;
+    image.alt = pages[current].title;
+    turning = false;
+    update();
+    return;
+  }
+
+  page.classList.remove("turn-in");
+  page.classList.add("turn-out");
+
+  setTimeout(() => {
+    current = index;
+    image.src = pages[current].src;
+    image.alt = pages[current].title;
+
+    page.classList.remove("turn-out");
+    void page.offsetWidth;
+    page.classList.add("turn-in");
+
+    update();
+
+    setTimeout(() => {
+      page.classList.remove("turn-in");
+      turning = false;
+      update();
+    }, 450);
+  }, 450);
+}
+
+previous.addEventListener("click", () => turnTo(current - 1));
+next.addEventListener("click", () => turnTo(current + 1));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowRight") turnTo(current + 1);
+  if (event.key === "ArrowLeft") turnTo(current - 1);
+});
+
+// Touch swipe navigation for iPhone and Android
+let touchStartX = 0;
+let touchStartY = 0;
+
+const book = document.getElementById("book");
+
+book.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].screenX;
+  touchStartY = event.changedTouches[0].screenY;
+}, {passive:true});
+
+book.addEventListener("touchend", (event) => {
+  const dx = event.changedTouches[0].screenX - touchStartX;
+  const dy = event.changedTouches[0].screenY - touchStartY;
+
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) {
+    if (dx < 0) turnTo(current + 1);
+    else turnTo(current - 1);
+  }
+}, {passive:true});
+
+// Preload all six images
+pages.forEach(item => {
+  const preload = new Image();
+  preload.src = item.src;
+});
+
+update();
+</script>
+
+</body>
+</html>
