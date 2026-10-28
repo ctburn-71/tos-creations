@@ -2995,13 +2995,25 @@ label[for="fitness-testing"] {
     can come together in a beautiful digital book.
   </p>
 
+  
+<!-- SCRAPBOOK DEMO BOOK CARDS -->
+<div style="
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+  gap:24px;
+  max-width:720px;
+  margin:0 auto;
+  align-items:stretch;
+">
+
+  <!-- OUR WEDDING DAY -->
   <div style="
-    max-width:340px;
-    margin:0 auto;
     padding:15px;
     border:1px solid rgba(213,173,114,.25);
     border-radius:14px;
     background:rgba(0,0,0,.15);
+    display:flex;
+    flex-direction:column;
   ">
 
     <a href="/wedding-demo/" style="
@@ -3013,7 +3025,8 @@ label[for="fitness-testing"] {
         alt="Our Wedding Day interactive scrapbook demo"
         style="
           width:100%;
-          height:auto;
+          aspect-ratio:1/1;
+          object-fit:cover;
           display:block;
           border-radius:8px;
           box-shadow:0 12px 25px rgba(0,0,0,.35);
@@ -3034,12 +3047,14 @@ label[for="fitness-testing"] {
       color:#b6c0cc;
       font-size:14px;
       margin:0 0 18px;
+      line-height:1.6;
     ">
       A love story told one beautiful page at a time.
     </p>
 
     <a href="/wedding-demo/" style="
       display:block;
+      margin-top:auto;
       padding:13px 18px;
       background:#d5ad72;
       color:#10151e;
@@ -3052,6 +3067,73 @@ label[for="fitness-testing"] {
     </a>
 
   </div>
+
+  <!-- THE ADVENTURES WE TOOK -->
+  <div style="
+    padding:15px;
+    border:1px solid rgba(213,173,114,.25);
+    border-radius:14px;
+    background:rgba(0,0,0,.15);
+    display:flex;
+    flex-direction:column;
+  ">
+
+    <a href="/adventures-demo/" style="
+      display:block;
+      text-decoration:none;
+    ">
+      <img
+        src="/adventures-demo/00_adventures_cover.png"
+        alt="The Adventures We Took interactive scrapbook demo"
+        style="
+          width:100%;
+          aspect-ratio:1/1;
+          object-fit:cover;
+          display:block;
+          border-radius:8px;
+          box-shadow:0 12px 25px rgba(0,0,0,.35);
+        "
+      >
+    </a>
+
+    <h3 style="
+      color:#f6f3ed;
+      font-family:Georgia,serif;
+      font-size:23px;
+      margin:18px 0 5px;
+    ">
+      The Adventures We Took
+    </h3>
+
+    <p style="
+      color:#b6c0cc;
+      font-size:14px;
+      margin:0 0 18px;
+      line-height:1.6;
+    ">
+      Roads traveled, places discovered,
+      and memories made together.
+    </p>
+
+    <a href="/adventures-demo/" style="
+      display:block;
+      margin-top:auto;
+      padding:13px 18px;
+      background:#d5ad72;
+      color:#10151e;
+      border-radius:9px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+    ">
+      Open Demo Book →
+    </a>
+
+  </div>
+
+</div>
+<!-- END SCRAPBOOK DEMO BOOK CARDS -->
+
 
   <p style="
     color:#8996a5;
