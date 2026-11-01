@@ -2714,7 +2714,14 @@ label[for="fitness-testing"] {
       font-size: 27px;
     }
   }
-  <div class="app-card">
+  <!-- TOS CREATIONS GAME ROOM -->
+  <section id="apps" class="section">
+    <h2>In Developement/Currently Designing</h2>
+    <p class="section-intro">
+      Explore what we're creating.
+    </p>
+
+    <div class="app-card">
 
 <section class="game-room-feature" id="game-room">
 
@@ -2770,8 +2777,115 @@ label[for="fitness-testing"] {
   </p>
 
 </section>
+
+<style>
+
+.game-room-feature {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 38px;
+  border-radius: 24px;
+  border: 1px solid rgba(213,173,114,0.25);
+
+  background: linear-gradient(
+    135deg,
+    #1c2532 0%,
+    #1b2a3d 55%,
+    #152438 100%
+  );
+}
+
+
+.game-room-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.game-room-icon {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.game-room-heading h2 {
+  color: #f6f3ed;
+  font-size: clamp(25px, 3vw, 32px);
+  margin: 0;
+}
+
+.game-room-tagline {
+  color: #d5ad72;
+  font-size: 18px;
+  margin: 8px 0 12px;
+}
+
+.game-room-status {
+  color: #d5ad72;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.game-room-intro {
+  margin: 28px 0;
+  color: #adb8c5;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+.game-room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.game-room-game {
+  background: rgba(10,17,27,.55);
+  border: 1px solid rgba(213,173,114,.14);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.game-room-game h3 {
+  color: #f6f3ed;
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.game-room-game p {
+  color: #adb8c5;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+}
+
+.game-room-footer {
+  color: #d5ad72;
+  font-style: italic;
+  margin: 27px 0 0;
+}
+
+@media (max-width: 600px) {
+  .game-room-feature {
+    padding: 24px;
+  }
+
+  .game-room-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+  }
+
+  .game-room-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
-  </section>
+
   
 <!-- TOS CREATIONS GAME ROOM -->
   <section id="apps" class="section">
