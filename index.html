@@ -2842,6 +2842,256 @@ label[for="fitness-testing"] {
   Privacy Policy
 </a>
 
+<!-- GAME LOUNGE EXPLORE DETAILS -->
+<details id="game-lounge-details" style="
+  margin-top:30px;
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:14px;
+  background:rgba(8,16,27,.32);
+  overflow:hidden;
+">
+
+  <summary style="
+    cursor:pointer;
+    color:#d5ad72;
+    font-weight:700;
+    padding:18px 22px;
+  ">
+    Explore Game Lounge Details
+  </summary>
+
+  <div style="
+    padding:8px 22px 24px;
+    color:#b6c0cc;
+    line-height:1.7;
+  ">
+
+    <style>
+      #game-lounge-details input[type="radio"] {
+        position:absolute;
+        opacity:0;
+        width:1px;
+        height:1px;
+      }
+
+      #game-lounge-details .gl-tab-label {
+        display:inline-block;
+        padding:11px 18px;
+        margin:4px 8px 16px 0;
+        border:1px solid #d5ad7266;
+        border-radius:9px;
+        color:#d5ad72;
+        cursor:pointer;
+        font-weight:700;
+      }
+
+      #gl-description:checked ~ .gl-tabs
+        label[for="gl-description"],
+      #gl-testing:checked ~ .gl-tabs
+        label[for="gl-testing"] {
+        background:#d5ad72;
+        color:#10151e;
+      }
+
+      #game-lounge-details .gl-panel {
+        display:none;
+      }
+
+      #gl-description:checked ~ #gl-description-panel,
+      #gl-testing:checked ~ #gl-testing-panel {
+        display:block;
+      }
+
+      #game-lounge-details input:focus-visible
+        + label {
+        outline:2px solid white;
+      }
+
+      #game-lounge-details h3 {
+        color:#f6f3ed;
+        margin:16px 0 8px;
+      }
+
+      #game-lounge-details li {
+        margin-bottom:11px;
+      }
+    </style>
+
+    <input
+      type="radio"
+      id="gl-description"
+      name="game-lounge-tab"
+      checked
+    >
+
+    <input
+      type="radio"
+      id="gl-testing"
+      name="game-lounge-tab"
+    >
+
+    <div class="gl-tabs">
+      <label class="gl-tab-label" for="gl-description">
+        Description
+      </label>
+
+      <label class="gl-tab-label" for="gl-testing">
+        What to Test
+      </label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="gl-panel" id="gl-description-panel">
+
+      <h3>Four Games. Four Distinct Lounges.</h3>
+
+      <p>
+        Welcome to The Dart Club & Game Lounge,
+        a digital entertainment experience
+        bringing four classic games together
+        in one application.
+      </p>
+
+      <p>
+        Each game offers its own atmosphere,
+        controls, and challenges.
+        Move between the lounges and discover
+        your favorite way to play.
+      </p>
+
+      <h3>🎯 The Dart Club</h3>
+      <p>
+        Sharpen your aim and test your accuracy.
+        Enjoy classic darts gameplay, daily
+        challenges, and private online matches
+        with invited players.
+      </p>
+
+      <h3>🎱 Pool</h3>
+      <p>
+        Line up your shots and enjoy a
+        dedicated billiards experience
+        focused on aiming, ball movement,
+        and satisfying gameplay.
+      </p>
+
+      <h3>🏒 Air Hockey</h3>
+      <p>
+        Challenge a computer opponent
+        in fast-paced air hockey.
+        Enjoy the traditional atmosphere
+        or switch to optional Midnight
+        Neon mode for an after-dark
+        arcade experience.
+      </p>
+
+      <h3>🎳 Bowling</h3>
+      <p>
+        Step onto the lanes for a
+        classic bowling experience.
+        Switch to Midnight Neon mode
+        for a different visual atmosphere
+        while enjoying the same game.
+      </p>
+
+      <p style="
+        color:#d5ad72;
+        font-style:italic;
+        margin-top:22px;
+      ">
+        Four games. Distinct lounges.
+        One place to play.
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="gl-panel" id="gl-testing-panel">
+
+      <h3>Help Us Improve the Game Lounge</h3>
+
+      <p>
+        The Dart Club & Game Lounge is currently
+        in TestFlight. Your feedback helps us
+        improve the experience before release.
+      </p>
+
+      <ul>
+        <li>
+          <strong>All four games:</strong>
+          Play Darts, Pool, Bowling,
+          and Air Hockey.
+        </li>
+
+        <li>
+          <strong>Controls:</strong>
+          Test aiming, dragging, shooting,
+          and overall responsiveness.
+        </li>
+
+        <li>
+          <strong>Scoring:</strong>
+          Check points, turns, wins,
+          results, and restarting games.
+        </li>
+
+        <li>
+          <strong>Sound:</strong>
+          Test sound effects, volume
+          settings, and mute controls.
+        </li>
+
+        <li>
+          <strong>Navigation:</strong>
+          Open games, return to the
+          lounge, and change settings.
+        </li>
+
+        <li>
+          <strong>Midnight Neon:</strong>
+          Switch between classic and neon
+          modes in Air Hockey and Bowling.
+          Check visual appearance and
+          gameplay in both environments.
+        </li>
+
+        <li>
+          <strong>Display and performance:</strong>
+          Look for overlapping buttons,
+          text that doesn't fit,
+          slowdowns, freezes, or crashes.
+        </li>
+
+        <li>
+          <strong>Private online Darts:</strong>
+          Create or join a room with another
+          tester. Check connection reliability,
+          turns, scoring synchronization,
+          and reconnecting after interruptions.
+        </li>
+      </ul>
+
+      <p>
+        When reporting an issue, include your
+        device model, the game you were playing,
+        what happened, and the steps needed
+        to reproduce it. Screenshots are helpful.
+      </p>
+
+      <p>
+        Send feedback to
+        <a href="mailto:toscreations71@gmail.com"
+           style="color:#d5ad72;">
+          toscreations71@gmail.com
+        </a>.
+      </p>
+
+    </div>
+
+  </div>
+</details>
+<!-- END GAME LOUNGE EXPLORE DETAILS -->
+
 
 </section>
 
