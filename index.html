@@ -209,6 +209,44 @@
   box-sizing: border-box;
 }
 
+/* TOS Creations mobile layout improvements */
+@media (max-width: 600px) {
+
+  /* Prevent page-wide horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* Keep content inside its containers */
+  main, section, article {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Allow long headings to wrap */
+  h1, h2, h3 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Keep pictures within the screen */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Allow Game Lounge buttons to wrap neatly */
+  #game-lounge-details {
+    max-width: 100%;
+  }
+
+  /* Prevent very long labels from overflowing */
+  a, button {
+    overflow-wrap: break-word;
+  }
+}
+
   </style>
 </head>
 
