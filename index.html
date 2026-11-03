@@ -3976,6 +3976,30 @@ align-items:stretch;
     box-sizing: border-box;
   }
 }
+  
+/* My Books lower buttons — mobile only */
+@media (max-width: 600px) {
+
+  a[href="https://testflight.apple.com/join/b2xG65HU"]
+    ~ a[href="my-books/"],
+
+  a[href="https://testflight.apple.com/join/b2xG65HU"]
+    ~ a[href="my-books/privacy.html"] {
+
+    display: inline-flex !important;
+    width: calc(50% - 6px) !important;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 8px !important;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+}
+
 
 </style>
 
