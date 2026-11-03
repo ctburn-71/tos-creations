@@ -3938,6 +3938,27 @@ align-items:stretch;
   }
 }
 
+/* Game Lounge buttons — mobile alignment */
+@media (max-width: 600px) {
+
+  /* Only the three links in the Game Lounge card */
+  a[href="https://testflight.apple.com/join/kPDAGxbx"],
+  a[href="/game-lounge/"],
+  a[href="/game-lounge/privacy.html"] {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px;
+    margin: 10px 0 !important;
+    padding: 12px 16px !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+}
+
 </style>
 
   <section id="about" class="section">
