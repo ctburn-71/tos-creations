@@ -3496,7 +3496,7 @@ label[for="fitness-testing"] {
 ">
 
   <!-- OUR WEDDING DAY -->
-  <div style="
+  <div class="scrapbook-demo-card" style="
     padding:15px;
     border:1px solid rgba(213,173,114,.25);
     border-radius:14px;
@@ -3558,7 +3558,7 @@ label[for="fitness-testing"] {
   </div>
 
   <!-- THE ADVENTURES WE TOOK -->
-  <div style="
+  <div class="scrapbook-demo-card" style="
     padding:15px;
     border:1px solid rgba(213,173,114,.25);
     border-radius:14px;
@@ -3889,6 +3889,42 @@ label[for="fitness-testing"] {
 
   #scrapbook-demos .scrapbook-demo-grid a[href$="-demo/"] {
     width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Match scrapbook demo cards to Game Lounge details */
+@media (max-width: 600px) {
+
+  #scrapbook-demos .scrapbook-demo-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 15px !important;
+
+    border: 1px solid rgba(213,173,114,.30) !important;
+    border-radius: 14px !important;
+    background: rgba(8,16,27,.32) !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,.18);
+    box-sizing: border-box;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card a[href$="-demo/"] {
+    width: 100% !important;
     box-sizing: border-box;
   }
 }
