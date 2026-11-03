@@ -3870,6 +3870,29 @@ label[for="fitness-testing"] {
     }
   }
 
+/* Scrapbook demo mobile layout */
+@media (max-width: 600px) {
+
+  #scrapbook-demos .scrapbook-demo-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-grid > div {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-grid a[href$="-demo/"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 </style>
 
   <section id="about" class="section">
