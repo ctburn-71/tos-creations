@@ -1,0 +1,2705 @@
+{
+  "version": 2,
+  "puzzles": [
+    {
+      "id": "np1-forest",
+      "title": "Forest Light",
+      "scene": 3,
+      "pack": "New Perspectives",
+      "date": "",
+      "variants": [
+        [
+          {
+            "number": 4,
+            "answer": "CEDAR",
+            "text": "An evergreen tree with fragrant wood.",
+            "row": 3,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "FERN",
+            "text": "A green plant whose fronds unfurl.",
+            "row": 1,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "TREE",
+            "text": "A tall plant with a woody trunk.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "BARK",
+            "text": "A tree's protective outer layer.",
+            "row": 1,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 6,
+            "answer": "CEDAR",
+            "text": "An evergreen tree with fragrant wood.",
+            "row": 5,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "FERN",
+            "text": "A green plant whose fronds unfurl.",
+            "row": 0,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "TREE",
+            "text": "A tall plant with a woody trunk.",
+            "row": 1,
+            "col": 7,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "BARK",
+            "text": "A tree's protective outer layer.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "CANOPY",
+            "text": "The leafy roof of a forest.",
+            "row": 5,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "LICHEN",
+            "text": "A partnership between a fungus and an alga.",
+            "row": 3,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "SAPLING",
+            "text": "A young tree.",
+            "row": 0,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "HUMUS",
+            "text": "Dark soil material formed from decayed plants.",
+            "row": 0,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 3,
+            "answer": "CEDAR",
+            "text": "An evergreen tree with fragrant wood.",
+            "row": 2,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "FERN",
+            "text": "A green plant whose fronds unfurl.",
+            "row": 9,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "TREE",
+            "text": "A tall plant with a woody trunk.",
+            "row": 10,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "BARK",
+            "text": "A tree's protective outer layer.",
+            "row": 8,
+            "col": 1,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "CANOPY",
+            "text": "The leafy roof of a forest.",
+            "row": 14,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "LICHEN",
+            "text": "A partnership between a fungus and an alga.",
+            "row": 12,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "SAPLING",
+            "text": "A young tree.",
+            "row": 12,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "HUMUS",
+            "text": "Dark soil material formed from decayed plants.",
+            "row": 7,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "MYCELIUM",
+            "text": "The branching network of a fungus.",
+            "row": 16,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "UNDERSTORY",
+            "text": "The layer of plants below the main treetops.",
+            "row": 7,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "DECIDUOUS",
+            "text": "Shedding leaves seasonally.",
+            "row": 0,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "CAMBIUM",
+            "text": "The growth layer beneath a tree's bark.",
+            "row": 1,
+            "col": 8,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-city",
+      "title": "City Lines",
+      "scene": 4,
+      "pack": "New Perspectives",
+      "date": "",
+      "variants": [
+        [
+          {
+            "number": 2,
+            "answer": "BRICK",
+            "text": "A rectangular block used in walls.",
+            "row": 4,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "ARCH",
+            "text": "A curved structure spanning an opening.",
+            "row": 7,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "TOWER",
+            "text": "A building that rises well above its neighbours.",
+            "row": 5,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "STREET",
+            "text": "A public road lined with buildings.",
+            "row": 0,
+            "col": 0,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 5,
+            "answer": "BRICK",
+            "text": "A rectangular block used in walls.",
+            "row": 6,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "ARCH",
+            "text": "A curved structure spanning an opening.",
+            "row": 4,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "TOWER",
+            "text": "A building that rises well above its neighbours.",
+            "row": 0,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "STREET",
+            "text": "A public road lined with buildings.",
+            "row": 10,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "FACADE",
+            "text": "The face of a building.",
+            "row": 5,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "ARCADE",
+            "text": "A covered passage lined with arches.",
+            "row": 9,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "ATRIUM",
+            "text": "A central interior court, often open above.",
+            "row": 9,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "CORNICE",
+            "text": "A projecting moulding near the top of a wall.",
+            "row": 4,
+            "col": 7,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 4,
+            "answer": "BRICK",
+            "text": "A rectangular block used in walls.",
+            "row": 7,
+            "col": 11,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "ARCH",
+            "text": "A curved structure spanning an opening.",
+            "row": 3,
+            "col": 17,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "TOWER",
+            "text": "A building that rises well above its neighbours.",
+            "row": 10,
+            "col": 14,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "STREET",
+            "text": "A public road lined with buildings.",
+            "row": 7,
+            "col": 19,
+            "down": true
+          },
+          {
+            "number": 9,
+            "answer": "FACADE",
+            "text": "The face of a building.",
+            "row": 11,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "ARCADE",
+            "text": "A covered passage lined with arches.",
+            "row": 12,
+            "col": 10,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "ATRIUM",
+            "text": "A central interior court, often open above.",
+            "row": 1,
+            "col": 14,
+            "down": false
+          },
+          {
+            "number": 11,
+            "answer": "CORNICE",
+            "text": "A projecting moulding near the top of a wall.",
+            "row": 13,
+            "col": 8,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "CANTILEVER",
+            "text": "A beam supported at only one end.",
+            "row": 10,
+            "col": 11,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "COLONNADE",
+            "text": "A row of columns supporting a roof.",
+            "row": 16,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "BUTTRESS",
+            "text": "A support built against a wall.",
+            "row": 7,
+            "col": 13,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "PILASTER",
+            "text": "A shallow rectangular column attached to a wall.",
+            "row": 0,
+            "col": 17,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-music",
+      "title": "Quiet Rhythm",
+      "scene": 5,
+      "pack": "New Perspectives",
+      "date": "",
+      "variants": [
+        [
+          {
+            "number": 1,
+            "answer": "PIANO",
+            "text": "A keyboard instrument with hammers and strings.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "NOTE",
+            "text": "A single written musical sound.",
+            "row": 4,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "BEAT",
+            "text": "The regular pulse of music.",
+            "row": 2,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "REST",
+            "text": "A written instruction for silence.",
+            "row": 3,
+            "col": 4,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 2,
+            "answer": "PIANO",
+            "text": "A keyboard instrument with hammers and strings.",
+            "row": 0,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "NOTE",
+            "text": "A single written musical sound.",
+            "row": 9,
+            "col": 10,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "BEAT",
+            "text": "The regular pulse of music.",
+            "row": 3,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "REST",
+            "text": "A written instruction for silence.",
+            "row": 6,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "TEMPO",
+            "text": "The speed of a musical passage.",
+            "row": 0,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "CHORD",
+            "text": "Several notes sounded together.",
+            "row": 4,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "OCTAVE",
+            "text": "The interval from one C to the next C.",
+            "row": 4,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "TIMBRE",
+            "text": "The quality that distinguishes two instruments playing the same note.",
+            "row": 6,
+            "col": 8,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 11,
+            "answer": "PIANO",
+            "text": "A keyboard instrument with hammers and strings.",
+            "row": 14,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "NOTE",
+            "text": "A single written musical sound.",
+            "row": 7,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "BEAT",
+            "text": "The regular pulse of music.",
+            "row": 8,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 12,
+            "answer": "REST",
+            "text": "A written instruction for silence.",
+            "row": 16,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "TEMPO",
+            "text": "The speed of a musical passage.",
+            "row": 9,
+            "col": 8,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "CHORD",
+            "text": "Several notes sounded together.",
+            "row": 2,
+            "col": 10,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "OCTAVE",
+            "text": "The interval from one C to the next C.",
+            "row": 11,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "TIMBRE",
+            "text": "The quality that distinguishes two instruments playing the same note.",
+            "row": 13,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "CADENCE",
+            "text": "A phrase-ending musical progression.",
+            "row": 0,
+            "col": 14,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "OSTINATO",
+            "text": "A short musical pattern repeated persistently.",
+            "row": 7,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "SYNCOPATION",
+            "text": "Accents that fall away from the expected beats.",
+            "row": 11,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "COUNTERPOINT",
+            "text": "Independent melodies sounding together.",
+            "row": 1,
+            "col": 12,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d01",
+      "title": "The Reading Room",
+      "scene": 4,
+      "pack": "Daily Editions",
+      "date": "2026-10-05",
+      "variants": [
+        [
+          {
+            "number": 2,
+            "answer": "BOOK",
+            "text": "A bound collection of written pages.",
+            "row": 1,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "PAGE",
+            "text": "One side of a leaf in a book.",
+            "row": 3,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "SPINE",
+            "text": "The edge of a book that often bears its title.",
+            "row": 2,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "COVER",
+            "text": "The outer protection of a book.",
+            "row": 0,
+            "col": 3,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 5,
+            "answer": "BOOK",
+            "text": "A bound collection of written pages.",
+            "row": 6,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "PAGE",
+            "text": "One side of a leaf in a book.",
+            "row": 3,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "SPINE",
+            "text": "The edge of a book that often bears its title.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "COVER",
+            "text": "The outer protection of a book.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "AUTHOR",
+            "text": "The person who writes a book.",
+            "row": 7,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "PREFACE",
+            "text": "An introduction written before the main text.",
+            "row": 3,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "INDEX",
+            "text": "An alphabetical guide at the back of a book.",
+            "row": 0,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "MARGIN",
+            "text": "The blank border around printed text.",
+            "row": 0,
+            "col": 3,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 8,
+            "answer": "BOOK",
+            "text": "A bound collection of written pages.",
+            "row": 7,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "PAGE",
+            "text": "One side of a leaf in a book.",
+            "row": 1,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "SPINE",
+            "text": "The edge of a book that often bears its title.",
+            "row": 2,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "COVER",
+            "text": "The outer protection of a book.",
+            "row": 5,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "AUTHOR",
+            "text": "The person who writes a book.",
+            "row": 0,
+            "col": 15,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "PREFACE",
+            "text": "An introduction written before the main text.",
+            "row": 8,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "INDEX",
+            "text": "An alphabetical guide at the back of a book.",
+            "row": 2,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "MARGIN",
+            "text": "The blank border around printed text.",
+            "row": 11,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 9,
+            "answer": "COLOPHON",
+            "text": "A note describing a book's printing or production.",
+            "row": 8,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "EPIGRAPH",
+            "text": "A quotation placed before a work or chapter.",
+            "row": 1,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "PALIMPSEST",
+            "text": "A manuscript reused after earlier writing was erased.",
+            "row": 2,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "ERRATA",
+            "text": "A list of corrections to a printed work.",
+            "row": 12,
+            "col": 0,
+            "down": false
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d02",
+      "title": "At the Table",
+      "scene": 5,
+      "pack": "Daily Editions",
+      "date": "2026-10-06",
+      "variants": [
+        [
+          {
+            "number": 3,
+            "answer": "SALT",
+            "text": "A common seasoning made of sodium chloride.",
+            "row": 2,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "BREAD",
+            "text": "A staple baked from dough.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "PLATE",
+            "text": "A flat dish for serving food.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "SPOON",
+            "text": "A utensil suited to soup.",
+            "row": 0,
+            "col": 1,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 3,
+            "answer": "SALT",
+            "text": "A common seasoning made of sodium chloride.",
+            "row": 4,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "BREAD",
+            "text": "A staple baked from dough.",
+            "row": 5,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "PLATE",
+            "text": "A flat dish for serving food.",
+            "row": 9,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "SPOON",
+            "text": "A utensil suited to soup.",
+            "row": 7,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "SIMMER",
+            "text": "Cook in liquid just below a full boil.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "WHISK",
+            "text": "Beat ingredients to blend them or add air.",
+            "row": 1,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "KNEAD",
+            "text": "Work dough by pressing and folding it.",
+            "row": 11,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "ZEST",
+            "text": "The coloured outer peel of citrus fruit.",
+            "row": 7,
+            "col": 1,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 6,
+            "answer": "SALT",
+            "text": "A common seasoning made of sodium chloride.",
+            "row": 4,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "BREAD",
+            "text": "A staple baked from dough.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "PLATE",
+            "text": "A flat dish for serving food.",
+            "row": 3,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "SPOON",
+            "text": "A utensil suited to soup.",
+            "row": 9,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "SIMMER",
+            "text": "Cook in liquid just below a full boil.",
+            "row": 9,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "WHISK",
+            "text": "Beat ingredients to blend them or add air.",
+            "row": 3,
+            "col": 10,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "KNEAD",
+            "text": "Work dough by pressing and folding it.",
+            "row": 13,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "ZEST",
+            "text": "The coloured outer peel of citrus fruit.",
+            "row": 7,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 10,
+            "answer": "EMULSION",
+            "text": "A mixture of liquids that normally separate.",
+            "row": 11,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "JULIENNE",
+            "text": "Cut into thin, matchstick-like strips.",
+            "row": 4,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "REDUCTION",
+            "text": "A sauce concentrated by simmering away liquid.",
+            "row": 2,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "UMAMI",
+            "text": "The savoury basic taste.",
+            "row": 5,
+            "col": 6,
+            "down": false
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d03",
+      "title": "Changing Skies",
+      "scene": 2,
+      "pack": "Daily Editions",
+      "date": "2026-10-07",
+      "variants": [
+        [
+          {
+            "number": 1,
+            "answer": "RAIN",
+            "text": "Water falling from clouds in drops.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "WIND",
+            "text": "Air moving across the land.",
+            "row": 3,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "CLOUD",
+            "text": "A visible mass of tiny droplets in the sky.",
+            "row": 6,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "SNOW",
+            "text": "Frozen precipitation in flakes.",
+            "row": 3,
+            "col": 1,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 3,
+            "answer": "RAIN",
+            "text": "Water falling from clouds in drops.",
+            "row": 0,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "WIND",
+            "text": "Air moving across the land.",
+            "row": 3,
+            "col": 10,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "CLOUD",
+            "text": "A visible mass of tiny droplets in the sky.",
+            "row": 6,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "SNOW",
+            "text": "Frozen precipitation in flakes.",
+            "row": 3,
+            "col": 7,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "CIRRUS",
+            "text": "A thin, wispy high cloud.",
+            "row": 1,
+            "col": 1,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "FRONT",
+            "text": "A boundary between air masses.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "ISOBAR",
+            "text": "A line joining equal air pressure on a weather map.",
+            "row": 0,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "SLEET",
+            "text": "Small ice pellets falling as precipitation.",
+            "row": 0,
+            "col": 4,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 6,
+            "answer": "RAIN",
+            "text": "Water falling from clouds in drops.",
+            "row": 11,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "WIND",
+            "text": "Air moving across the land.",
+            "row": 1,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "CLOUD",
+            "text": "A visible mass of tiny droplets in the sky.",
+            "row": 4,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 11,
+            "answer": "SNOW",
+            "text": "Frozen precipitation in flakes.",
+            "row": 18,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "CIRRUS",
+            "text": "A thin, wispy high cloud.",
+            "row": 9,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "FRONT",
+            "text": "A boundary between air masses.",
+            "row": 7,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "ISOBAR",
+            "text": "A line joining equal air pressure on a weather map.",
+            "row": 12,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "SLEET",
+            "text": "Small ice pellets falling as precipitation.",
+            "row": 13,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "BAROMETER",
+            "text": "An instrument that measures atmospheric pressure.",
+            "row": 15,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "ANEMOMETER",
+            "text": "An instrument that measures wind speed.",
+            "row": 0,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "CONVECTION",
+            "text": "Heat transfer through the motion of a fluid.",
+            "row": 9,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "VIRGA",
+            "text": "Precipitation that evaporates before reaching the ground.",
+            "row": 16,
+            "col": 2,
+            "down": false
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d04",
+      "title": "A Garden Walk",
+      "scene": 3,
+      "pack": "Daily Editions",
+      "date": "2026-10-08",
+      "variants": [
+        [
+          {
+            "number": 3,
+            "answer": "ROSE",
+            "text": "A flower known for fragrant blooms and thorny stems.",
+            "row": 3,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "SEED",
+            "text": "A plant's small beginning, containing an embryo.",
+            "row": 1,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "LEAF",
+            "text": "A plant organ that usually captures sunlight.",
+            "row": 0,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "STEM",
+            "text": "The stalk that supports leaves and flowers.",
+            "row": 1,
+            "col": 3,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 1,
+            "answer": "ROSE",
+            "text": "A flower known for fragrant blooms and thorny stems.",
+            "row": 0,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "SEED",
+            "text": "A plant's small beginning, containing an embryo.",
+            "row": 0,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "LEAF",
+            "text": "A plant organ that usually captures sunlight.",
+            "row": 6,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "STEM",
+            "text": "The stalk that supports leaves and flowers.",
+            "row": 2,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "PETAL",
+            "text": "A usually colourful part of a flower.",
+            "row": 4,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "POLLEN",
+            "text": "Fine grains produced by a flower's anthers.",
+            "row": 4,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "STAMEN",
+            "text": "The pollen-producing part of a flower.",
+            "row": 2,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "BULB",
+            "text": "An underground storage structure, as in a tulip.",
+            "row": 7,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 2,
+            "answer": "ROSE",
+            "text": "A flower known for fragrant blooms and thorny stems.",
+            "row": 2,
+            "col": 7,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "SEED",
+            "text": "A plant's small beginning, containing an embryo.",
+            "row": 11,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "LEAF",
+            "text": "A plant organ that usually captures sunlight.",
+            "row": 6,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "STEM",
+            "text": "The stalk that supports leaves and flowers.",
+            "row": 5,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "PETAL",
+            "text": "A usually colourful part of a flower.",
+            "row": 8,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "POLLEN",
+            "text": "Fine grains produced by a flower's anthers.",
+            "row": 0,
+            "col": 14,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "STAMEN",
+            "text": "The pollen-producing part of a flower.",
+            "row": 4,
+            "col": 10,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "BULB",
+            "text": "An underground storage structure, as in a tulip.",
+            "row": 16,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "RHIZOME",
+            "text": "A horizontal underground stem.",
+            "row": 2,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "PERENNIAL",
+            "text": "A plant that lives for more than two years.",
+            "row": 8,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "COTYLEDON",
+            "text": "A seed leaf in a plant embryo.",
+            "row": 6,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "SEPAL",
+            "text": "A leaf-like part enclosing a flower bud.",
+            "row": 4,
+            "col": 10,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d05",
+      "title": "On the Map",
+      "scene": 1,
+      "pack": "Daily Editions",
+      "date": "2026-10-09",
+      "variants": [
+        [
+          {
+            "number": 1,
+            "answer": "CHART",
+            "text": "A map used for navigation at sea.",
+            "row": 0,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "EAST",
+            "text": "The direction opposite west.",
+            "row": 2,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "ROAD",
+            "text": "A route built for vehicles.",
+            "row": 0,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "LAKE",
+            "text": "A large inland body of water.",
+            "row": 2,
+            "col": 2,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 7,
+            "answer": "CHART",
+            "text": "A map used for navigation at sea.",
+            "row": 8,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "EAST",
+            "text": "The direction opposite west.",
+            "row": 3,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "ROAD",
+            "text": "A route built for vehicles.",
+            "row": 6,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "LAKE",
+            "text": "A large inland body of water.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "CONTOUR",
+            "text": "A map line joining points of equal elevation.",
+            "row": 6,
+            "col": 1,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "COMPASS",
+            "text": "An instrument with a needle pointing north.",
+            "row": 5,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "SCALE",
+            "text": "The ratio between a map distance and a real distance.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "LEGEND",
+            "text": "A guide explaining a map's symbols.",
+            "row": 3,
+            "col": 1,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 9,
+            "answer": "CHART",
+            "text": "A map used for navigation at sea.",
+            "row": 7,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "EAST",
+            "text": "The direction opposite west.",
+            "row": 1,
+            "col": 10,
+            "down": false
+          },
+          {
+            "number": 10,
+            "answer": "ROAD",
+            "text": "A route built for vehicles.",
+            "row": 8,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "LAKE",
+            "text": "A large inland body of water.",
+            "row": 1,
+            "col": 18,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "CONTOUR",
+            "text": "A map line joining points of equal elevation.",
+            "row": 2,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "COMPASS",
+            "text": "An instrument with a needle pointing north.",
+            "row": 1,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "SCALE",
+            "text": "The ratio between a map distance and a real distance.",
+            "row": 1,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "LEGEND",
+            "text": "A guide explaining a map's symbols.",
+            "row": 1,
+            "col": 18,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "MERIDIAN",
+            "text": "A line of longitude.",
+            "row": 5,
+            "col": 11,
+            "down": false
+          },
+          {
+            "number": 11,
+            "answer": "AZIMUTH",
+            "text": "A direction expressed as an angle around the horizon.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "TOPOGRAPHY",
+            "text": "The shape and features of a land surface.",
+            "row": 3,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "CARTOGRAPHY",
+            "text": "The art and science of making maps.",
+            "row": 0,
+            "col": 6,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d06",
+      "title": "Ways of Seeing",
+      "scene": 5,
+      "pack": "Daily Editions",
+      "date": "2026-10-10",
+      "variants": [
+        [
+          {
+            "number": 2,
+            "answer": "PAINT",
+            "text": "A coloured material applied with a brush.",
+            "row": 2,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "LINE",
+            "text": "A mark traced between points.",
+            "row": 0,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "TONE",
+            "text": "The lightness or darkness of a colour.",
+            "row": 5,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "FRAME",
+            "text": "A border that holds or surrounds a picture.",
+            "row": 3,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 3,
+            "answer": "PAINT",
+            "text": "A coloured material applied with a brush.",
+            "row": 5,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "LINE",
+            "text": "A mark traced between points.",
+            "row": 6,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "TONE",
+            "text": "The lightness or darkness of a colour.",
+            "row": 0,
+            "col": 13,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "FRAME",
+            "text": "A border that holds or surrounds a picture.",
+            "row": 3,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "CANVAS",
+            "text": "A woven surface commonly used for paintings.",
+            "row": 8,
+            "col": 1,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "PALETTE",
+            "text": "A surface for mixing paint colours.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "PIGMENT",
+            "text": "A substance that gives paint its colour.",
+            "row": 5,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "FRESCO",
+            "text": "Painting on freshly laid wet plaster.",
+            "row": 3,
+            "col": 9,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 7,
+            "answer": "PAINT",
+            "text": "A coloured material applied with a brush.",
+            "row": 6,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "LINE",
+            "text": "A mark traced between points.",
+            "row": 4,
+            "col": 15,
+            "down": true
+          },
+          {
+            "number": 9,
+            "answer": "TONE",
+            "text": "The lightness or darkness of a colour.",
+            "row": 7,
+            "col": 14,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "FRAME",
+            "text": "A border that holds or surrounds a picture.",
+            "row": 1,
+            "col": 20,
+            "down": false
+          },
+          {
+            "number": 11,
+            "answer": "CANVAS",
+            "text": "A woven surface commonly used for paintings.",
+            "row": 9,
+            "col": 12,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "PALETTE",
+            "text": "A surface for mixing paint colours.",
+            "row": 7,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "PIGMENT",
+            "text": "A substance that gives paint its colour.",
+            "row": 5,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "FRESCO",
+            "text": "Painting on freshly laid wet plaster.",
+            "row": 0,
+            "col": 21,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "SGRAFFITO",
+            "text": "A technique that scratches through a surface to reveal a lower layer.",
+            "row": 4,
+            "col": 10,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "GOUACHE",
+            "text": "An opaque water-based paint.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "TRIPTYCH",
+            "text": "An artwork made of three panels.",
+            "row": 11,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "IMPASTO",
+            "text": "Paint applied thickly enough to show texture.",
+            "row": 5,
+            "col": 15,
+            "down": false
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np1-d07",
+      "title": "Across the Board",
+      "scene": 4,
+      "pack": "Daily Editions",
+      "date": "2026-10-11",
+      "variants": [
+        [
+          {
+            "number": 2,
+            "answer": "BOARD",
+            "text": "The sixty-four-square surface used for chess.",
+            "row": 1,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "PAWN",
+            "text": "A chess piece that usually advances one square.",
+            "row": 0,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "ROOK",
+            "text": "A chess piece that moves along ranks and files.",
+            "row": 5,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "BISHOP",
+            "text": "A chess piece that moves diagonally.",
+            "row": 1,
+            "col": 2,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 6,
+            "answer": "BOARD",
+            "text": "The sixty-four-square surface used for chess.",
+            "row": 5,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "PAWN",
+            "text": "A chess piece that usually advances one square.",
+            "row": 0,
+            "col": 10,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "ROOK",
+            "text": "A chess piece that moves along ranks and files.",
+            "row": 5,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "KNIGHT",
+            "text": "A chess piece that moves in an L shape.",
+            "row": 7,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "BISHOP",
+            "text": "A chess piece that moves diagonally.",
+            "row": 0,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "QUEEN",
+            "text": "The chess piece combining rook and bishop moves.",
+            "row": 3,
+            "col": 1,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "GAMBIT",
+            "text": "An opening offer of material for an advantage.",
+            "row": 2,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "CASTLING",
+            "text": "A move involving both king and rook.",
+            "row": 3,
+            "col": 4,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 9,
+            "answer": "BOARD",
+            "text": "The sixty-four-square surface used for chess.",
+            "row": 7,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "PAWN",
+            "text": "A chess piece that usually advances one square.",
+            "row": 12,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 10,
+            "answer": "ROOK",
+            "text": "A chess piece that moves along ranks and files.",
+            "row": 7,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "KNIGHT",
+            "text": "A chess piece that moves in an L shape.",
+            "row": 9,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "BISHOP",
+            "text": "A chess piece that moves diagonally.",
+            "row": 7,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "QUEEN",
+            "text": "The chess piece combining rook and bishop moves.",
+            "row": 0,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "GAMBIT",
+            "text": "An opening offer of material for an advantage.",
+            "row": 4,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "CASTLING",
+            "text": "A move involving both king and rook.",
+            "row": 4,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "ZUGZWANG",
+            "text": "A position in which having to move is a disadvantage.",
+            "row": 7,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "STALEMATE",
+            "text": "No legal move while the king is not in check.",
+            "row": 2,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "FORK",
+            "text": "An attack on two or more pieces at once.",
+            "row": 6,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "PIN",
+            "text": "An attack that restricts a piece because of what lies behind it.",
+            "row": 6,
+            "col": 1,
+            "down": true
+          }
+        ]
+      ]
+    },
+    {
+      "id": "np2-thanksgiving-table",
+      "title": "Gather Around the Table",
+      "scene": 3,
+      "date": "",
+      "packId": "thanksgiving-2026",
+      "packTitle": "Thanksgiving",
+      "availableFrom": "2026-11-04",
+      "variants": [
+        [
+          {
+            "number": 4,
+            "answer": "TURKEY",
+            "text": "A large bird often served at a Thanksgiving meal.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "PIE",
+            "text": "A baked dessert with a pastry crust.",
+            "row": 2,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "CORN",
+            "text": "A crop with kernels growing on a cob.",
+            "row": 2,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "FEAST",
+            "text": "A large meal shared for a celebration.",
+            "row": 0,
+            "col": 0,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 2,
+            "answer": "TURKEY",
+            "text": "A large bird often served at a Thanksgiving meal.",
+            "row": 0,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "PIE",
+            "text": "A baked dessert with a pastry crust.",
+            "row": 6,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "CORN",
+            "text": "A crop with kernels growing on a cob.",
+            "row": 10,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "FEAST",
+            "text": "A large meal shared for a celebration.",
+            "row": 0,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "HARVEST",
+            "text": "The gathering of ripe crops.",
+            "row": 2,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "GRATITUDE",
+            "text": "The feeling of being thankful.",
+            "row": 4,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "CRANBERRY",
+            "text": "A tart red berry often made into sauce.",
+            "row": 12,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "PUMPKIN",
+            "text": "An orange squash often used in autumn pies.",
+            "row": 6,
+            "col": 3,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 1,
+            "answer": "TURKEY",
+            "text": "A large bird often served at a Thanksgiving meal.",
+            "row": 0,
+            "col": 15,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "PIE",
+            "text": "A baked dessert with a pastry crust.",
+            "row": 16,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "CORN",
+            "text": "A crop with kernels growing on a cob.",
+            "row": 6,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "FEAST",
+            "text": "A large meal shared for a celebration.",
+            "row": 3,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "HARVEST",
+            "text": "The gathering of ripe crops.",
+            "row": 12,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "GRATITUDE",
+            "text": "The feeling of being thankful.",
+            "row": 5,
+            "col": 8,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "CRANBERRY",
+            "text": "A tart red berry often made into sauce.",
+            "row": 1,
+            "col": 11,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "PUMPKIN",
+            "text": "An orange squash often used in autumn pies.",
+            "row": 11,
+            "col": 7,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "GATHER",
+            "text": "To come together in one place.",
+            "row": 8,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "TRADITION",
+            "text": "A custom passed from one generation to another.",
+            "row": 3,
+            "col": 13,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "CORNUCOPIA",
+            "text": "A horn-shaped container overflowing with produce.",
+            "row": 1,
+            "col": 11,
+            "down": false
+          },
+          {
+            "number": 10,
+            "answer": "ABUNDANCE",
+            "text": "A plentiful supply.",
+            "row": 13,
+            "col": 0,
+            "down": false
+          }
+        ]
+      ],
+      "artwork": "artwork/thanksgiving-2026-v1.jpg"
+    },
+    {
+      "id": "np2-christmas-lights",
+      "title": "A Season of Lights",
+      "scene": 3,
+      "date": "",
+      "packId": "christmas-2026",
+      "packTitle": "Christmas",
+      "availableFrom": "2026-12-01",
+      "variants": [
+        [
+          {
+            "number": 4,
+            "answer": "TREE",
+            "text": "An evergreen often decorated for Christmas.",
+            "row": 3,
+            "col": 2,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "STAR",
+            "text": "A shape often placed at the top of a Christmas tree.",
+            "row": 0,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "BELL",
+            "text": "A hollow instrument that rings when struck.",
+            "row": 2,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "GIFT",
+            "text": "Something given to another person.",
+            "row": 1,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 8,
+            "answer": "TREE",
+            "text": "An evergreen often decorated for Christmas.",
+            "row": 9,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "STAR",
+            "text": "A shape often placed at the top of a Christmas tree.",
+            "row": 1,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "BELL",
+            "text": "A hollow instrument that rings when struck.",
+            "row": 3,
+            "col": 5,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "GIFT",
+            "text": "Something given to another person.",
+            "row": 9,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "CAROL",
+            "text": "A song traditionally sung at Christmas.",
+            "row": 3,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "WREATH",
+            "text": "A decorative ring of leaves or branches.",
+            "row": 0,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "STOCKING",
+            "text": "A long sock sometimes hung for small Christmas gifts.",
+            "row": 2,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "ORNAMENT",
+            "text": "A decoration hung on a tree.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 2,
+            "answer": "TREE",
+            "text": "An evergreen often decorated for Christmas.",
+            "row": 1,
+            "col": 6,
+            "down": false
+          },
+          {
+            "number": 5,
+            "answer": "STAR",
+            "text": "A shape often placed at the top of a Christmas tree.",
+            "row": 7,
+            "col": 12,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "BELL",
+            "text": "A hollow instrument that rings when struck.",
+            "row": 15,
+            "col": 1,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "GIFT",
+            "text": "Something given to another person.",
+            "row": 8,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "CAROL",
+            "text": "A song traditionally sung at Christmas.",
+            "row": 14,
+            "col": 5,
+            "down": false
+          },
+          {
+            "number": 12,
+            "answer": "WREATH",
+            "text": "A decorative ring of leaves or branches.",
+            "row": 18,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "STOCKING",
+            "text": "A long sock sometimes hung for small Christmas gifts.",
+            "row": 0,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "ORNAMENT",
+            "text": "A decoration hung on a tree.",
+            "row": 6,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "EVERGREEN",
+            "text": "A plant that keeps its leaves throughout the year.",
+            "row": 4,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "GINGERBREAD",
+            "text": "A spiced baked treat often shaped into people or houses.",
+            "row": 9,
+            "col": 7,
+            "down": true
+          },
+          {
+            "number": 11,
+            "answer": "REINDEER",
+            "text": "A northern deer associated with Santa's sleigh.",
+            "row": 16,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 8,
+            "answer": "TINSEL",
+            "text": "Thin shiny strips used as festive decoration.",
+            "row": 11,
+            "col": 5,
+            "down": false
+          }
+        ]
+      ],
+      "artwork": "artwork/christmas-2026-v1.jpg"
+    },
+    {
+      "id": "np2-fourth-of-july",
+      "title": "Stars, Stripes and Summer",
+      "scene": 4,
+      "date": "",
+      "packId": "independence-day-2027",
+      "packTitle": "Fourth of July",
+      "availableFrom": "2027-06-20",
+      "variants": [
+        [
+          {
+            "number": 2,
+            "answer": "FLAG",
+            "text": "A piece of fabric used as a national symbol.",
+            "row": 2,
+            "col": 3,
+            "down": true
+          },
+          {
+            "number": 1,
+            "answer": "STAR",
+            "text": "One of fifty symbols on the United States flag.",
+            "row": 0,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "PARADE",
+            "text": "A procession held for a celebration.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "STRIPES",
+            "text": "The alternating bands on the United States flag.",
+            "row": 0,
+            "col": 0,
+            "down": true
+          }
+        ],
+        [
+          {
+            "number": 2,
+            "answer": "FLAG",
+            "text": "A piece of fabric used as a national symbol.",
+            "row": 1,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 7,
+            "answer": "STAR",
+            "text": "One of fifty symbols on the United States flag.",
+            "row": 12,
+            "col": 9,
+            "down": false
+          },
+          {
+            "number": 6,
+            "answer": "PARADE",
+            "text": "A procession held for a celebration.",
+            "row": 9,
+            "col": 11,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "PICNIC",
+            "text": "A meal eaten outdoors.",
+            "row": 9,
+            "col": 11,
+            "down": false
+          },
+          {
+            "number": 4,
+            "answer": "STRIPES",
+            "text": "The alternating bands on the United States flag.",
+            "row": 6,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "LIBERTY",
+            "text": "The condition of being free.",
+            "row": 2,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "FIREWORKS",
+            "text": "Colorful displays of light in the night sky.",
+            "row": 0,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 5,
+            "answer": "SUMMER",
+            "text": "The season that includes July in the Northern Hemisphere.",
+            "row": 8,
+            "col": 4,
+            "down": false
+          }
+        ],
+        [
+          {
+            "number": 5,
+            "answer": "FLAG",
+            "text": "A piece of fabric used as a national symbol.",
+            "row": 5,
+            "col": 8,
+            "down": false
+          },
+          {
+            "number": 9,
+            "answer": "STAR",
+            "text": "One of fifty symbols on the United States flag.",
+            "row": 11,
+            "col": 16,
+            "down": true
+          },
+          {
+            "number": 4,
+            "answer": "PARADE",
+            "text": "A procession held for a celebration.",
+            "row": 4,
+            "col": 4,
+            "down": true
+          },
+          {
+            "number": 6,
+            "answer": "PICNIC",
+            "text": "A meal eaten outdoors.",
+            "row": 6,
+            "col": 6,
+            "down": true
+          },
+          {
+            "number": 3,
+            "answer": "STRIPES",
+            "text": "The alternating bands on the United States flag.",
+            "row": 4,
+            "col": 0,
+            "down": false
+          },
+          {
+            "number": 1,
+            "answer": "LIBERTY",
+            "text": "The condition of being free.",
+            "row": 0,
+            "col": 2,
+            "down": true
+          },
+          {
+            "number": 8,
+            "answer": "FIREWORKS",
+            "text": "Colorful displays of light in the night sky.",
+            "row": 11,
+            "col": 8,
+            "down": false
+          },
+          {
+            "number": 3,
+            "answer": "SUMMER",
+            "text": "The season that includes July in the Northern Hemisphere.",
+            "row": 4,
+            "col": 0,
+            "down": true
+          },
+          {
+            "number": 10,
+            "answer": "INDEPENDENCE",
+            "text": "Freedom from another country's control.",
+            "row": 13,
+            "col": 3,
+            "down": false
+          },
+          {
+            "number": 7,
+            "answer": "DECLARATION",
+            "text": "A formal public statement.",
+            "row": 8,
+            "col": 4,
+            "down": false
+          },
+          {
+            "number": 2,
+            "answer": "CELEBRATION",
+            "text": "An occasion that marks a happy event.",
+            "row": 3,
+            "col": 9,
+            "down": true
+          },
+          {
+            "number": 2,
+            "answer": "COMMUNITY",
+            "text": "People connected by a shared place or interest.",
+            "row": 3,
+            "col": 9,
+            "down": false
+          }
+        ]
+      ],
+      "artwork": "artwork/independence-day-2027-v1.jpg"
+    }
+  ]
+}
