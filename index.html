@@ -310,45 +310,93 @@
         family memory collections, and more.
       </p>
 
-<!-- MY BOOKS APP PREVIEW VIDEO -->
-<div style="
-  max-width:440px;
-  width:100%;
-  margin:26px 0;
-">
 
-  <p style="
-    color:#d5ad72;
-    font-weight:700;
-    font-size:15px;
-    margin-bottom:12px;
-  ">
-    See My Books in Action
-  </p>
+<!-- MY BOOKS APP STORE JOURNEY -->
+<div class="my-books-journey-layout">
 
-  <video
-    controls
-    playsinline
-    preload="metadata"
-    style="
-      display:block;
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      border:1px solid rgba(213,173,114,.35);
-      background:#10151e;
-      box-shadow:0 12px 28px rgba(0,0,0,.35);
-    "
-  >
-    <source
-      src="/my-books-preview.mp4"
-      type="video/mp4"
-    >
-    Your browser does not support video playback.
-  </video>
+  <!-- APPLE ANNOUNCEMENT VIDEO -->
+  <div class="my-books-journey-video">
+    <p class="my-books-journey-label">
+      SEE MY BOOKS IN ACTION
+    </p>
 
+    <video controls playsinline preload="metadata">
+      <source
+        src="/my-books-preview.mp4"
+        type="video/mp4"
+      >
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <!-- JOURNEY STORY -->
+  <div class="my-books-journey-story">
+
+    <p class="my-books-journey-label">
+      A TOS CREATIONS JOURNEY
+    </p>
+
+    <h3>From an Idea to the App Store</h3>
+
+    <p class="my-books-journey-intro">
+      Every creation begins with an idea.
+      My Books began with a simple vision:
+      give people a beautiful place to
+      create and preserve their stories.
+    </p>
+
+    <div class="my-books-timeline">
+
+      <div class="my-books-milestone">
+        <h4>01 — The Idea</h4>
+        <p>
+          What started as a personal creative
+          project became the beginning of
+          something bigger.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>02 — Development</h4>
+        <p>
+          From early designs to interactive
+          bookshelves, page turning, and
+          creative editing tools, each step
+          brought the idea closer to life.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>03 — Test & Refine</h4>
+        <p>
+          Family and beta testers helped
+          shape the experience through
+          feedback, adjustments, and
+          countless little improvements.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>04 — The App Store</h4>
+        <p>
+          After development and testing,
+          My Books received Apple's approval
+          and became available for others
+          to download and enjoy.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="my-books-journey-closing">
+      One idea. Many lessons.
+      A new beginning.
+    </p>
+
+  </div>
 </div>
-<!-- END MY BOOKS APP PREVIEW VIDEO -->
+<!-- END MY BOOKS APP STORE JOURNEY -->
+
 
      
 
@@ -689,6 +737,121 @@ label[for="my-books-testing"] {
 
   .my-books-tab-buttons label {
     flex: 1;
+  }
+}
+
+/* MY BOOKS — APP STORE JOURNEY */
+
+.my-books-journey-layout {
+  display:grid;
+  grid-template-columns:minmax(0,440px) minmax(0,1fr);
+  gap:32px;
+  align-items:start;
+  width:100%;
+  margin:28px 0;
+}
+
+.my-books-journey-video,
+.my-books-journey-story {
+  min-width:0;
+}
+
+.my-books-journey-label {
+  color:#d5ad72;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  margin:0 0 15px;
+}
+
+.my-books-journey-video video {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid rgba(213,173,114,.35);
+  border-radius:14px;
+  background:#10151e;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+.my-books-journey-story {
+  padding:25px;
+  border:1px solid rgba(213,173,114,.25);
+  border-radius:15px;
+  background:linear-gradient(145deg,#192535,#111b28);
+}
+
+.my-books-journey-story h3 {
+  margin:0 0 15px;
+  color:#f6f3ed;
+  font-family:Georgia,serif;
+  font-size:clamp(23px,2.5vw,31px);
+  line-height:1.3;
+}
+
+.my-books-journey-intro {
+  color:#b6c0cc;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.my-books-timeline {
+  border-left:2px solid rgba(213,173,114,.35);
+  margin-left:7px;
+  padding-left:24px;
+}
+
+.my-books-milestone {
+  position:relative;
+  margin-bottom:22px;
+}
+
+.my-books-milestone::before {
+  content:"";
+  position:absolute;
+  width:11px;
+  height:11px;
+  left:-31px;
+  top:7px;
+  border-radius:50%;
+  background:#d5ad72;
+  box-shadow:0 0 0 4px #192535;
+}
+
+.my-books-milestone h4 {
+  color:#d5ad72;
+  font-size:16px;
+  margin:0 0 6px;
+}
+
+.my-books-milestone p {
+  color:#b6c0cc;
+  line-height:1.65;
+  margin:0;
+}
+
+.my-books-journey-closing {
+  margin:20px 0 0;
+  color:#d5ad72;
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:18px;
+}
+
+/* Mobile and tablet */
+@media(max-width:800px) {
+  .my-books-journey-layout {
+    grid-template-columns:minmax(0,1fr);
+    gap:24px;
+  }
+
+  .my-books-journey-video {
+    max-width:440px;
+    width:100%;
+  }
+
+  .my-books-journey-story {
+    padding:20px;
   }
 }
 
