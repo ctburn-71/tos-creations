@@ -253,7 +253,28 @@
     margin-top: 36px;
   }
 }
+@media (max-width: 600px) {
+  .my-books-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    align-items: stretch;
+  }
 
+  .my-books-links a:first-child {
+    grid-column: 1 / -1;   /* top App Store button spans full width */
+    width: 100% !important;
+  }
+
+  .my-books-links a:nth-child(2),
+  .my-books-links a:nth-child(3) {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+  }
+}
   </style>
 </head>
 
