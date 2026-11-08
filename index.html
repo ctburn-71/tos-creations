@@ -3,43 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-updateClock();
-setInterval(updateClock, 1000);
-async function updateWeather() {
-    const temperatureDisplay =
-        document.querySelector("#currentTemperature");
-
-    const weatherUrl =
-        "https://api.open-meteo.com/v1/forecast" +
-        "?latitude=42.8276" +
-        "&longitude=-88.7375" +
-        "&current=temperature_2m" +
-        "&temperature_unit=fahrenheit";
-
-    try {
-        const response = await fetch(weatherUrl);
-
-        if (!response.ok) {
-            throw new Error("Weather request failed");
-        }
-
-        const weatherData = await response.json();
-
-        const temperature =
-            Math.round(weatherData.current.temperature_2m);
-
-        temperatureDisplay.textContent =
-            temperature + "°";
-    } catch (error) {
-        temperatureDisplay.textContent =
-            "Weather unavailable";
-    }
-}
-
-updateWeather();
-
-// Refresh the weather every 10 minutes.
-setInterval(updateWeather, 600000);
   <title>TOS Creations | Apps Made Personal</title>
   <meta name="description"
         content="Discover creative applications from TOS Creations.">
