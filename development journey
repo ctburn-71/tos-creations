@@ -1,0 +1,313 @@
+# Revival Creek Homesteader
+## From an Idea to a Living Rural World
+
+**A TOS Creations Original Game**
+
+**Development began: November 1, 2026**  
+**Current status: In Active Development**  
+**Platform focus: Mobile, with future expansion opportunities**
+
+### The Vision — Before Development Began
+
+Revival Creek Homesteader began with a simple but ambitious idea: What if you discovered a nearly forgotten rural town and were given the freedom to bring it back to life?
+
+Not simply by completing missions or following a fixed storyline, but by choosing how you wanted to live.
+
+You might restore an old farmhouse, become a farmer, raise cattle, open a restaurant, operate a grocery store, build homes, or develop a business that helps the community grow.
+
+As more residents arrive, the town would gradually become a functioning community, with interconnected businesses, supplies, property ownership, employment and an evolving local economy.
+
+Weather, changing seasons, home improvements, vehicles, farming equipment, and eventually opportunities to share the experience with others would help create a world that feels alive.
+
+Our guiding vision has remained the same:
+
+**A town that starts nearly forgotten and becomes whatever the player chooses to make it.**
+
+---
+
+## Week 1 — November 1–7, 2026
+### Building the World from the Ground Up
+
+**November 1 — The First Piece of Land**
+
+Actual development began in Unity with the creation of the first terrain in a new scene named `RevivalCreek_Main`.
+
+What started as an empty development environment quickly became the beginning of a rural homestead.
+
+The first major additions included:
+
+- A farmhouse and front porch
+- An old wooden barn
+- A dirt and gravel driveway
+- Initial yard details and fencing
+- Terrain sculpting and rolling countryside
+- Basic lighting and environmental groundwork
+
+The original goal was not to make a collection of buildings. It was to establish a believable place where someone might actually want to live.
+
+**The first milestone was complete: Revival Creek had its first homestead.**
+
+### November 2–3 — Giving the World a Player
+
+The next milestone was making the environment explorable.
+
+Pete, our working player character, was introduced with a first-person walking controller, mouse-look, gravity and collision handling.
+
+Third-person camera functionality was added so players could experience the world from different perspectives.
+
+Movement and camera testing became an important part of development. We wanted the world to feel natural at ground level, not just look attractive from an overhead Unity camera.
+
+Development also expanded toward vehicles, including a pickup truck that players could enter, drive and view from different camera positions.
+
+For the first time, the homestead was becoming a place you could actually explore.
+
+### November 4–5 — The Town Begins to Take Shape
+
+Attention expanded beyond the farmhouse and barn to the nearby township.
+
+Work introduced and developed the community hardware store, town buildings, roads, access areas and additional environmental details.
+
+An important gameplay rule was established:
+
+**Community Hardware is the town's permanent supply store. It operates from the beginning and cannot be purchased or taken over by the player.**
+
+The hardware store would eventually become a critical part of the town's economy, supplying materials for repairs, improvements and construction.
+
+Other structures were intended to look weathered and aged. Only the diner would begin boarded up, awaiting restoration.
+
+The pickup also became an increasingly important part of the experience, allowing travel between the homestead and town.
+
+### November 5–7 — Creating a More Natural Landscape
+
+The countryside began to receive significant attention.
+
+Work included:
+
+- Expanding and refining rural roads
+- Improving the meadow and countryside appearance
+- Creating more natural distant hills and mountain ridges
+- Adding trees and environmental transitions
+- Developing the winding creek and its banks
+- Testing water appearance and vehicle access near the creek
+- Refining the overall appearance of the town and surrounding countryside
+
+The goal was realism without sacrificing mobile performance.
+
+We also began planning residential development, including a winding neighborhood road, additional homes, and future opportunities for population growth.
+
+By the end of the first week, Revival Creek was no longer just a farmhouse in an empty field. It was becoming a recognizable rural world with roads, buildings, countryside, a creek, and opportunities for future expansion.
+
+---
+
+## Week 2 — November 8–9, 2026
+### Turning the Landscape into a Playable Game
+
+The second development week began with an important transition.
+
+Rather than concentrating only on what the world looked like, we focused on **what players could actually do inside it**.
+
+### Entering Community Hardware
+
+The hardware store became an interactive building with a working entrance, interior space, service counter and shelving.
+
+Door operation was integrated into the existing player interaction controls.
+
+This established the foundation for entering buildings and eventually interacting with businesses throughout the town.
+
+### The First Hands-On Construction System
+
+We introduced a construction system allowing Pete to place and adjust physical objects.
+
+Early construction work began with shelving and a cabinet before expanding into outdoor fences and gates.
+
+The system grew to include:
+
+- A Build/Move interface
+- Placement previews
+- Object rotation and finish options
+- Position adjustment and snapping
+- Placement restrictions and collision checking
+- Material costs
+- Undo functionality
+- Save and Load controls
+- In-game instructions
+
+Construction began evolving from a technical placement experiment into an actual gameplay activity.
+
+### Fence and Gate Construction
+
+We developed wooden fence sections and a working hinged gate.
+
+Fence sections could connect through endpoint snapping, and the gate could be opened and closed by the player.
+
+The system also began recognizing connected fence boundaries and enclosed areas, laying the foundation for future pastures and livestock.
+
+Different finishes and resource requirements introduced more choice into construction.
+
+**The first practical step toward building a working farm was underway.**
+
+### The First Working Supply Economy
+
+One of the biggest milestones was connecting construction with the community hardware store.
+
+Instead of receiving unlimited free construction materials, Pete could now purchase supplies using in-game money.
+
+The first working economy introduced:
+
+- A player wallet
+- Construction timber and fittings
+- A shopping interface at Community Hardware
+- Purchase confirmation and cost calculations
+- A Homestead Supply Bay near the barn
+- Purchased-material storage
+- Construction using purchased resources
+- Material refunds through Undo
+- Persistent saving of money, supplies, purchases and structures
+
+In testing, Pete began with $300 and could purchase 36 timber and 10 fittings for $224.
+
+The remaining $76 stayed in his wallet, and materials were deducted as he built.
+
+This was an especially important milestone because it connected several systems into one continuous activity:
+
+**Visit town. Buy materials. Return home. Build something. Save your progress.**
+
+### Making the Game Easier to Understand
+
+Personal gameplay testing revealed something that automated tests could not: the construction areas were difficult to locate.
+
+Players were being guided using development coordinates and invisible boundaries.
+
+We improved the experience by introducing named locations, directional guidance, distance indicators and visible property markers.
+
+The hardware store, Homestead Supply Bay and Pasture Construction Area became recognizable destinations rather than sets of numerical coordinates.
+
+Construction feedback was also improved so the player could understand why a location was unavailable.
+
+Our approach became increasingly clear:
+
+**The game should be challenging because of what the player wants to accomplish, not because simple controls are difficult to understand.**
+
+### The Homestead Becomes Player-Owned Property
+
+The next major milestone was moving beyond small construction-testing areas.
+
+Pete was given an initial property measuring approximately 90 × 90 metres, or two acres.
+
+Ownership and building permissions became separate systems, allowing construction across suitable areas of the property rather than within one tiny square.
+
+Named protected areas were established around existing buildings, trees, the driveway, the barn entrance, and essential access routes.
+
+Construction was verified in both the Rear Pasture and West Meadow.
+
+This was the first major step toward giving players genuine freedom to develop their land.
+
+### Refining the Construction Experience
+
+As construction became more flexible, personal testing identified another important issue: moving an existing fence panel was unnecessarily difficult.
+
+Development continued to improve walking while building, selecting individual panels, editing their position and rotation, preserving materials and saving changes.
+
+A particularly useful debugging session revealed that the interface was allowing a fence to be highlighted without clearly entering the actual editing mode. Distance-related feedback was also being hidden by generic instructions.
+
+After identifying the real interaction problem, we corrected the selection-to-edit workflow.
+
+The result was an easier way for players to work with individual structures without needing to rebuild an entire fence.
+
+By November 9, this issue had passed personal gameplay review.
+
+**A small usability improvement, but an important achievement for the kind of game we want Revival Creek to become.**
+
+---
+
+## Development Progress as of November 9, 2026
+
+### Created and Playable
+
+- An initial rural world with rolling terrain and countryside scenery
+- Farmhouse, barn, driveway and homestead environment
+- A growing township with multiple structures
+- Community hardware store with interactive entrance and interior
+- Rural roads, residential development areas and surrounding landscape
+- Creek, banks, distant ridges and woodland features
+- First-person and third-person player movement
+- Drivable pickup truck with camera options
+- Basic hands-on construction
+- Wooden fencing and an interactive gate
+- Individual fence and gate editing
+- Player-owned homestead property
+- Protected construction areas and property boundaries
+- Player wallet and hardware-store purchasing
+- Homestead material storage
+- Construction resource consumption and Undo refunds
+- Saving, loading and recovery protections
+- In-game navigation guidance and construction instructions
+
+### In Development or Planned
+
+- Functional farmhouse and barn interiors
+- Home renovations, paint, flooring, furniture and customization
+- Additional property and land ownership
+- Larger fences, multiple pastures and livestock handling
+- Crop planting, gardens, harvesting and farming income
+- Tractors, implements and additional vehicles
+- Restoration and operation of the diner and other businesses
+- Resident housing, population growth and town employment
+- A more complete supply, production and trading economy
+- Dynamic weather and seasonal changes
+- Optional real-world ZIP-code-based weather
+- Expanded player livelihoods
+- Future shared-world and multiplayer possibilities
+
+These features are part of the development vision; they should not be considered completed gameplay until built and tested.
+
+---
+
+## The Business Plan
+
+Revival Creek Homesteader is being designed as a TOS Creations original game with a player-friendly purchasing model.
+
+Our current proposed approach is:
+
+**14 days free to experience the game, followed by a one-time $9.99 permanent unlock.**
+
+There would be no required annual subscription and no automatic charge when the trial expires.
+
+Players who choose to purchase would retain their existing world and progress.
+
+Optional expansion bundles are also planned for home customization, farming equipment, business improvements, vehicles and additional lifestyle experiences.
+
+The goal is to make players want more because they enjoy what the game offers—not because the basic experience is intentionally frustrating or incomplete.
+
+These commercial features remain in the planning stage and may be refined before release.
+
+---
+
+## What Comes Next?
+
+Our next major development objective is to begin turning the existing farmhouse into a usable home.
+
+That means moving from an exterior building to a structure Pete can actually enter, explore, repair and customize.
+
+Future construction will build on the property ownership, purchasing and object-placement systems developed during these first two weeks.
+
+From there, we can begin introducing more meaningful farming activities, equipment, livestock, businesses and community development.
+
+Revival Creek Homesteader is still early in development. Much of the larger gameplay vision remains ahead of us.
+
+But in the first nine days of hands-on Unity work, the project has progressed from an empty landscape into a playable rural environment with driving, interactive buildings, purchasing, construction, property ownership and persistent player progress.
+
+### The TOS Creations Philosophy
+
+**Simple to control. Challenging to build. Rewarding to master.**
+
+Revival Creek is about freedom, creativity, hard work and opportunity.
+
+The challenge should come from developing a homestead, running a business, managing a farm, earning a living and helping a forgotten town grow.
+
+It should never come from struggling to move a simple fence panel.
+
+**The goal isn't simply to rebuild a town. It's to give players the freedom to build a life.**
+
+*Revival Creek Homesteader — A TOS Creations Original*  
+*Development Journal — November 9, 2026*
