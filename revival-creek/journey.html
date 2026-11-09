@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Revival Creek Development Journey | TOS Creations</title>
+
+  <meta name="description"
+    content="Follow the weekly development journey of Revival Creek Homesteader, an original rural town rebuilding game from TOS Creations.">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #10151e;
+      color: #b6c0cc;
+      font-family: Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(1100px, 100%);
+      margin: auto;
+      padding: 35px 22px 70px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 25px;
+      border: 1px solid rgba(213,173,114,.3);
+      border-radius: 18px;
+      background: linear-gradient(145deg,#222d3a,#121923);
+    }
+
+    .eyebrow {
+      color: #d5ad72;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h1, h2, h3 {
+      color: #f6f3ed;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(30px,5vw,48px);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(24px,4vw,32px);
+    }
+
+    h3 {
+      color: #d5ad72;
+      font-size: 19px;
+      margin-top: 28px;
+    }
+
+    p { margin: 12px 0; }
+
+    .gold { color: #d5ad72; }
+
+    .card {
+      background: linear-gradient(145deg,#202c3b,#121923);
+      border: 1px solid rgba(213,173,114,.3);
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 32px;
+    }
+
+    .week {
+      margin-top: 22px;
+      border: 1px solid rgba(213,173,114,.35);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #151f2c;
+    }
+
+    .week summary {
+      padding: 22px 25px;
+      cursor: pointer;
+      color: #d5ad72;
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .week summary:hover {
+      background: rgba(213,173,114,.08);
+    }
+
+    .week summary:focus-visible {
+      outline: 2px solid #d5ad72;
+      outline-offset: -3px;
+    }
+
+    .week-content {
+      padding: 10px 26px 30px;
+      border-top: 1px solid rgba(213,173,114,.2);
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .statement {
+      color: #d5ad72;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 20px;
+      text-align: center;
+      margin: 28px auto;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      max-width: 100%;
+      padding: 13px 24px;
+      margin-top: 22px;
+      background: #d5ad72;
+      color: #10151e;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .muted {
+      font-size: 13px;
+      color: #98a7b8;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 55px;
+      color: #98a7b8;
+      font-size: 13px;
+    }
+
+    @media(max-width:600px) {
+      .container { padding: 16px 12px 45px; }
+      .hero { padding: 30px 18px; }
+      .card { padding: 22px 16px; }
+      .week summary { padding: 18px 14px; font-size: 17px; }
+      .week-content { padding: 10px 16px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+<main class="container">
+
+  <!-- PAGE INTRODUCTION -->
+  <header class="hero">
+    <p class="eyebrow">TOS CREATIONS ORIGINAL GAME</p>
+
+    <h1>Revival Creek Homesteader</h1>
+
+    <h2 class="gold">From an Idea to a Living Rural World</h2>
+
+    <p>
+      Follow the journey of creating a forgotten rural town
+      that players can rebuild, explore, and make their own.
+    </p>
+
+    <p class="muted">
+      Development began: November 1, 2026
+      <br>
+      Current status: In Active Development
+      <br>
+      Platform focus: Mobile
+    </p>
+
+    <a class="button" href="/">
+      Return to TOS Creations ↗
+    </a>
+  </header>
+
+  <!-- ORIGINAL VISION -->
+  <section class="card">
+    <h2>The Vision — Before Development Began</h2>
+
+    <p>
+      Revival Creek Homesteader began with a simple but
+      ambitious idea: What if you discovered a nearly
+      forgotten rural town and were given the freedom
+      to bring it back to life?
+    </p>
+
+    <p>
+      Not simply by completing missions or following a
+      fixed storyline, but by choosing how you wanted to live.
+    </p>
+
+    <p>
+      You might restore an old farmhouse, become a farmer,
+      raise cattle, open a restaurant, operate a grocery store,
+      build homes, or develop a business that helps the
+      community grow.
+    </p>
+
+    <p>
+      As more residents arrive, the town would gradually
+      become a functioning community, with interconnected
+      businesses, supplies, property ownership, employment,
+      and an evolving local economy.
+    </p>
+
+    <p>
+      Weather, changing seasons, home improvements, vehicles,
+      farming equipment, and eventually opportunities to share
+      the experience with others would help create a world
+      that feels alive.
+    </p>
+
+    <p class="statement">
+      A town that starts nearly forgotten and becomes
+      whatever the player chooses to make it.
+    </p>
+  </section>
+
+  <!-- WEEKLY DEVELOPMENT JOURNAL -->
+  <section class="card">
+    <h2>The Weekly Development Journey</h2>
+
+    <p>
+      Explore the progress, challenges, and milestones
+      as Revival Creek grows from an idea into a playable world.
+    </p>
+
+    <!-- WEEK 1 -->
+    <details class="week" open>
+      <summary>
+        Week 1 — November 1–7, 2026
+        <br>
+        Building the World from the Ground Up
+      </summary>
+
+      <div class="week-content">
+
+        <h3>November 1 — The First Piece of Land</h3>
+
+        <p>
+          Development began in Unity with the creation
+          of the first terrain in a new scene named
+          RevivalCreek_Main.
+        </p>
+
+        <p>
+          What started as an empty development environment
+          quickly became the beginning of a rural homestead.
+        </p>
+
+        <p>The first major additions included:</p>
+
+        <ul>
+          <li>A farmhouse and front porch</li>
+          <li>An old wooden barn</li>
+          <li>A dirt and gravel driveway</li>
+          <li>Initial yard details and fencing</li>
+          <li>Terrain sculpting and rolling countryside</li>
+          <li>Basic lighting and environmental groundwork</li>
+        </ul>
+
+        <p>
+          The original goal was not to make a collection of
+          buildings. It was to establish a believable place
+          where someone might actually want to live.
+        </p>
+
+        <p class="gold">
+          The first milestone was complete:
+          Revival Creek had its first homestead.
+        </p>
+
+        <h3>November 2–3 — Giving the World a Player</h3>
+
+        <p>
+          Pete, our working player character, was introduced
+          with first-person walking, mouse-look, gravity,
+          and collision handling.
+        </p>
+
+        <p>
+          Third-person camera functionality was added so
+          players could experience the world from different
+          perspectives.
+        </p>
+
+        <p>
+          Movement and camera testing became an important
+          part of development. We wanted the world to feel
+          natural at ground level, not just look attractive
+          from an overhead Unity camera.
+        </p>
+
+        <p>
+          Development expanded toward vehicles, including
+          a pickup truck that players could enter, drive,
+          and view from different camera positions.
+        </p>
+
+        <h3>November 4–5 — The Town Begins to Take Shape</h3>
+
+        <p>
+          Attention expanded beyond the farmhouse and barn
+          to the nearby township.
+        </p>
+
+        <p>
+          Work introduced the community hardware store,
+          town buildings, roads, access areas, and
+          environmental details.
+        </p>
+
+        <p class="gold">
+          Community Hardware is the town's permanent supply
+          store. It operates from the beginning and cannot
+          be purchased or taken over by the player.
+        </p>
+
+        <p>
+          The hardware store would become a critical part
+          of the town's economy, supplying materials for
+          repairs, improvements, and construction.
+        </p>
+
+        <p>
+          Other structures were designed to appear weathered
+          and aged. Only the diner would begin boarded up,
+          awaiting restoration.
+        </p>
+
+        <h3>November 5–7 — A More Natural Landscape</h3>
+
+        <p>Development continued with:</p>
+
+        <ul>
+          <li>Expanding and refining rural roads</li>
+          <li>Improving meadows and countryside scenery</li>
+          <li>Creating distant hills and mountain ridges</li>
+          <li>Adding trees and environmental transitions</li>
+          <li>Developing the winding creek and its banks</li>
+          <li>Testing water appearance and vehicle access</li>
+          <li>Refining the town and surrounding countryside</li>
+        </ul>
+
+        <p>
+          The goal was realism without sacrificing mobile
+          performance.
+        </p>
+
+        <p>
+          We also began planning residential development,
+          including additional homes, neighborhood roads,
+          and future population growth.
+        </p>
+
+        <p class="statement">
+          By the end of Week 1, Revival Creek was becoming
+          a recognizable rural world.
+        </p>
+
+      </div>
+    </details>
+
+    <!-- WEEK 2 -->
+    <details class="week">
+      <summary>
+        Week 2 — November 8–9, 2026
+        <br>
+        Turning the Landscape into a Playable Game
+      </summary>
+
+      <div class="week-content">
+
+        <p>
+          The second week focused on an important question:
+          What can players actually do inside Revival Creek?
+        </p>
+
+        <h3>Entering Community Hardware</h3>
+
+        <p>
+          The hardware store became an interactive building
+          with a working entrance, interior space, service
+          counter, and shelving.
+        </p>
+
+        <p>
+          Door operation was integrated into the existing
+          player interaction controls, establishing the
+          foundation for entering buildings throughout town.
+        </p>
+
+        <h3>The First Hands-On Construction System</h3>
+
+        <p>
+          A construction system was introduced, allowing
+          Pete to place and adjust physical objects.
+        </p>
+
+        <p>
+          Early work began with shelving and a cabinet before
+          expanding into outdoor fences and gates.
+        </p>
+
+        <ul>
+          <li>Build/Move interface</li>
+          <li>Placement previews</li>
+          <li>Object rotation and finish options</li>
+          <li>Position adjustment and snapping</li>
+          <li>Collision checking and placement restrictions</li>
+          <li>Material costs</li>
+          <li>Undo functionality</li>
+          <li>Save and Load controls</li>
+          <li>In-game instructions</li>
+        </ul>
+
+        <h3>Fence and Gate Construction</h3>
+
+        <p>
+          Wooden fence sections and a working hinged gate
+          were developed.
+        </p>
+
+        <p>
+          Fence sections could connect through endpoint
+          snapping, and the gate could be opened and closed.
+          Work also began on recognizing enclosed boundaries
+          for future pastures and livestock.
+        </p>
+
+        <h3>The First Working Supply Economy</h3>
+
+        <p>
+          One of the most significant milestones was
+          connecting construction with Community Hardware.
+        </p>
+
+        <p>
+          Instead of receiving unlimited free materials,
+          Pete could now purchase supplies using
+          in-game money.
+        </p>
+
+        <ul>
+          <li>Player wallet</li>
+          <li>Construction timber and fittings</li>
+          <li>Hardware store shopping interface</li>
+          <li>Purchase confirmation and cost calculations</li>
+          <li>Homestead Supply Bay near the barn</li>
+          <li>Purchased-material storage</li>
+          <li>Construction using purchased resources</li>
+          <li>Undo refunds</li>
+          <li>Persistent saving of money and materials</li>
+        </ul>
+
+        <p>
+          During testing, Pete began with $300 and purchased
+          36 timber and 10 fittings for $224, leaving $76
+          in his wallet.
+        </p>
+
+        <p class="statement">
+          Visit town. Buy materials. Return home.
+          Build something. Save your progress.
+        </p>
+
+        <h3>Making the Game Easier to Understand</h3>
+
+        <p>
+          Personal gameplay testing revealed that
+          construction areas were difficult to locate.
+        </p>
+
+        <p>
+          Development coordinates and invisible boundaries
+          were replaced with named locations, directional
+          guidance, distance indicators, and visible markers.
+        </p>
+
+        <p>
+          Community Hardware, the Homestead Supply Bay,
+          and the Pasture Construction Area became
+          recognizable destinations.
+        </p>
+
+        <p class="gold">
+          The game should be challenging because of what
+          players want to accomplish, not because simple
+          controls are difficult to understand.
+        </p>
+
+        <h3>Player-Owned Property</h3>
+
+        <p>
+          Pete received an initial property measuring
+          approximately 90 × 90 metres, or about two acres.
+        </p>
+
+        <p>
+          Ownership and building permissions were separated,
+          allowing construction across suitable property
+          areas while protecting existing structures,
+          trees, driveways, and essential access routes.
+        </p>
+
+        <p>
+          Construction was verified in both the Rear Pasture
+          and West Meadow.
+        </p>
+
+        <h3>Refining the Construction Experience</h3>
+
+        <p>
+          Personal testing identified difficulties when
+          selecting and moving existing fence panels.
+        </p>
+
+        <p>
+          Improvements addressed walking while building,
+          selecting individual pieces, editing position
+          and rotation, saving changes, and preserving
+          construction resources.
+        </p>
+
+        <p>
+          By November 9, the corrected selection-to-edit
+          workflow had passed personal gameplay review.
+        </p>
+
+        <p class="statement">
+          A small usability improvement, but an important
+          achievement for Revival Creek.
+        </p>
+
+      </div>
+    </details>
+
+    <!-- FUTURE WEEKLY ENTRIES GO HERE -->
+
+  </section>
+
+  <!-- DEVELOPMENT STATUS -->
+  <section class="card">
+    <h2>Development Progress</h2>
+
+    <p class="gold">As of November 9, 2026</p>
+
+    <h3>Created and Playable</h3>
+
+    <ul>
+      <li>Rural world, farmhouse, barn, and countryside</li>
+      <li>Growing township and interactive hardware store</li>
+      <li>First-person and third-person player movement</li>
+      <li>Drivable pickup truck and camera options</li>
+      <li>Hands-on construction and wooden fencing</li>
+      <li>Interactive gate and individual structure editing</li>
+      <li>Player-owned homestead property</li>
+      <li>Hardware-store purchasing and player wallet</li>
+      <li>Purchased-material storage and resource use</li>
+      <li>Saving, loading, and construction guidance</li>
+    </ul>
+
+    <h3>In Development or Planned</h3>
+
+    <ul>
+      <li>Functional farmhouse and barn interiors</li>
+      <li>Home renovations and property customization</li>
+      <li>More farmland, livestock, and crop production</li>
+      <li>Tractors, implements, and additional vehicles</li>
+      <li>Diner restoration and other town businesses</li>
+      <li>More residents, homes, and town employment</li>
+      <li>Expanded supply and trading economy</li>
+      <li>Dynamic weather and changing seasons</li>
+      <li>Optional real-world ZIP-code weather</li>
+      <li>Future shared-world and multiplayer possibilities</li>
+    </ul>
+
+    <p class="muted">
+      Planned features are part of the development vision
+      and should not be considered completed gameplay
+      until implemented and tested.
+    </p>
+  </section>
+
+  <!-- FUTURE PLANS -->
+  <section class="card">
+    <h2>Future Plans</h2>
+
+    <p>
+      The next major objective is turning the farmhouse
+      into a usable home that Pete can enter, explore,
+      repair, and customize.
+    </p>
+
+    <p>
+      Later development will build upon the existing
+      construction, property ownership, and purchasing
+      systems to introduce farming, livestock,
+      additional businesses, and community growth.
+    </p>
+
+    <h3>Proposed Purchasing Model</h3>
+
+    <p>
+      One model under consideration is a 14-day free
+      experience followed by a one-time $9.99 permanent
+      unlock, with optional expansion content.
+    </p>
+
+    <p class="muted">
+      These commercial ideas remain proposals, not
+      final pricing or release commitments.
+    </p>
+  </section>
+
+  <!-- CLOSING MESSAGE -->
+  <section class="card" style="text-align:center;">
+    <p class="eyebrow">THE TOS CREATIONS PHILOSOPHY</p>
+
+    <h2>Simple to Control. Challenging to Build. Rewarding to Master.</h2>
+
+    <p>
+      Revival Creek is about freedom, creativity,
+      hard work, and opportunity.
+    </p>
+
+    <p>
+      The challenge should come from developing a homestead,
+      running a business, managing a farm, earning a living,
+      and helping a forgotten town grow.
+    </p>
+
+    <p class="statement">
+      The goal isn't simply to rebuild a town.
+      It's to give players the freedom to build a life.
+    </p>
+
+    <a class="button" href="/">
+      Return to TOS Creations ↗
+    </a>
+  </section>
+
+  <footer>
+    © 2026 TOS Creations · Apps Made Personal
+    <br>
+    Revival Creek Homesteader — Development Journal
+  </footer>
+
+</main>
+</body>
+</html>
