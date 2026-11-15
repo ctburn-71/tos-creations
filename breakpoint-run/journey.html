@@ -1,131 +1,560 @@
-TOS CREATIONS ORIGINAL GAME
 
-Breakpoint Run
-From an Idea to a City in Motion
-Follow the creation of a fast-paced urban parkour game where every rooftop, street, alley, and obstacle offers a new route toward the finish.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Every Second. Every Decision. Every Escape.
+  <title>Breakpoint Run Development Journey | TOS Creations</title>
 
-First Unreal development build: November 15, 2026
-Current status: In Active Development
-Platform focus: iPhone and Android
-Development tools: Unreal Engine 5 and OpenAI Codex
+  <meta name="description"
+    content="Follow the development journey of Breakpoint Run, a fast-paced urban parkour racing game from TOS Creations.">
 
-Return to TOS Creations ↗
-The Vision — Before Development Began
-Breakpoint Run began with a question: What if the entire city became a racecourse?
+  <style>
+    * { box-sizing: border-box; }
 
-Not a traditional racing game with vehicles, and not a runner locked to one predetermined path. Players would race from one side of a sprawling city to the other, choosing how they got there.
+    body {
+      margin: 0;
+      background: #10151e;
+      color: #b6c0cc;
+      font-family: Arial, sans-serif;
+      line-height: 1.75;
+    }
 
-One player might sprint down streets, weaving past construction zones and roadblocks. Another might climb to a rooftop, cross between buildings, then drop into an alley to find a faster shortcut.
+    .container {
+      width: min(1100px, 100%);
+      margin: auto;
+      padding: 35px 22px 70px;
+    }
 
-Skill, exploration, timing, and creativity would all matter. Sprinting, jumping, sliding, vaulting, climbing, and eventually wall-running would open up different routes.
+    .hero {
+      text-align: center;
+      padding: 45px 25px;
+      border: 1px solid rgba(213,173,114,.3);
+      border-radius: 18px;
+      background: linear-gradient(145deg,#222d3a,#121923);
+    }
 
-From the beginning, the primary focus was iPhone and Android. The ambition is realistic-looking urban action with responsive, approachable touchscreen controls—not a separate button for every possible movement.
+    .eyebrow {
+      color: #d5ad72;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-Detailed architecture will come later. First, the city must be exciting to move through.
+    h1, h2, h3 {
+      color: #f6f3ed;
+    }
 
-The city is the obstacle. The route is your choice. The clock is your competition.
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(30px,5vw,48px);
+      line-height: 1.2;
+    }
 
-The Weekly Development Journey
-Explore the early experiments, challenges, and milestones as Breakpoint Run grows from a concept into a playable escape experience.
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(24px,4vw,32px);
+    }
 
-Week 1 — November 15–21, 2026
-Building the City and Bringing Movement to Life
-November 15 — From the First City Block to the First Escape
-Development began in Unreal Engine 5.8 with the creation of the BreakPointRun project. The first task was preparing Unreal on Mac and connecting OpenAI Codex to the editor through Unreal's Model Context Protocol integration.
+    h3 {
+      color: #d5ad72;
+      font-size: 19px;
+      margin-top: 28px;
+    }
 
-This established the working approach: plan the gameplay, implement it in the engine, test it directly, and refine what does not yet feel right.
+    p { margin: 12px 0; }
 
-Building the First City
-A new level, Lvl_CityTraversal_Blockout, was created while preserving Unreal's original First Person starter environment.
+    .gold { color: #d5ad72; }
 
-The first playable city blockout included:
+    .card {
+      background: linear-gradient(145deg,#202c3b,#121923);
+      border: 1px solid rgba(213,173,114,.3);
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 32px;
+    }
 
-Four connected city blocks
-Eight usable buildings with rooftop access
-Streets, sidewalks, and alleys
-Rooftop bridges, scaffolding, stairs, and terraces
-Roadblocks, barriers, and vaulting obstacles
-Alternative ground-level and rooftop routes
-A designated starting area and finish zone
-The structures intentionally used simple development geometry. The goal was not yet a beautiful city; it was a city worth running through.
+    .week {
+      margin-top: 22px;
+      border: 1px solid rgba(213,173,114,.35);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #151f2c;
+    }
 
-Introducing Speed and Race Timing
-A dedicated Breakpoint Run character and game mode were created. Sprinting, momentum settings, and camera adjustments began establishing a sense of speed.
+    .week summary {
+      padding: 22px 25px;
+      cursor: pointer;
+      color: #d5ad72;
+      font-weight: bold;
+      font-size: 19px;
+    }
 
-The race timer connected the starting point to the escape zone, making it possible to complete a course and compete against previous times.
+    .week summary:hover {
+      background: rgba(213,173,114,.08);
+    }
 
-The first successful manually tested run finished in 33.15 seconds. An early subsequent run improved to 16.19 seconds.
+    .week summary:focus-visible {
+      outline: 2px solid #d5ad72;
+      outline-offset: -3px;
+    }
 
-The first gameplay loop was working: escape, learn the route, and try again faster.
+    .week-content {
+      padding: 10px 26px 30px;
+      border-top: 1px solid rgba(213,173,114,.2);
+    }
 
-Developing the First Parkour Mechanics
-The first movement improvements included:
+    ul { padding-left: 24px; }
 
-Adjustable camera sensitivity
-Improved jumping controls
-Crouching beneath low obstacles
-Momentum-based sliding
-Context-sensitive obstacle vaulting
-Ledge catching and short mantling
-Collision and landing-safety checks
-Preservation of movement speed and race timing
-Early tests showed that the controls needed to remain intuitive. The Spacebar was adapted to respond to the player's surroundings: jumping in open space, vaulting suitable low obstacles, or mantling a reachable ledge.
+    li { margin-bottom: 8px; }
 
-This is an early foundation for future context-sensitive touchscreen controls, not a finished mobile control scheme.
+    .statement {
+      color: #d5ad72;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 20px;
+      text-align: center;
+      margin: 28px auto;
+    }
 
-Testing and Refining the Experience
-Repeated manual testing identified overly sensitive mouse movement, jumping issues, and opportunities to improve crouching, sliding, vaulting, and mantling. Adjustments were made while keeping the race timer operational.
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      max-width: 100%;
+      padding: 13px 24px;
+      margin-top: 22px;
+      background: #d5ad72;
+      color: #10151e;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+    }
 
-Unreal's memory demands also highlighted the need to monitor editor resource usage and prioritize mobile performance as the environment grows.
+    .muted {
+      font-size: 13px;
+      color: #98a7b8;
+    }
 
-The First Day's Milestone
-By the end of November 15, Breakpoint Run had become an early playable parkour racing prototype. The city could be traversed, the character could run, jump, crouch, slide, vault, and mantle, and a start-to-finish escape could be timed.
+    footer {
+      text-align: center;
+      margin-top: 55px;
+      color: #98a7b8;
+      font-size: 13px;
+    }
 
-Wall-running, richer rooftop traversal, realistic buildings, mobile controls, and testing on physical phones remain future work.
+    @media(max-width:600px) {
+      .container { padding: 16px 12px 45px; }
+      .hero { padding: 30px 18px; }
+      .card { padding: 22px 16px; }
+      .week summary { padding: 18px 14px; font-size: 17px; }
+      .week-content { padding: 10px 16px 24px; }
+    }
+  </style>
+</head>
 
-One day. One city. The first successful escape. And a much bigger journey ahead.
+<body>
+<main class="container">
 
-Development continues during Week 1. This entry documents the milestones reported for November 15.
+  <!-- PAGE INTRODUCTION -->
+  <header class="hero">
+    <p class="eyebrow">TOS CREATIONS ORIGINAL GAME</p>
 
-Development Progress
-As of November 15, 2026
+    <h1>Breakpoint Run</h1>
 
-Created and Tested in the Early Prototype
-Unreal Engine project and Codex editor connection
-Four-block city traversal level with rooftop and street routes
-Eight buildings with rooftop access
-Player character, sprinting, and camera control
-Jumping, crouching, sliding, vaulting, and short mantling
-Race start, finish zone, and functioning timer
-Early manual test runs, including a 16.19-second completion
-In Development or Planned
-More sophisticated rooftop and vertical traversal
-Wall-running and additional movement refinements
-Realistic city architecture, lighting, and animation
-Expanded routes and varied obstacles
-Touchscreen controls for iPhone and Android
-Optimization and testing on physical mobile devices
-Further race challenges, replayability, and progression systems
-The initial city is a gameplay blockout. Concept artwork and planned mechanics should not be mistaken for completed features or final mobile performance.
+    <h2 class="gold">From an Idea to a City in Motion</h2>
 
-Future Plans
-The next priorities are to make traversal more fluid, expand meaningful route choice, and strengthen the experience of racing through the city before replacing blockout structures with detailed urban environments.
+    <p>
+      Follow the creation of a fast-paced urban parkour
+      game where every rooftop, street, alley, and obstacle
+      offers a new route toward the finish.
+    </p>
 
-Mobile remains the primary design target. Responsive, context-sensitive touch controls and real-device performance testing will be central to later development. Desktop testing will continue as part of the creation process.
+    <p class="statement">
+      Every Second. Every Decision. Every Escape.
+    </p>
 
-As the course expands, the aim is to reward players who learn its obstacles, discover shortcuts, and improve their times through skill rather than relying on a single predetermined path.
+    <p class="muted">
+      First Unreal development build: November 15, 2026
+      <br>
+      Current status: In Active Development
+      <br>
+      Platform focus: iPhone and Android
+      <br>
+      Development tools: Unreal Engine 5 and OpenAI Codex
+    </p>
 
-One city. Countless possibilities. How fast can you escape?
+    <a class="button" href="/">
+      Return to TOS Creations ↗
+    </a>
+  </header>
 
-THE TOS CREATIONS PHILOSOPHY
+  <!-- ORIGINAL VISION -->
+  <section class="card">
+    <h2>The Vision — Before Development Began</h2>
 
-Every Second. Every Decision. Every Escape.
-Breakpoint Run is being built one tested milestone at a time, with the goal of making speed, freedom of movement, and route choice genuinely enjoyable.
+    <p>
+      Breakpoint Run began with a question:
+      What if the entire city became a racecourse?
+    </p>
 
-The city is the challenge. Your route makes the difference.
+    <p>
+      Not a traditional racing game with vehicles,
+      and not a runner locked to one predetermined
+      path.
+    </p>
 
-Return to TOS Creations ↗
-© 2026 TOS Creations · Apps Made Personal
-Breakpoint Run — Development Journal
+    <p>
+      Players would race from one side of a sprawling
+      city to the other, choosing how they got there.
+    </p>
+
+    <p>
+      One player might sprint down streets, weaving
+      past construction zones and roadblocks.
+      Another might climb to a rooftop, cross between
+      buildings, then drop into an alley to find
+      a faster shortcut.
+    </p>
+
+    <p>
+      Skill, exploration, timing, and creativity
+      would all matter.
+    </p>
+
+    <p>
+      Sprinting, jumping, sliding, vaulting,
+      climbing, and eventually wall-running
+      would open up different routes.
+    </p>
+
+    <p>
+      From the beginning, the primary focus was
+      iPhone and Android. The ambition is realistic
+      urban action with responsive, approachable
+      touchscreen controls—not a separate button
+      for every possible movement.
+    </p>
+
+    <p>
+      Detailed architecture will come later.
+      First, the city must be exciting to move through.
+    </p>
+
+    <p class="statement">
+      The city is the obstacle.
+      The route is your choice.
+      The clock is your competition.
+    </p>
+  </section>
+
+  <!-- WEEKLY DEVELOPMENT JOURNAL -->
+  <section class="card">
+    <h2>The Weekly Development Journey</h2>
+
+    <p>
+      Explore the early experiments, challenges,
+      and milestones as Breakpoint Run grows
+      from a concept into a playable escape experience.
+    </p>
+
+    <!-- WEEK 1 -->
+    <details class="week" open>
+      <summary>
+        Week 1 — November 15–21, 2026
+        <br>
+        Building the City and Bringing Movement to Life
+      </summary>
+
+      <div class="week-content">
+
+        <h3>November 15 — From the First City Block to the First Escape</h3>
+
+        <p>
+          Development began in Unreal Engine 5.8
+          with the creation of the BreakPointRun project.
+        </p>
+
+        <p>
+          The first task was preparing Unreal on Mac
+          and connecting OpenAI Codex to the editor
+          through Unreal's Model Context Protocol
+          integration.
+        </p>
+
+        <p>
+          This established the working approach:
+          plan the gameplay, implement it in the
+          engine, test it directly, and refine
+          what does not yet feel right.
+        </p>
+
+        <h3>Building the First City</h3>
+
+        <p>
+          A new level, Lvl_CityTraversal_Blockout,
+          was created while preserving Unreal's
+          original First Person starter environment.
+        </p>
+
+        <p>
+          The first playable city blockout included:
+        </p>
+
+        <ul>
+          <li>Four connected city blocks</li>
+          <li>Eight usable buildings with rooftop access</li>
+          <li>Streets, sidewalks, and alleys</li>
+          <li>Rooftop bridges, scaffolding, stairs, and terraces</li>
+          <li>Roadblocks, barriers, and vaulting obstacles</li>
+          <li>Alternative ground-level and rooftop routes</li>
+          <li>A designated starting area and finish zone</li>
+        </ul>
+
+        <p>
+          The structures intentionally used simple
+          development geometry.
+        </p>
+
+        <p>
+          The goal was not yet a beautiful city;
+          it was a city worth running through.
+        </p>
+
+        <h3>Introducing Speed and Race Timing</h3>
+
+        <p>
+          A dedicated Breakpoint Run character and
+          game mode were created.
+        </p>
+
+        <p>
+          Sprinting, momentum settings, and camera
+          adjustments began establishing a sense
+          of speed.
+        </p>
+
+        <p>
+          The race timer connected the starting point
+          to the escape zone, making it possible
+          to complete a course and compete against
+          previous times.
+        </p>
+
+        <p>
+          The first successful manually tested
+          run finished in 33.15 seconds.
+        </p>
+
+        <p class="gold">
+          An early subsequent run improved to
+          16.19 seconds.
+        </p>
+
+        <p>
+          The first gameplay loop was working:
+          escape, learn the route, and try again faster.
+        </p>
+
+        <h3>Developing the First Parkour Mechanics</h3>
+
+        <p>
+          The first movement improvements included:
+        </p>
+
+        <ul>
+          <li>Adjustable camera sensitivity</li>
+          <li>Improved jumping controls</li>
+          <li>Crouching beneath low obstacles</li>
+          <li>Momentum-based sliding</li>
+          <li>Context-sensitive obstacle vaulting</li>
+          <li>Ledge catching and short mantling</li>
+          <li>Collision and landing-safety checks</li>
+          <li>Preservation of movement speed and race timing</li>
+        </ul>
+
+        <p>
+          Early tests showed that the controls needed
+          to remain intuitive.
+        </p>
+
+        <p>
+          The Spacebar was adapted to respond to
+          the player's surroundings: jumping in
+          open space, vaulting suitable low obstacles,
+          or mantling a reachable ledge.
+        </p>
+
+        <p>
+          This is an early foundation for future
+          context-sensitive touchscreen controls,
+          not a finished mobile control scheme.
+        </p>
+
+        <h3>Testing and Refining the Experience</h3>
+
+        <p>
+          Repeated manual testing identified overly
+          sensitive mouse movement, jumping issues,
+          and opportunities to improve crouching,
+          sliding, vaulting, and mantling.
+        </p>
+
+        <p>
+          Adjustments were made while keeping
+          the race timer operational.
+        </p>
+
+        <p>
+          Unreal's memory demands also highlighted
+          the need to monitor editor resource usage
+          and prioritize mobile performance
+          as the environment grows.
+        </p>
+
+        <h3>The First Day's Milestone</h3>
+
+        <p>
+          By the end of November 15,
+          Breakpoint Run had become an early
+          playable parkour racing prototype.
+        </p>
+
+        <p>
+          The city could be traversed, the character
+          could run, jump, crouch, slide, vault,
+          and mantle, and a start-to-finish escape
+          could be timed.
+        </p>
+
+        <p>
+          Wall-running, richer rooftop traversal,
+          realistic buildings, mobile controls,
+          and testing on physical phones remain
+          future work.
+        </p>
+
+        <p class="statement">
+          One day. One city. The first successful escape.
+          And a much bigger journey ahead.
+        </p>
+
+      </div>
+    </details>
+
+    <!-- FUTURE WEEKLY ENTRIES GO HERE -->
+
+  </section>
+
+  <!-- DEVELOPMENT STATUS -->
+  <section class="card">
+    <h2>Development Progress</h2>
+
+    <p class="gold">As of November 15, 2026</p>
+
+    <h3>Created and Tested in the Early Prototype</h3>
+
+    <ul>
+      <li>Unreal Engine project and Codex editor connection</li>
+      <li>Four-block city traversal level with rooftop and street routes</li>
+      <li>Eight buildings with rooftop access</li>
+      <li>Player character, sprinting, and camera control</li>
+      <li>Jumping, crouching, sliding, vaulting, and short mantling</li>
+      <li>Race start, finish zone, and functioning timer</li>
+      <li>Early manual test runs, including a 16.19-second completion</li>
+    </ul>
+
+    <h3>In Development or Planned</h3>
+
+    <ul>
+      <li>More sophisticated rooftop and vertical traversal</li>
+      <li>Wall-running and additional movement refinements</li>
+      <li>Realistic city architecture, lighting, and animation</li>
+      <li>Expanded routes and varied obstacles</li>
+      <li>Touchscreen controls for iPhone and Android</li>
+      <li>Optimization and testing on physical mobile devices</li>
+      <li>Further race challenges, replayability, and progression systems</li>
+    </ul>
+
+    <p class="muted">
+      The initial city is a gameplay blockout.
+      Concept artwork and planned mechanics
+      should not be mistaken for completed
+      features or final mobile performance.
+    </p>
+  </section>
+
+  <!-- FUTURE PLANS -->
+  <section class="card">
+    <h2>Future Plans</h2>
+
+    <p>
+      The next priorities are to make traversal
+      more fluid, expand meaningful route choice,
+      and strengthen the experience of racing
+      through the city before replacing blockout
+      structures with detailed urban environments.
+    </p>
+
+    <p>
+      Mobile remains the primary design target.
+      Responsive, context-sensitive touch controls
+      and real-device performance testing will
+      be central to later development.
+    </p>
+
+    <p>
+      Desktop testing will continue as part of
+      the creation process.
+    </p>
+
+    <p>
+      As the course expands, the aim is to reward
+      players who learn its obstacles, discover
+      shortcuts, and improve their times through
+      skill rather than relying on a single
+      predetermined path.
+    </p>
+
+    <p class="statement">
+      One city. Countless possibilities.
+      How fast can you escape?
+    </p>
+  </section>
+
+  <!-- CLOSING MESSAGE -->
+  <section class="card" style="text-align:center;">
+    <p class="eyebrow">THE TOS CREATIONS PHILOSOPHY</p>
+
+    <h2>Every Second. Every Decision. Every Escape.</h2>
+
+    <p>
+      Breakpoint Run is being built one
+      tested milestone at a time, with
+      the goal of making speed, freedom
+      of movement, and route choice
+      genuinely enjoyable.
+    </p>
+
+    <p class="statement">
+      The city is the challenge.
+      Your route makes the difference.
+    </p>
+
+    <a class="button" href="/">
+      Return to TOS Creations ↗
+    </a>
+  </section>
+
+  <footer>
+    © 2026 TOS Creations · Apps Made Personal
+    <br>
+    Breakpoint Run — Development Journal
+  </footer>
+
+</main>
+</body>
+</html>
