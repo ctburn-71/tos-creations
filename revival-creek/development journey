@@ -311,3 +311,250 @@ It should never come from struggling to move a simple fence panel.
 
 *Revival Creek Homesteader — A TOS Creations Original*  
 *Development Journal — November 9, 2026*
+# Revival Creek Homesteader
+## Development Journey — The Town Comes to Life
+
+**November 10–15, 2026 | TOS Creations**
+
+### Week 2 Continued — November 10–14
+#### Turning a Homestead into a Home
+
+During the second week of hands-on development, Revival Creek Homesteader began evolving from an explorable countryside into an increasingly interactive world.
+
+Our focus expanded beyond fences, gates, hardware supplies and property boundaries.
+
+We wanted buildings that players could actually enter, explore, improve and eventually make their own.
+
+**A Functional Farmhouse**
+
+One of our biggest milestones was converting the original farmhouse from a solid exterior structure into a usable home.
+
+The farmhouse received a working front door, walkable ground-floor rooms, interior walls, flooring and lighting.
+
+The layout includes a living room, kitchen/dining area, bedroom or workroom, utility/bathroom area and reserved space for future stairs.
+
+The original exterior appearance was preserved, including its weathered siding, windows, roof and porch.
+
+For the first time, Pete could walk through his front door and explore his own home.
+
+**The Beginning of Home Renovation**
+
+Next came our first working renovation tools.
+
+Players could select interior wall and floor surfaces, preview different finishes and see how improvements would look before committing.
+
+Initial choices included muted wall colors and practical flooring materials suited to an older country farmhouse.
+
+Renovation supplies were connected to the existing in-game economy.
+
+Testing revealed that requiring players to travel to Community Hardware for every small purchase interrupted the building experience.
+
+That led to an important improvement: **Buy & Apply and Buy & Build**.
+
+Players can now preview a project, purchase exactly the materials they're missing, confirm the cost and complete the work without leaving the location.
+
+Community Hardware remains available for traditional in-person shopping.
+
+This became an important development principle:
+
+**Make ordinary actions intuitive. Make meaningful accomplishments challenging.**
+
+**Improving Player Controls**
+
+We also refined instructional panels, camera control and menu interactions.
+
+Players can dismiss lessons, collapse status displays, use clickable controls and return to normal exploration without unnecessary interruptions.
+
+These changes are helping establish a consistent interface that can eventually support both computer and mobile gameplay.
+
+---
+
+### Week 3 — November 15, 2026
+#### Building a Town with History
+
+With the core construction and renovation systems established, attention shifted toward creating the larger community originally envisioned for Revival Creek.
+
+The goal was no longer simply to add buildings.
+
+It was to make the world resemble a once-thriving rural town with homes, businesses, farms, roads and a history worth discovering.
+
+**The Residential Neighborhood Expands**
+
+Seven new residential exteriors, designated H1 through H7, have been created and visually reviewed.
+
+Each house has its own architectural style and personality:
+
+- **H1 — Timber Cottage:** A modest, traditional weathered home.
+- **H2 — Family Bungalow:** A broader single-story residence with a low roof and offset porch.
+- **H3 — Two-Story Village Home:** A traditional family house with a pitched roof and deeper garden lot.
+- **H4 — Brick Family Home:** A sturdy older residence with aged masonry and faded trim.
+- **H5 — Worker's Cottage:** A smaller, more neglected home with faded siding and selective window boarding.
+- **H6 — Timber Family Home:** A larger house with an attached side wing and practical garden space.
+- **H7 — Country Cottage:** A distinctive home with a generous covered porch and rear utility extension.
+
+Together with Pete's farmhouse and the two original neighborhood homes, Revival Creek now contains **ten residential buildings**.
+
+The new homes have stable property identities, driveway access and reserved garden areas.
+
+Their interiors, ownership opportunities and future resident activities remain in development.
+
+These homes represent the beginning of a much larger residential community—not a limit on how many people Revival Creek may eventually accommodate.
+
+**Making Exploration Easier**
+
+As the town expanded, traveling repeatedly from the farmhouse to the northern neighborhood became inconvenient during testing.
+
+A new starting-location selector was introduced.
+
+Developers can now choose **MY FARM** or **TOWN** when beginning a Unity test session, with Pete and his pickup appearing together at the selected location.
+
+This allows quicker review of new development without changing saved game progress.
+
+---
+
+### A Living World — Real Time, Real Weather
+
+One of Revival Creek's original design requirements has always been that its world should continue existing whether a player is logged in or not.
+
+During this development period, we established the technical foundations for that experience.
+
+**A Real-World Clock**
+
+Revival Creek now has a real-time world clock based on actual calendar dates.
+
+The system measures elapsed time across game sessions and supports future offline progression.
+
+When a player returns after several days, the world will reflect the real date rather than advancing only when someone plays.
+
+The future goal is for crops, lawns, farm activities and community life to respond appropriately to that elapsed time.
+
+**A Home in West Virginia**
+
+We selected a fictional Appalachian valley near Beckley, West Virginia, as Revival Creek's real-world geographic reference.
+
+The town uses Eastern Time and connects to National Weather Service observations and forecasts.
+
+Every player in the shared Revival Creek world is intended to experience the same local time, seasons and weather.
+
+**Weather Comes to Life**
+
+Our first environmental milestones introduced:
+
+- Real-time sunlight and daylight transitions
+- Sunrise, sunset and nighttime appearance
+- Cloud conditions informed by actual observations
+- Visible rain and snowfall
+- Shelter behavior around supported buildings and vehicles
+- A clickable Weather Center with current conditions and forecasts
+- Development controls for testing weather without changing the real-world clock
+
+During personal review, nighttime snowfall became one of the most satisfying visual improvements.
+
+**Wet Ground and Snow Coverage**
+
+Environmental development continued with realistic ground wetness and initial snow coverage.
+
+A small test area near Pete's farmhouse can now display damp ground, light and heavier snow coverage, and gradual visual melting.
+
+Testing also revealed an interface conflict that prevented snow coverage from appearing. Correcting it allowed snow to become visible on the farmhouse roof and ground.
+
+These systems are currently visual pilots.
+
+Full-town coverage, long-term accumulation, historical weather reconstruction and effects on farming are still planned.
+
+Our long-term goal remains unchanged: weather should leave meaningful evidence in the world, even while players are away.
+
+---
+
+### Main Street Begins to Grow
+
+A thriving town needs more than houses.
+
+Revival Creek already contained Community Hardware, a diner, grocery store, garage and barber shop.
+
+Our commercial expansion began with **Revival Pharmacy**.
+
+**Revival Pharmacy**
+
+The new pharmacy was designed as an aging brick storefront with large display windows, a recessed entrance, faded signage and modest signs of abandonment.
+
+After its exterior was approved, the building received a functional entrance and a basic walkable interior.
+
+Players can now open the door, enter the vacant building, explore and leave.
+
+The pharmacy remains closed as a business, awaiting future restoration and activation.
+
+This marked an important development milestone:
+
+**A building can be abandoned without being inaccessible.**
+
+We intend to expand this approach throughout Revival Creek, allowing players to explore properties and discover their stories while keeping ownership and renovation rights separate.
+
+**Our First Townsperson**
+
+Community Hardware also received its first character: a clerk stationed behind the counter.
+
+Players can approach the clerk, start a conversation and access the existing shopping system.
+
+The clerk currently offers introductory dialogue about Revival Creek and advice for newcomers.
+
+This begins establishing something especially important to the project: a community with people, personalities, memories and stories.
+
+---
+
+### The Story Behind Revival Creek
+
+Development has also expanded into the deeper history of the town.
+
+Our narrative direction centers on a community that once prospered through farming, local businesses, a working mill and the remarkable creek flowing through its valley.
+
+Over time, the town declined, its businesses closed and families moved away.
+
+Years later, a man named Pete saw an opportunity to bring the forgotten community back to life.
+
+The creek will be central to that story.
+
+Its clear water, future irrigation potential and possible water-powered operations connect the town's history to its restoration.
+
+We envision an optional, substantial opening story, followed by discoveries, journal entries and conversations that players can revisit whenever they wish.
+
+Players who enjoy storytelling will be able to explore the town's past.
+
+Those who prefer building, farming and business development will be free to concentrate on those activities.
+
+Both experiences will be part of the same world.
+
+---
+
+### What's Coming Next?
+
+The next development priorities include:
+
+- Additional historic Main Street businesses, beginning with the old village bakery
+- More reusable building interiors and accessible entrances
+- Expanded neighborhood and agricultural districts
+- Town-wide snow and wet-ground coverage
+- Persistent weather effects based on recorded conditions
+- A more substantial, visually pristine creek supporting future irrigation and water-powered activities
+- Farming, crops, livestock and ongoing property maintenance
+- Additional residents, conversations and story discoveries
+- Shared renovation systems across residential and commercial properties
+- A scalable foundation for player accounts and individually owned properties
+
+Our long-term vision is a large, persistent virtual community that continues evolving around the clock.
+
+Players will be able to choose a home, restore property, develop fields, pursue livelihoods and help bring a forgotten town back to life.
+
+### Our Development Philosophy
+
+Revival Creek Homesteader is being created carefully, one tested milestone at a time.
+
+We are not rushing toward release.
+
+Every new system must serve the larger experience: a believable rural world where players have meaningful freedom, where their choices matter and where their accomplishments feel earned.
+
+**Simple to Control. Challenging to Build. Rewarding to Master.**
+
+*Revival Creek Homesteader*  
+*A TOS Creations Original*  
+*Development update: November 15, 2026*
