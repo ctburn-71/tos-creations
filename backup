@@ -1,0 +1,5488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOS Creations | Apps Made Personal</title>
+  
+<meta name="description"
+  content="Discover TOS Creations: creative apps, interactive digital scrapbooks, crossword jigsaw puzzles, music tools, fitness experiences, and original games for Apple and Android.">
+
+  <style>
+    :root {
+      --background: #10151e;
+      --surface: #1c2532;
+      --accent: #d5ad72;
+      --text: #f6f3ed;
+      --muted: #adb8c5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      border-bottom: 1px solid #ffffff18;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 110px 20px 100px;
+      background: radial-gradient(
+        ellipse at top,
+        #34465b 0%,
+        #10151e 72%
+      );
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      margin: 0;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      margin: 18px auto;
+      max-width: 650px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 24px;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 35px;
+    }
+
+    .app-card {
+      background: var(--surface);
+      border: 1px solid #ffffff18;
+      border-radius: 22px;
+      padding: 36px;
+      margin-bottom: 22px;
+    }
+
+    .app-card h3 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .app-card p {
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #151515;
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .button:hover {
+      background: #e7c79a;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #ffffff18;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .app-card {
+        padding: 25px;
+      }
+
+      .secondary-link {
+        display: block;
+        margin: 20px 0 0;
+      }
+    }
+    
+/* TOS CREATIONS — CONSISTENT APP GALLERY */
+
+/* Keep all four cards equal height */
+.app-gallery {
+  align-items: stretch;
+}
+
+.app-gallery .gallery-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Push status and action buttons to the bottom */
+.app-gallery .gallery-card .gallery-status {
+  display: block;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+/* Make the TestFlight buttons equally wide */
+.app-gallery .gallery-card a[href*="testflight.apple.com/join/"] {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 44px;
+  padding: 10px 5px !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px !important;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+/* Keep the buttons within their cards */
+.app-gallery .gallery-card a {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* TOS Creations mobile layout improvements */
+@media (max-width: 600px) {
+
+  /* Prevent page-wide horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* Keep content inside its containers */
+  main, section, article {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Allow long headings to wrap */
+  h1, h2, h3 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Keep pictures within the screen */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Allow Game Lounge buttons to wrap neatly */
+  #game-lounge-details {
+    max-width: 100%;
+  }
+
+  /* Prevent very long labels from overflowing */
+  a, button {
+    overflow-wrap: break-word;
+  }
+}
+
+/* My Books journey — desktop alignment */
+@media (min-width: 801px) {
+  .my-books-journey-story {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .my-books-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    align-items: stretch;
+  }
+
+  .my-books-links a:first-child {
+    grid-column: 1 / -1;   /* top App Store button spans full width */
+    width: 100% !important;
+  }
+
+  .my-books-links a:nth-child(2),
+  .my-books-links a:nth-child(3) {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">TOS <span class="accent">CREATIONS</span></div>
+
+    <nav>
+      <a href="#apps">Our Apps</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  
+<section class="hero">
+
+  <h1>
+    TOS <span class="accent">CREATIONS</span>
+  </h1>
+
+  
+<h2 style="
+  color:#d5ad72;
+  text-align:center;
+">
+  Creating experiences that matter.
+</h2>
+
+
+  <p style="
+    color:#b6c0cc;
+    line-height:1.8;
+    max-width:720px;
+    margin:20px auto 30px;
+    text-align:center;
+  ">
+    From creative expression and entertainment to everyday
+    inspiration, TOS Creations brings meaningful ideas to
+    life through technology.
+  </p>
+
+  <img
+    src="/TOS_Footer_Parchment.png"
+    alt="TOS Creations Maker's Mark"
+    loading="lazy"
+    style="
+      display:block;
+      width:100%;
+max-width:420px;
+height:auto;
+margin:20px auto 30px;
+      border-radius:16px;
+      border:1px solid rgba(213,173,114,.25);
+      box-shadow:0 18px 40px rgba(0,0,0,.35);
+    "
+  >
+
+</section>
+
+
+  <section id="apps" class="section">
+    <h2>Our Featured Application</h2>
+    <p class="section-intro">
+      Explore what we're creating.
+    </p>
+
+    <div class="app-card">
+
+  <img
+    src="my-books-icon.png"
+    alt="My Books: Creative Library App Icon"
+    style="
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
+      display: block;
+    "
+  >
+
+  <h3>My Books: Creative Library</h3>
+  <p class="accent">Your stories. Your way.</p>
+<p style="
+  color: #d5ad72;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 8px;
+">
+  AVAILABLE ON THE APP STORE
+</p>
+      <p>
+        Turn your memories and ideas into beautiful digital
+        books. Create scrapbooks, journals, cookbooks,
+        family memory collections, and more.
+      </p>
+
+
+<!-- MY BOOKS APP STORE JOURNEY -->
+<div class="my-books-journey-layout">
+
+  <!-- APPLE ANNOUNCEMENT VIDEO -->
+  <div class="my-books-journey-video">
+    <p class="my-books-journey-label">
+      SEE MY BOOKS IN ACTION
+    </p>
+
+    <video controls playsinline preload="metadata">
+      <source
+        src="/my-books-preview.mp4"
+        type="video/mp4"
+      >
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <!-- JOURNEY STORY -->
+  <div class="my-books-journey-story">
+
+    <p class="my-books-journey-label">
+      A TOS CREATIONS JOURNEY
+    </p>
+
+    <h3>From an Idea to the App Store</h3>
+
+    <p class="my-books-journey-intro">
+      Every creation begins with an idea.
+      My Books began with a simple vision:
+      give people a beautiful place to
+      create and preserve their stories.
+    </p>
+
+    <div class="my-books-timeline">
+
+      <div class="my-books-milestone">
+        <h4>01 — The Idea</h4>
+        <p>
+          What started as a personal creative
+          project became the beginning of
+          something bigger.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>02 — Development</h4>
+        <p>
+          From early designs to interactive
+          bookshelves, page turning, and
+          creative editing tools, each step
+          brought the idea closer to life.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>03 — Test & Refine</h4>
+        <p>
+          Family and beta testers helped
+          shape the experience through
+          feedback, adjustments, and
+          countless little improvements.
+        </p>
+      </div>
+
+      <div class="my-books-milestone">
+        <h4>04 — The App Store</h4>
+        <p>
+          After development and testing,
+          My Books received Apple's approval
+          and became available for others
+          to download and enjoy.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="my-books-journey-closing">
+      One idea. Many lessons.
+      A new beginning.
+    </p>
+
+  </div>
+</div>
+<!-- END MY BOOKS APP STORE JOURNEY -->
+
+
+     
+
+<!-- MY BOOKS LINKS -->
+<div class="my-books-links" style="
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin-top:20px;
+">
+
+  <!-- APP STORE -->
+  <a
+    href="https://apps.apple.com/us/app/my-books-creative-library/id6816745312"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 22px;
+      background:#d5ad72;
+      color:#10151e;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+    "
+  >
+    APP STORE DOWNLOAD ↗
+  </a>
+
+  <!-- SUPPORT -->
+  <a
+    href="my-books/"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:12px 20px;
+      border-radius:9px;
+      background:#253244;
+      color:#d5ad72;
+      border:1px solid #8c7351;
+      font-weight:700;
+      text-decoration:none;
+    "
+  >
+    Support
+  </a>
+
+  <!-- PRIVACY POLICY -->
+  <a
+    href="my-books/privacy.html"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:12px 20px;
+      border-radius:9px;
+      background:#253244;
+      color:#d5ad72;
+      border:1px solid #8c7351;
+      font-weight:700;
+      text-decoration:none;
+    "
+  >
+    Privacy Policy
+  </a>
+
+</div>
+
+      </div>
+
+    
+<!-- ======================================= -->
+<!-- MY BOOKS EXPANDABLE DETAILS             -->
+<!-- ======================================= -->
+
+<details class="my-books-details" id="my-books-details">
+  <summary>Explore My Books Details</summary>
+
+  <div class="my-books-detail-content">
+
+    <input type="radio" name="my-books-tabs"
+      id="my-books-description" checked>
+
+    <input type="radio" name="my-books-tabs"
+      id="my-books-testing">
+
+    <div class="my-books-tab-buttons">
+      <label for="my-books-description">Description</label>
+      <label for="my-books-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="my-books-panel my-books-description-panel">
+
+      <h3>My Books — Your Stories, Your Way</h3>
+
+      <p>
+        Turn your memories, ideas, recipes, travels,
+        and everyday moments into beautiful personal books.
+      </p>
+
+      <p>
+        My Books makes it easy to create and organize
+        custom digital books with your own titles,
+        text, photos, colors, fonts, and page styles.
+        Start with a blank book or choose an inspiring
+        idea from the bookshelf, then make it yours.
+      </p>
+
+      <h4>Create Books for Every Occasion</h4>
+      <p>
+        Create cookbooks, journals, scrapbooks,
+        travel memories, family storybooks,
+        wedding books, and more.
+      </p>
+
+      <h4>Make Every Page Your Own</h4>
+      <p>
+        Add photos from your library, write and edit text,
+        move and resize items, rotate images, and arrange
+        each page to match your vision.
+      </p>
+
+      <h4>Personalize Your Bookshelf</h4>
+      <p>
+        Choose different book colors, fonts,
+        flat covers, or spine-out designs.
+        Your books are displayed together in a warm,
+        personal library that grows with you.
+      </p>
+
+      <h4>Preserve What Matters</h4>
+      <p>
+        Whether you're preserving family memories,
+        collecting favorite recipes, planning an adventure,
+        or capturing your thoughts, My Books gives
+        you a creative place to make each story your own.
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="my-books-panel my-books-testing-panel">
+
+      <h3>Help Us Test My Books</h3>
+
+      <p>
+        Thank you for testing My Books: Creative Library!
+        Please explore book creation, editing, customization,
+        and saving. We especially welcome feedback about
+        anything that feels confusing or difficult to use.
+      </p>
+
+      <h4>1. Bookshelf and Cover Customization</h4>
+      <ul>
+        <li>Switch between spine-out and flat book displays.</li>
+        <li>Change book colors and check that your selections appear correctly.</li>
+        <li>Select an inspiration book and confirm the available idea-book selection replenishes as designed.</li>
+        <li>Close and reopen the app to confirm your chosen display settings are retained.</li>
+      </ul>
+
+      <h4>2. Inspiration Books</h4>
+      <ul>
+        <li>Tap an idea book on the Ideas to Keep shelf.</li>
+        <li>Confirm a new book is created with the displayed title.</li>
+        <li>Confirm the new book opens immediately.</li>
+        <li>Return to the shelf and confirm the selected idea book is replaced or removed as expected.</li>
+        <li>Close and reopen the app to verify the previous idea selection does not incorrectly return.</li>
+      </ul>
+
+      <h4>3. Text Editing</h4>
+      <ul>
+        <li>Add a short text item and confirm it appears on the page.</li>
+        <li>Add a long recipe or paragraph and verify text scrolls vertically without turning the page or moving the item.</li>
+        <li>Select text and use Edit mode to move it smoothly and precisely.</li>
+        <li>Try shrinking, enlarging, and rotating text.</li>
+        <li>Test font, size, color, and alignment options.</li>
+      </ul>
+
+      <h4>4. Photo Editing</h4>
+      <ul>
+        <li>Add a photo from your photo library.</li>
+        <li>Try different supported image formats.</li>
+        <li>Add multiple photos and confirm the newly added photo is selected.</li>
+        <li>Move, resize, and rotate photos in Edit mode.</li>
+        <li>Try deleting, duplicating, and changing photo attachments.</li>
+      </ul>
+
+      <h4>5. Page Backgrounds and Controls</h4>
+      <ul>
+        <li>Select the Rustic page background.</li>
+        <li>Check that Preview, Edit, navigation, and editing controls remain readable.</li>
+        <li>Repeat these checks on other background styles.</li>
+        <li>Open text-style settings from a rustic page and check label readability.</li>
+      </ul>
+
+      <h4>6. Saving and Reopening</h4>
+      <ul>
+        <li>Make changes to text, photos, and backgrounds.</li>
+        <li>Leave the book, then reopen it.</li>
+        <li>Confirm all content and formatting remain intact.</li>
+        <li>Check positions, sizes, rotations, colors, and backgrounds.</li>
+      </ul>
+
+      <h4>Reporting Feedback</h4>
+      <p>
+        Please include your device model, app version,
+        what you were trying to do, what happened,
+        and what you expected.
+        Screenshots are helpful when appropriate.
+      </p>
+
+      <p>
+        <strong>
+          What one improvement would make creating
+          your next book easier?
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+</details>
+
+<!-- MY BOOKS DETAILS STYLING -->
+<style>
+
+.my-books-details {
+  margin-top: 18px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.my-books-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.my-books-details > summary:hover {
+  background: #202c3b;
+}
+
+.my-books-detail-content {
+  padding: 28px 32px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+.my-books-detail-content input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.my-books-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.my-books-tab-buttons label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 20px;
+  background: #253244;
+  border-radius: 9px;
+  color: #adb8c5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#my-books-description:checked ~ .my-books-tab-buttons
+label[for="my-books-description"],
+#my-books-testing:checked ~ .my-books-tab-buttons
+label[for="my-books-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.my-books-panel {
+  display: none;
+  max-width: 850px;
+  line-height: 1.8;
+}
+
+#my-books-description:checked ~ .my-books-description-panel,
+#my-books-testing:checked ~ .my-books-testing-panel {
+  display: block;
+}
+
+.my-books-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.my-books-panel h4 {
+  color: #d5ad72;
+  margin: 25px 0 8px;
+}
+
+.my-books-panel p {
+  margin: 0 0 17px;
+}
+
+.my-books-panel ul {
+  padding-left: 26px;
+  margin-bottom: 22px;
+}
+
+.my-books-panel li {
+  margin-bottom: 12px;
+}
+
+.my-books-panel strong {
+  color: #f6f3ed;
+}
+
+@media (max-width: 600px) {
+  .my-books-detail-content {
+    padding: 18px;
+  }
+
+  .my-books-tab-buttons label {
+    flex: 1;
+  }
+}
+
+/* MY BOOKS — APP STORE JOURNEY */
+
+.my-books-journey-layout {
+  display:grid;
+  grid-template-columns:minmax(0,440px) minmax(0,1fr);
+  gap:32px;
+  align-items:start;
+  width:100%;
+  margin:28px 0;
+}
+
+.my-books-journey-video,
+.my-books-journey-story {
+  min-width:0;
+}
+
+.my-books-journey-label {
+  color:#d5ad72;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  margin:0 0 15px;
+}
+
+.my-books-journey-video video {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid rgba(213,173,114,.35);
+  border-radius:14px;
+  background:#10151e;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+.my-books-journey-story {
+  padding:25px;
+  border:1px solid rgba(213,173,114,.25);
+  border-radius:15px;
+  background:linear-gradient(145deg,#192535,#111b28);
+}
+
+.my-books-journey-story h3 {
+  margin:0 0 15px;
+  color:#f6f3ed;
+  font-family:Georgia,serif;
+  font-size:clamp(23px,2.5vw,31px);
+  line-height:1.3;
+}
+
+.my-books-journey-intro {
+  color:#b6c0cc;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.my-books-timeline {
+  border-left:2px solid rgba(213,173,114,.35);
+  margin-left:7px;
+  padding-left:24px;
+}
+
+.my-books-milestone {
+  position:relative;
+  margin-bottom:22px;
+}
+
+.my-books-milestone::before {
+  content:"";
+  position:absolute;
+  width:11px;
+  height:11px;
+  left:-31px;
+  top:7px;
+  border-radius:50%;
+  background:#d5ad72;
+  box-shadow:0 0 0 4px #192535;
+}
+
+.my-books-milestone h4 {
+  color:#d5ad72;
+  font-size:16px;
+  margin:0 0 6px;
+}
+
+.my-books-milestone p {
+  color:#b6c0cc;
+  line-height:1.65;
+  margin:0;
+}
+
+.my-books-journey-closing {
+  margin:20px 0 0;
+  color:#d5ad72;
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:18px;
+}
+
+/* Mobile and tablet */
+@media(max-width:800px) {
+  .my-books-journey-layout {
+    grid-template-columns:minmax(0,1fr);
+    gap:24px;
+  }
+
+  .my-books-journey-video {
+    max-width:440px;
+    width:100%;
+  }
+
+  .my-books-journey-story {
+    padding:20px;
+  }
+}
+
+</style>
+
+
+    <!-- TOS CREATIONS APP GALLERY -->
+
+<h2 style="margin-top: 65px;">Explore Our Apps</h2>
+
+<p class="section-intro">
+  Discover what we're creating and testing at TOS Creations.
+</p>
+
+
+<style>
+  .app-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+  }
+
+  .gallery-card {
+    background: #1c2532;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    padding: 28px;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border-color: #d5ad72;
+  }
+
+  .gallery-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .gallery-card h3 {
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: #f6f3ed;
+  }
+
+  .gallery-card p {
+    color: #adb8c5;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .gallery-status {
+    display: inline-block;
+    margin-top: 14px;
+    color: #d5ad72;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    
+/* CROSSWORD JIGSAW SUPPORT LINKS */
+
+
+.crossword-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 6px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.crossword-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 5px;
+  border: 1px solid rgba(213,173,114,0.45);
+  border-radius: 8px;
+  background: #253244;
+  color: #d5ad72;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.crossword-links a:hover {
+  background: #34465b;
+}
+
+
+.crossword-links a:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: 3px;
+}
+
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-card {
+      transition: none;
+    }
+    .gallery-card:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<div class="app-gallery">
+
+  <!-- CROSSWORD JIGSAW -->
+  <article class="gallery-card">
+    <img
+      src="crossword-icon.png"
+      alt="Crossword Jigsaw app icon"
+      class="gallery-icon"
+    >
+
+    <h3>Crossword Jigsaw</h3>
+
+    <p>
+      Solve crossword clues to unlock puzzle pieces
+      and reveal beautiful hidden pictures.
+      A relaxing blend of words and visual discovery.
+    </p>
+
+    <span class="gallery-status">AVAILABLE ON APP STORE</span>
+
+  
+<!-- CROSSWORD JIGSAW LINKS -->
+<div class="crossword-links"
+  
+  <!-- APP STORE BUTTON -->
+<a
+  href="https://apps.apple.com/us/app/crossword-jigsaw/id6822561017"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#d5ad72;
+    color:#10151e;
+    border-radius:10px;
+  margin-top:10px;
+    padding:12px 12px;
+    font-weight:700;
+  font-size:11px !important;
+    text-decoration:none;
+    text-align:center;
+    box-sizing:border-box;
+  "
+>
+  App Store Download ↗
+</a>
+
+<!-- SUPPORT AND PRIVACY BUTTONS -->
+<div class="crossword-links"
+     style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:6px; width:100%; margin-top:14px;">
+
+  <a href="crossword-jigsaw/"
+     style="display:flex; flex:1 1 0; min-width:0; align-items:center; justify-content:center; padding:9px 4px; border:1px solid #8c7351; border-radius:8px; background:#253244; color:#d5ad72; font-size:11px; font-weight:700; text-decoration:none; white-space:nowrap;">
+    Support
+  </a>
+
+  <a href="crossword-jigsaw/privacy.html"
+     style="display:flex; flex:1 1 0; min-width:0; align-items:center; justify-content:center; padding:9px 4px; border:1px solid #8c7351; border-radius:8px; background:#253244; color:#d5ad72; font-size:11px; font-weight:700; text-decoration:none; white-space:nowrap;">
+    Privacy Policy
+  </a>
+
+</div>
+
+</style>
+</article>
+
+
+<!-- MUSIC MASHUP -->
+<article class="gallery-card">
+
+  <img
+    src="mashup-icon.png"
+    alt="Music Mashup app icon"
+    class="gallery-icon"
+    loading="lazy"
+  >
+
+  <h3>Music Mashup </h3>
+
+  <p>
+    Create custom mixes, transitions, and mashups
+    using audio you own. Import tracks, edit with
+    two decks, adjust tempo and pitch, add crossfades,
+    and export your creations as WAV files.
+  </p>
+
+  <span class="gallery-status">IN TESTFLIGHT</span>
+
+  <!-- TESTFLIGHT BUTTON -->
+  <a
+    href="https://testflight.apple.com/join/WM4ngT36"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="
+      display:flex;
+      width:100%;
+      min-height:42px;
+      margin-top:14px;
+      padding:10px 6px;
+      align-items:center;
+      justify-content:center;
+      border-radius:9px;
+      background:#d5ad72;
+      color:#10151e;
+      text-align:center;
+      font-size:12px;
+      font-weight:700;
+      text-decoration:none;
+      box-sizing:border-box;
+    "
+  >
+    Join Music Mashup Beta ↗
+  </a>
+
+  <!-- SUPPORT AND PRIVACY BUTTONS -->
+  <div
+    style="
+      display:flex;
+      flex-direction:row;
+      flex-wrap:nowrap;
+      gap:6px;
+      width:100%;
+      margin-top:14px;
+    "
+  >
+
+    <a
+      href="music-mashup/"
+      style="
+        display:flex;
+        flex:1 1 0;
+        min-width:0;
+        min-height:40px;
+        padding:9px 4px;
+        align-items:center;
+        justify-content:center;
+        border:1px solid #8c7351;
+        border-radius:8px;
+        background:#253244;
+        color:#d5ad72;
+        font-size:11px;
+        font-weight:700;
+        text-decoration:none;
+        white-space:nowrap;
+        box-sizing:border-box;
+      "
+    >
+      Support
+    </a>
+
+    <a
+      href="music-mashup/privacy.html"
+      style="
+        display:flex;
+        flex:1 1 0;
+        min-width:0;
+        min-height:40px;
+        padding:9px 4px;
+        align-items:center;
+        justify-content:center;
+        border:1px solid #8c7351;
+        border-radius:8px;
+        background:#253244;
+        color:#d5ad72;
+        font-size:11px;
+        font-weight:700;
+        text-decoration:none;
+        white-space:nowrap;
+        box-sizing:border-box;
+      "
+    >
+      Privacy Policy
+    </a>
+
+  </div>
+
+
+
+</article>
+
+
+  <!-- BLOCKS GAME -->
+  <article class="gallery-card">
+    <img
+      src="blocks-icon.png"
+      alt="TOS Retro Games icon"
+      class="gallery-icon"
+    >
+
+    <h3>TOS Retro Games </h3>
+
+    <p>
+      Enjoy an arcade-inspired puzzle experience
+      that combines colorful gameplay,
+      strategy, and entertaining challenges.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+    
+<!-- TOS RETRO GAMES TESTFLIGHT BUTTON -->
+
+<a
+  href="https://testflight.apple.com/join/reNaac71"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:flex;
+    width:100%;
+    min-height:42px;
+    margin-top:14px;
+    padding:10px 6px;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:#d5ad72;
+    color:#10151e;
+    text-align:center;
+    font-size:12px;
+    font-weight:700;
+    text-decoration:none;
+    box-sizing:border-box;
+  "
+>
+  Join Retro Games Beta ↗
+</a>
+
+    
+<!-- TOS RETRO GAMES SUPPORT AND PRIVACY LINKS -->
+
+<div style="
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  gap:6px;
+  width:100%;
+  margin-top:14px;
+">
+
+  <a
+    href="retro-games/"
+    style="
+      display:flex;
+      flex:1 1 0;
+      min-width:0;
+      min-height:40px;
+      padding:9px 4px;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #8c7351;
+      border-radius:8px;
+      background:#253244;
+      color:#d5ad72;
+      font-size:11px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      box-sizing:border-box;
+    "
+  >
+    Support
+  </a>
+
+  <a
+    href="retro-games/privacy.html"
+    style="
+      display:flex;
+      flex:1 1 0;
+      min-width:0;
+      min-height:40px;
+      padding:9px 4px;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #8c7351;
+      border-radius:8px;
+      background:#253244;
+      color:#d5ad72;
+      font-size:11px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      box-sizing:border-box;
+    "
+  >
+    Privacy Policy
+  </a>
+
+</div>
+
+  </article>
+
+  <!-- MY MUSIC OS -->
+  <article class="gallery-card">
+    <img
+      src="music-os-icon.png"
+      alt="My Music OS app icon"
+      class="gallery-icon"
+    >
+
+    <h3>My Music OS</h3>
+
+    <p>
+      A personalized music experience focused
+      on creativity, exploration, and bringing
+      your favorite sounds together.
+    </p>
+
+    <span class="gallery-status">IN TESTFLIGHT</span>
+    
+<!-- MY MUSIC OS TESTFLIGHT BUTTON -->
+
+<a
+  href="https://testflight.apple.com/join/j2CwvC9z"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:flex;
+    width:100%;
+    min-height:44px;
+    margin-top:14px;
+    padding:10px 6px;
+    align-items:center;
+    justify-content:center;
+    border-radius:9px;
+    background:#d5ad72;
+    color:#10151e;
+    text-align:center;
+    font-size:11px;
+    font-weight:700;
+    text-decoration:none;
+    box-sizing:border-box;
+  "
+>
+  Join My Music OS Beta ↗
+</a>
+
+    <!-- MY MUSIC OS SUPPORT AND PRIVACY LINKS -->
+
+<div style="
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  gap:6px;
+  width:100%;
+  margin-top:14px;
+">
+
+  <a
+    href="my-music-os/"
+    style="
+      display:flex;
+      flex:1 1 0;
+      min-width:0;
+      min-height:40px;
+      padding:9px 4px;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #8c7351;
+      border-radius:8px;
+      background:#253244;
+      color:#d5ad72;
+      font-size:11px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      box-sizing:border-box;
+    "
+  >
+    Support
+  </a>
+
+  <a
+    href="my-music-os/privacy.html"
+    style="
+      display:flex;
+      flex:1 1 0;
+      min-width:0;
+      min-height:40px;
+      padding:9px 4px;
+      align-items:center;
+      justify-content:center;
+      border:1px solid #8c7351;
+      border-radius:8px;
+      background:#253244;
+      color:#d5ad72;
+      font-size:11px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      box-sizing:border-box;
+    "
+  >
+    Privacy Policy
+  </a>
+
+</div>
+  </article>
+
+</div>
+    
+<!-- CROSSWORD JIGSAW DETAILS -->
+
+<details class="crossword-details" id="crossword-details">
+  <summary>Explore Crossword Jigsaw Details</summary>
+
+  <div class="crossword-detail-content">
+
+    <input type="radio" name="crossword-tabs"
+           id="crossword-description" checked>
+    <input type="radio" name="crossword-tabs"
+           id="crossword-testing">
+
+    <div class="crossword-tab-buttons">
+      <label for="crossword-description">Description</label>
+      <label for="crossword-testing">What to Test</label>
+    </div>
+
+    <div class="crossword-panel crossword-description-panel">
+
+      <h3>Crossword Jigsaw</h3>
+      <p><strong>Solve the words. Reveal the picture.</strong></p>
+
+      <p>Crossword Jigsaw brings word clues and picture puzzles together in one relaxing challenge. Solve clues to unlock pieces, then fit them into place to reveal beautiful, realistic artwork.</p>
+
+      <p>Enjoy a quiet puzzle break or give yourself a challenge. Choose your difficulty, play at your own pace, and turn on the optional timer when you want to test your speed.</p>
+
+      <h4>Two Ways to Exercise Your Mind</h4>
+      <p>Use your word knowledge to solve clues and your visual skills to assemble the picture. Each answer brings you closer to the finished image.</p>
+
+      <h4>Beautiful Worlds to Discover</h4>
+      <p>Explore artwork inspired by ancient wonders, coastal scenery, and the world beyond Earth. Watch each scene come together, one piece at a time.</p>
+
+      <h4>A Challenge That Fits Your Mood</h4>
+      <p>Choose Easy, Medium, or Expert puzzles. Add an extra twist with optional piece rotation, or keep things relaxed with untimed play.</p>
+
+      <h4>Build Your Gallery</h4>
+      <p>Every completed puzzle becomes part of your collection. Complete a collection to unlock a larger master puzzle that brings your achievements together.</p>
+
+      <h4>Pick Up Where You Left Off</h4>
+      <p>Your progress saves automatically on your device, so you can step away and return to your unfinished puzzle.</p>
+
+      <p>Whether you love word games, jigsaws, or discovering something a little different, Crossword Jigsaw gives you a satisfying reason to find that next answer—and place that next piece.</p>
+
+      <p><strong>Created by TOS Creations.</strong></p>
+
+    </div>
+
+    <div class="crossword-panel crossword-testing-panel">
+
+      <h3>What to Test</h3>
+
+      <p>Thank you for testing Crossword Jigsaw! Please focus on:</p>
+
+      <ul>
+        <li><strong>Getting started:</strong> Is it clear how solving word clues unlocks jigsaw pieces?</li>
+        <li><strong>Puzzle difficulty:</strong> Try Easy, Medium, and Expert. Are the clues enjoyable, appropriately challenging, and accurate?</li>
+        <li><strong>Puzzle controls:</strong> Check selecting, moving, and placing pieces. Try optional piece rotation and the timer.</li>
+        <li><strong>Saving progress:</strong> Leave a puzzle unfinished, close the app, and reopen it. Confirm your answers and placed pieces are restored.</li>
+        <li><strong>Navigation:</strong> Move between Home, Puzzles, Gallery, and Settings. Report any confusing buttons or screens you cannot exit.</li>
+        <li><strong>Artwork and gallery:</strong> Complete puzzles and confirm their pictures appear in your gallery. If you finish a full collection, try the unlocked master puzzle.</li>
+        <li><strong>Downloads and offline play:</strong> Download available content, then try playing without an internet connection.</li>
+        <li><strong>Display and performance:</strong> Watch for cut-off text, tiny controls, slow loading, freezes, or crashes.</li>
+      </ul>
+
+      <p>We'd also love to hear what feels fun, what feels frustrating, and what would make you want to play again.</p>
+
+      <p>When reporting a problem, please include your iPhone model, what you were doing, what happened, and a screenshot if possible.</p>
+
+    </div>
+
+  </div>
+</details>
+
+<style>
+.crossword-details {
+  margin-top: 28px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.crossword-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.crossword-details > summary:hover {
+  background: #202c3b;
+}
+
+.crossword-detail-content {
+  padding: 20px 24px 28px;
+}
+
+.crossword-detail-content input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.crossword-tab-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.crossword-tab-buttons label {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #253244;
+  border-radius: 9px;
+  color: #adb8c5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#crossword-description:checked ~ .crossword-tab-buttons
+label[for="crossword-description"],
+#crossword-testing:checked ~ .crossword-tab-buttons
+label[for="crossword-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.crossword-panel {
+  display: none;
+  max-width: 850px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+#crossword-description:checked ~ .crossword-description-panel,
+#crossword-testing:checked ~ .crossword-testing-panel {
+  display: block;
+}
+
+.crossword-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.crossword-panel h4 {
+  color: #d5ad72;
+  margin: 24px 0 8px;
+}
+
+.crossword-panel p {
+  margin: 0 0 17px;
+}
+
+.crossword-panel ul {
+  padding-left: 24px;
+}
+
+.crossword-panel li {
+  margin-bottom: 13px;
+}
+
+.crossword-panel strong {
+  color: #f6f3ed;
+}
+
+.crossword-details summary:focus-visible,
+.crossword-tab-buttons label:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .crossword-detail-content {
+    padding: 16px;
+  }
+
+  .crossword-tab-buttons label {
+    flex: 1;
+    text-align: center;
+  }
+}
+</style>
+    
+<!-- MUSIC MASHUP DETAILS -->
+
+<details class="mashup-details" id="music-mashup-details">
+  <summary>Explore Music Mashup Details</summary>
+
+  <div class="mashup-detail-content">
+
+    
+<!-- MUSIC MASHUP TAB CONTROLS -->
+
+<div class="mashup-tab-buttons">
+  <button type="button"
+    class="mashup-tab active"
+    onclick="showMashupTab('description', this)">
+    Description
+  </button>
+
+  <button type="button"
+    class="mashup-tab"
+    onclick="showMashupTab('testing', this)">
+    What to Test
+  </button>
+</div>
+
+<div id="mashup-description-content">
+
+
+    <h3>Music Mashup Project</h3>
+
+    <p>
+      Music Mashup is a creative sound lab for turning songs
+      and owned audio into custom mixes, transitions,
+      and mashups.
+    </p>
+
+    <p>
+      Browse and play music from your Apple Music library,
+      or import audio files you own from the Files app.
+      Build a queue, arrange clips, trim start and end points,
+      adjust tempo and pitch, add crossfades, preview your
+      changes, and export your finished mix as a WAV file.
+    </p>
+
+    <h4>Two-Deck Editor</h4>
+    <p>
+      The two-deck editor makes it easier to shape
+      transitions between songs without constantly moving
+      between screens. Adjust both tracks together,
+      preview each deck, control the overlap between clips,
+      and hear your mix before exporting.
+    </p>
+
+    <h4>Supported Audio Formats</h4>
+    <p>
+      Music Mashup supports MP3, WAV, M4A, AAC,
+      and AIFF audio files.
+    </p>
+
+    <h4>Apple Music Integration</h4>
+    <p>
+      Apple Music content is available for listening,
+      browsing, and queueing only. Apple Music tracks
+      cannot be edited, mixed, or exported.
+    </p>
+
+    <p>
+      Editing and exporting are limited to audio that
+      you own or have permission to use.
+    </p>
+
+    <h4>Create Something of Your Own</h4>
+    <p>
+      Create a quick blend from your first two imported
+      tracks, save projects for later, organize your
+      queues, and build something that sounds like yours.
+    </p>
+
+  </div>
+
+<!-- MUSIC MASHUP WHAT TO TEST -->
+
+<div id="mashup-testing-content" style="display:none;">
+
+  <h3>Help Us Test Music Mashup</h3>
+
+  <p>
+    Please test the complete creative workflow.
+  </p>
+
+  <h4>Getting Started</h4>
+  <ol>
+    <li>Launch the app and review the onboarding flow.</li>
+    <li>Try the demo mix.</li>
+    <li>Open Library and confirm Apple Music permission and library browsing.</li>
+    <li>Tap an Apple Music song to start playback, tap it again to pause, and try another song.</li>
+    <li>Add an Apple Music track to the playback queue.</li>
+    <li>Confirm Apple Music tracks remain playback-only and cannot be edited or exported.</li>
+  </ol>
+
+  <h4>Importing and Editing Audio</h4>
+  <ol start="7">
+    <li>Open Owned Audio and import MP3, WAV, M4A, AAC, or AIFF files from Files.</li>
+    <li>Add at least two imported tracks to the queue.</li>
+    <li>Open Imported Audio Queue.</li>
+    <li>Use the “Edit both tracks together” editor.</li>
+    <li>Adjust Deck A and Deck B start/end sliders.</li>
+    <li>Adjust the transition/crossfade length.</li>
+    <li>Preview each deck and confirm playback can start and stop.</li>
+    <li>Play the edited queue and verify the changes are audible.</li>
+    <li>Test tempo/playback-rate and pitch adjustments.</li>
+    <li>Reorder clips, delete a clip, and add the same clip more than once.</li>
+  </ol>
+
+  <h4>Mixing, Exporting and Projects</h4>
+  <ol start="17">
+    <li>Use Quick Mix with two imported tracks.</li>
+    <li>Export the queue as a WAV file and confirm the file can be saved and played.</li>
+    <li>Create, rename, and delete a project. Confirm the delete confirmation appears.</li>
+    <li>Test the iCloud sync button and confirm the app remains usable if sync is unavailable.</li>
+  </ol>
+
+  <h4>Reliability and Device Testing</h4>
+  <ol start="21">
+    <li>Test the app after resetting simulator state with <code>--reset-state</code>.</li>
+    <li>Check scrolling, tab navigation, text readability, and controls on a physical device.</li>
+  </ol>
+
+</div>
+  </div>
+
+</details>
+
+<style>
+.mashup-details {
+  margin-top: 18px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.mashup-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mashup-details > summary:hover {
+  background: #202c3b;
+}
+
+.mashup-detail-content {
+  padding: 28px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #adb8c5;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+
+#mashup-description-content,
+#mashup-testing-content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#mashup-testing-content ol {
+  padding-left: 28px;
+  margin-bottom: 24px;
+}
+
+#mashup-testing-content li {
+  padding-left: 4px;
+  margin-bottom: 12px;
+}
+
+.mashup-tab-heading {
+  display: inline-block;
+  background: #d5ad72;
+  color: #10151e;
+  padding: 11px 20px;
+  border-radius: 9px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.mashup-detail-content h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.mashup-detail-content h4 {
+  color: #d5ad72;
+  margin: 25px 0 8px;
+}
+
+.mashup-detail-content p {
+  margin: 0 0 17px;
+}
+
+.mashup-details > summary:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: -2px;
+}
+
+@media (max-width: 600px) {
+  .mashup-detail-content {
+    padding: 16px;
+  }
+}
+  
+/* Uniform support buttons */
+#support a[href] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  max-width: 480px;
+  min-height: 56px;
+  padding: 12px 16px !important;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+</style>
+    
+<style>
+.mashup-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.mashup-tab {
+  padding: 11px 20px;
+  min-height: 44px;
+  border-radius: 9px;
+  border: 1px solid rgba(213,173,114,.35);
+  background: #253244;
+  color: #adb8c5;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mashup-tab.active {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.mashup-tab:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: 3px;
+}
+
+#mashup-testing-content h4 {
+  color: #d5ad72;
+  margin-top: 28px;
+}
+
+#mashup-testing-content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .mashup-tab {
+    flex: 1;
+  }
+}
+</style>
+
+<script>
+function showMashupTab(tab, button) {
+  const description =
+    document.getElementById("mashup-description-content");
+
+  const testing =
+    document.getElementById("mashup-testing-content");
+
+  if (!description || !testing) return;
+
+  description.style.display =
+    tab === "description" ? "block" : "none";
+
+  testing.style.display =
+    tab === "testing" ? "block" : "none";
+
+  document.querySelectorAll(".mashup-tab")
+    .forEach(item => {
+      item.classList.toggle("active", item === button);
+    });
+}
+</script>
+
+<!-- ======================================= -->
+<!-- TOS RETRO GAMES DETAILS                 -->
+<!-- ======================================= -->
+
+<details class="retro-details" id="retro-games-details">
+
+  <summary>Explore TOS Retro Games Details</summary>
+
+  <div class="retro-content">
+
+    <input
+      type="radio"
+      name="retro-tabs"
+      id="retro-description"
+      checked
+    >
+
+    <input
+      type="radio"
+      name="retro-tabs"
+      id="retro-testing"
+    >
+
+    <div class="retro-tab-buttons">
+      <label for="retro-description">Description</label>
+      <label for="retro-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+
+    <div class="retro-panel retro-description-panel">
+
+      <h3>TOS Retro Games</h3>
+
+      <p>
+        Step inside the neon grid with a five-level
+        retro arcade stacking challenge designed
+        to test timing, reflexes, balance,
+        and spatial strategy.
+      </p>
+
+      <p>
+        Inspired by classic arcade games, TOS Retro
+        Games combines simple controls with increasingly
+        demanding challenges, glowing visual effects,
+        and an adaptive synthesized soundtrack.
+      </p>
+
+      <h4>Level 1 — Classic Slice</h4>
+      <p>
+        Drop sliding blocks onto your tower.
+        Overhanging sections are sliced away,
+        shrinking your platform with every miss.
+        Precision is the key to building higher.
+      </p>
+
+      <h4>Level 2 — The Balance Beam</h4>
+      <p>
+        Blocks retain their full size.
+        Gravity and weight distribution determine
+        whether your tower remains standing.
+        Stack too far off-center and watch it tilt.
+      </p>
+
+      <h4>Level 3 — Grid-Fit Puzzle</h4>
+      <p>
+        Fit fractional pieces of 25%, 50%, and 75%
+        together to complete a full row without gaps.
+        Every placement matters.
+      </p>
+
+      <h4>Level 4 — The Shift Grid</h4>
+      <p>
+        The target landing area moves left and right
+        while blocks slide overhead. Track the movement
+        and time your drops carefully.
+      </p>
+
+      <h4>Level 5 — Blind Neon</h4>
+      <p>
+        The grid disappears into darkness, briefly
+        flashing in time with the retro soundtrack.
+        Rely on rhythm, memory, and precise timing.
+      </p>
+
+      <h4>Arcade Features</h4>
+
+      <ul>
+        <li>Five distinct arcade challenges</li>
+        <li>Local Top 5 leaderboards</li>
+        <li>Three-letter initials for high scores</li>
+        <li>Streak multipliers and bonus points</li>
+        <li>Adaptive synthesized arcade audio</li>
+        <li>Daily challenges and personal achievements</li>
+        <li>Skyline, medal, and progression systems</li>
+      </ul>
+
+      <p>
+        <strong>
+          Five levels. Endless opportunities
+          to beat your personal best.
+        </strong>
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+
+    <div class="retro-panel retro-testing-panel">
+
+      <h3>Help Us Test TOS Retro Games</h3>
+
+      <p>
+        Welcome to TOS Retro Games testing!
+        We're looking for feedback on gameplay,
+        timing, physics, progression, and
+        overall enjoyment.
+      </p>
+
+      <h4>Test All Five Levels</h4>
+
+      <ol>
+        <li>
+          <strong>Classic Slice:</strong>
+          Test block alignment, slicing,
+          and perfect-drop scoring.
+        </li>
+
+        <li>
+          <strong>Balance Beam:</strong>
+          Test gravity, weight distribution,
+          tower movement, and tipping.
+        </li>
+
+        <li>
+          <strong>Grid-Fit Puzzle:</strong>
+          Try fractional pieces and confirm
+          full, gap-free rows score correctly.
+        </li>
+
+        <li>
+          <strong>The Shift Grid:</strong>
+          Test the moving landing area
+          and timing of block drops.
+        </li>
+
+        <li>
+          <strong>Blind Neon:</strong>
+          Test the brief target flashes
+          and rhythm-based gameplay.
+        </li>
+      </ol>
+
+      <h4>Scoring and Audio</h4>
+
+      <ul>
+        <li>
+          Verify consecutive perfect placements
+          activate the STREAK multiplier.
+        </li>
+
+        <li>
+          Confirm bonus scoring is applied correctly.
+        </li>
+
+        <li>
+          Listen for soundtrack changes as
+          the challenge becomes more demanding.
+        </li>
+
+        <li>
+          Test the MUTE control.
+        </li>
+
+        <li>
+          Confirm local Top 5 high scores
+          save for the appropriate level.
+        </li>
+
+        <li>
+          Check the campaign-completion
+          experience after Level 5.
+        </li>
+      </ul>
+
+      <h4>Progression and Replay Value</h4>
+
+      <p>
+        Recent updates include changes to the
+        color scheme and level progression.
+        Please pay particular attention to
+        how the updated experience feels.
+      </p>
+
+      <ul>
+        <li>
+          After losing, did you want another try?
+          Why or why not?
+        </li>
+
+        <li>
+          Was it clear what you were
+          working toward?
+        </li>
+
+        <li>
+          Which mode would you return to,
+          and which felt frustrating?
+        </li>
+
+        <li>
+          Did the skyline make your progress
+          feel worthwhile?
+        </li>
+
+        <li>
+          Are the updated colors readable
+          and visually comfortable?
+        </li>
+
+        <li>
+          Does progression through the
+          five levels feel clear and fair?
+        </li>
+      </ul>
+
+      <h4>Additional Testing</h4>
+
+      <ul>
+        <li>
+          Try Instant Play and attempt to beat
+          the studio baseline score of 8.
+        </li>
+
+        <li>
+          Report your highest streak count.
+        </li>
+
+        <li>
+          Test gameplay controls on your device.
+        </li>
+
+        <li>
+          Report freezes, crashes, incorrect scores,
+          or unexpected behavior.
+        </li>
+      </ul>
+
+      <h4>Reporting Feedback</h4>
+
+      <p>
+        Please include your device model,
+        app version or build number,
+        game level, what happened,
+        and what you expected.
+        Screenshots are helpful when available.
+      </p>
+
+      <p>
+        <strong>
+          Most importantly, tell us whether
+          the game makes you want to play again!
+        </strong>
+      </p>
+
+    </div>
+
+  </div>
+
+</details>
+
+<!-- RETRO GAMES STYLING -->
+
+<style>
+
+.retro-details {
+  margin-top: 18px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.retro-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.retro-details > summary:hover {
+  background: #202c3b;
+}
+
+.retro-content {
+  padding: 28px 32px;
+  color: #adb8c5;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+
+.retro-content input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.retro-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.retro-tab-buttons label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 20px;
+  background: #253244;
+  border-radius: 9px;
+  color: #adb8c5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#retro-description:checked ~ .retro-tab-buttons
+label[for="retro-description"],
+#retro-testing:checked ~ .retro-tab-buttons
+label[for="retro-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.retro-content input:focus-visible ~ .retro-tab-buttons {
+  outline: 1px solid #d5ad72;
+  outline-offset: 4px;
+}
+
+.retro-panel {
+  display: none;
+  max-width: 850px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+#retro-description:checked ~ .retro-description-panel,
+#retro-testing:checked ~ .retro-testing-panel {
+  display: block;
+}
+
+.retro-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+  margin-top: 10px;
+}
+
+.retro-panel h4 {
+  color: #d5ad72;
+  margin: 25px 0 8px;
+}
+
+.retro-panel p {
+  margin: 0 0 17px;
+}
+
+.retro-panel ul,
+.retro-panel ol {
+  padding-left: 26px;
+  margin-bottom: 22px;
+}
+
+.retro-panel li {
+  margin-bottom: 12px;
+}
+
+.retro-panel strong {
+  color: #f6f3ed;
+}
+
+@media (max-width: 600px) {
+  .retro-content {
+    padding: 18px;
+  }
+
+  .retro-tab-buttons label {
+    flex: 1;
+  }
+}
+
+</style>
+
+<!-- ======================================= -->
+<!-- MY MUSIC OS DETAILS                     -->
+<!-- ======================================= -->
+
+<details class="my-music-details" id="my-music-os-details">
+  <summary>Explore My Music OS Details</summary>
+
+  <div class="my-music-content">
+
+    <input type="radio" name="my-music-tabs"
+      id="my-music-description" checked>
+
+    <input type="radio" name="my-music-tabs"
+      id="my-music-testing">
+
+    <div class="my-music-tab-buttons">
+      <label for="my-music-description">Description</label>
+      <label for="my-music-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="my-music-panel my-music-description-panel">
+
+      <h3>My Music OS</h3>
+
+      <p>
+        Turn your phone into a pocket dual-deck DJ booth.
+        Load two tracks side by side, blend them with a
+        crossfader, and explore music creation through
+        hands-on controls and a glowing, audio-reactive interface.
+      </p>
+
+      <h4>Dual-Deck Mixing</h4>
+      <p>
+        Control two decks with EQ, pitch adjustments,
+        crossfading, hot cues, and loop controls.
+        Blend music and create your own transitions.
+      </p>
+
+      <h4>Camelot Key-Matching Wheel</h4>
+      <p>
+        Explore harmonic mixing using an interactive
+        Camelot wheel. The display highlights each
+        deck's musical key and helps you identify
+        compatible combinations.
+      </p>
+
+      <h4>Smart Sync and Tempo Detection</h4>
+      <p>
+        Use on-device tempo and musical-key analysis
+        with the included studio loops. Smart Sync
+        aligns supported loops to a common beat grid,
+        while a metronome provides additional timing help.
+      </p>
+
+      <h4>Studio Loops</h4>
+      <p>
+        Five built-in studio loops let you begin mixing
+        immediately, including the Velvet Strings
+        guitar loop.
+      </p>
+
+      <h4>Library and Crates</h4>
+      <p>
+        Import audio from your device, organize tracks
+        into named crates, and load them onto either deck.
+      </p>
+
+      <h4>Recording</h4>
+      <p>
+        Capture and export supported mixes created from
+        the built-in studio loops, then save or share
+        your recordings.
+      </p>
+
+      <p>
+        Recording currently does not support mixes
+        containing imported device tracks.
+      </p>
+
+      <h4>Studio Coach and Achievements</h4>
+      <p>
+        Learn the controls using the built-in Studio Coach
+        and earn achievements as you explore mixing,
+        synchronization, and harmonic matching.
+      </p>
+
+      <p>
+        <strong>
+          Mix creatively. Learn the controls.
+          Build your sound.
+        </strong>
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="my-music-panel my-music-testing-panel">
+
+      <h3>Help Us Test My Music OS</h3>
+
+      <p>
+        Please explore the complete DJ mixing experience,
+        including the latest guitar loop, Camelot wheel,
+        library organization, and core audio controls.
+      </p>
+
+      <h4>1. Dual-Deck Audio and Mixer</h4>
+      <ul>
+        <li>Load studio loops onto Deck A and Deck B.</li>
+        <li>Start playback and check that the decks stay synchronized.</li>
+        <li>Move the crossfader from left to right and listen for smooth transitions.</li>
+        <li>Test volume and EQ controls for crackling, popping, clipping, or silence.</li>
+        <li>Try pitch controls, hot cues, and loops.</li>
+        <li>Test Smart Sync and the metronome.</li>
+        <li>Check mute and solo controls where available.</li>
+      </ul>
+
+      <h4>2. Velvet Strings Guitar Loop</h4>
+      <ul>
+        <li>Open Studio and load Velvet Strings onto either deck.</li>
+        <li>Confirm audio plays clearly.</li>
+        <li>Check its detected BPM and musical key.</li>
+        <li>Try Smart Sync with another studio loop.</li>
+        <li>Test its hot cues and loop controls.</li>
+        <li>Compare its volume and sound quality with the other studio loops.</li>
+      </ul>
+
+      <h4>3. Camelot Wheel</h4>
+      <ul>
+        <li>Load different studio loops onto Deck A and Deck B.</li>
+        <li>Check that each deck's key appears in its designated color.</li>
+        <li>Look for neighboring key indicators.</li>
+        <li>Confirm matching keys produce the green highlight and white ring.</li>
+        <li>Compare the wheel with the text readout below it.</li>
+        <li>Tell us whether key matching feels clear or confusing.</li>
+      </ul>
+
+      <h4>4. Imported Audio and Crates</h4>
+      <ul>
+        <li>Import an audio file using Load Track.</li>
+        <li>Confirm the imported track appears in Your Imports.</li>
+        <li>Reload it onto either deck from the Library.</li>
+        <li>Create a named crate and organize tracks inside it.</li>
+        <li>Rename and delete a crate.</li>
+        <li>Confirm deleting a crate doesn't delete its tracks.</li>
+        <li>Delete an imported track and confirm its library and crate references disappear.</li>
+      </ul>
+
+      <h4>5. Recording and Sharing</h4>
+      <ul>
+        <li>Load supported built-in studio loops.</li>
+        <li>Record a mix using the available recording controls.</li>
+        <li>Save or share the finished WAV recording.</li>
+        <li>Confirm the recording can be played back.</li>
+        <li>Check how recording behaves when imported tracks are loaded.</li>
+      </ul>
+
+      <h4>6. Reliability and Navigation</h4>
+      <ul>
+        <li>Test scrolling and control responsiveness.</li>
+        <li>Background the app during playback, then return.</li>
+        <li>Close and reopen the app to check saved session settings.</li>
+        <li>Explore Studio Coach and confirm its explanations are clear.</li>
+        <li>Check readability, screen layouts, and accessibility.</li>
+        <li>Report crashes, freezes, audio glitches, or unexpected behavior.</li>
+      </ul>
+
+      <h4>What Feedback Helps Most?</h4>
+
+      <p>
+        Does the Camelot wheel make harmonic mixing
+        easier to understand? Are importing and organizing
+        tracks intuitive? Does Velvet Strings fit naturally
+        with the other loops?
+      </p>
+
+      <p>
+        Tell us what worked, what felt confusing,
+        and what would improve your next session.
+      </p>
+
+      <p>
+        Please include your device model, app version,
+        what happened, and what you expected.
+        Screenshots are helpful when available.
+      </p>
+
+    </div>
+
+  </div>
+</details>
+
+<!-- MY MUSIC OS STYLING -->
+<style>
+
+.my-music-details {
+  margin-top: 18px;
+  background: #141e2b;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.my-music-details > summary {
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.my-music-details > summary:hover {
+  background: #202c3b;
+}
+
+.my-music-content {
+  padding: 28px 32px;
+  color: #adb8c5;
+  line-height: 1.8;
+}
+
+.my-music-content input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.my-music-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.my-music-tab-buttons label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  min-height: 44px;
+  background: #253244;
+  color: #adb8c5;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#my-music-description:checked ~ .my-music-tab-buttons
+label[for="my-music-description"],
+#my-music-testing:checked ~ .my-music-tab-buttons
+label[for="my-music-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.my-music-panel {
+  display: none;
+  max-width: 850px;
+  line-height: 1.8;
+}
+
+#my-music-description:checked ~ .my-music-description-panel,
+#my-music-testing:checked ~ .my-music-testing-panel {
+  display: block;
+}
+
+.my-music-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.my-music-panel h4 {
+  color: #d5ad72;
+  margin: 25px 0 8px;
+}
+
+.my-music-panel p {
+  margin: 0 0 17px;
+}
+
+.my-music-panel ul {
+  padding-left: 26px;
+  margin-bottom: 22px;
+}
+
+.my-music-panel li {
+  margin-bottom: 12px;
+}
+
+.my-music-panel strong {
+  color: #f6f3ed;
+}
+
+@media (max-width: 600px) {
+  .my-music-content {
+    padding: 18px;
+  }
+
+  .my-music-tab-buttons label {
+    flex: 1;
+  }
+}
+
+</style>
+
+<!-- TOS CREATIONS ANDROID BETA SIGNUP -->
+<section id="android-beta" style="
+  max-width:1050px;
+  margin:45px auto;
+  padding:32px 26px;
+  border:1px solid rgba(213,173,114,.3);
+  border-radius:18px;
+  background:linear-gradient(145deg,#202e40,#121923);
+  text-align:center;
+  box-sizing:border-box;
+">
+
+  <p style="
+    color:#d5ad72;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:700;
+  ">
+    GOOGLE PLAY · CLOSED TESTING
+  </p>
+
+  <h2 style="
+    color:#f6f3ed;
+    font-family:Georgia,serif;
+    font-size:clamp(27px,4vw,38px);
+    margin:14px 0;
+  ">
+    Become an Android Beta Tester
+  </h2>
+
+  <p style="
+    color:#b6c0cc;
+    line-height:1.7;
+    max-width:720px;
+    margin:0 auto 24px;
+  ">
+    Interested in testing TOS Creations apps on Android?
+    Help us improve our games before public release.
+    Apply to join our Google Play closed-testing program.
+  </p>
+
+  <div style="
+    background:rgba(8,16,27,.35);
+    border:1px solid rgba(213,173,114,.2);
+    border-radius:12px;
+    padding:20px;
+    margin:0 auto 24px;
+    max-width:550px;
+  ">
+    <p style="color:#f6f3ed;font-weight:700;margin:0 0 8px;">
+      Currently Inviting Testers
+    </p>
+
+    <p style="color:#d5ad72;margin:0;line-height:1.8;">
+      Crossword Jigsaw
+      <span style="color:#b6c0cc;"> · </span>
+      TOS Retro Games
+      <span style="color:#b6c0cc;"> · </span>
+      Fitness OS
+      <span style="color:#b6c0cc;"> · </span>
+      Dart Club & Game Lounge
+    </p>
+  </div>
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLScV7EEDZDfDQcedGPhKMA1uRLs2q3oNflg1aoWVPpUJN4XDrQ/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      max-width:100%;
+      min-height:48px;
+      padding:13px 24px;
+      border-radius:10px;
+      background:#d5ad72;
+      color:#10151e;
+      text-decoration:none;
+      font-weight:700;
+      text-align:center;
+      box-sizing:border-box;
+    "
+  >
+    Apply for Android Beta Testing ↗
+  </a>
+
+  <p style="
+    color:#98a7b8;
+    font-size:13px;
+    line-height:1.6;
+    margin:20px auto 0;
+    max-width:650px;
+  ">
+    Participation is free. Selected testers will receive
+    instructions for joining their chosen Google Play
+    closed tests. Availability may vary.
+  </p>
+
+</section>
+<!-- END ANDROID BETA SIGNUP -->
+
+
+
+    <!-- FITNESS OS - IN TESTFLIGHT -->
+
+<section class="fitness-feature">
+
+  <div class="fitness-header">
+    <img
+      src="fitness-os-icon.png"
+      alt="Fitness OS app icon"
+      class="fitness-icon"
+    >
+
+    <div>
+      <h2>Fitness OS</h2>
+      <p class="fitness-tagline">Build a Better You.</p>
+      <span class="fitness-status">IN TESTFLIGHT</span>
+    </div>
+  </div>
+
+  <p class="fitness-description">
+    Fitness OS is an intelligent fitness experience
+    designed to bring workouts, personalized coaching,
+    nutrition, and progress tracking together in one place.
+  </p>
+
+  <p class="fitness-description">
+    Built around individual progress, Fitness OS combines
+    practical fitness tools with AI-supported guidance
+    to help users work toward their personal goals.
+  </p>
+
+  <p class="fitness-footer">
+    Something stronger is taking shape.
+  </p>
+
+
+    <!-- FITNESS OS TESTFLIGHT -->
+
+
+<!-- FITNESS OS LINKS -->
+
+<div class="fitness-links">
+
+  <a
+    href="https://testflight.apple.com/join/aj5GQsMA"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fitness-link-primary"
+  >
+    Join Fitness OS Beta ↗
+  </a>
+
+  <a
+    href="fitness-os/"
+    class="fitness-link-secondary"
+  >
+    Support
+  </a>
+
+  <a
+    href="fitness-os/privacy.html"
+    class="fitness-link-secondary"
+  >
+    Privacy Policy
+  </a>
+
+</div>
+
+<style>
+.fitness-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.fitness-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.fitness-link-primary {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.fitness-link-primary:hover {
+  background: #e7c79a;
+  transform: translateY(-2px);
+}
+
+.fitness-link-secondary {
+  color: #d5ad72;
+  background: #1c2532;
+  border: 1px solid rgba(213,173,114,.45);
+}
+
+.fitness-link-secondary:hover {
+  background: #29384a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .fitness-links a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fitness-links a {
+    transition: none;
+  }
+
+  .fitness-links a:hover {
+    transform: none;
+  }
+}
+</style>
+
+
+<!-- FITNESS OS EXPANDABLE DETAILS -->
+
+<details class="fitness-more">
+  <summary>Explore Fitness OS Details</summary>
+
+  <div class="fitness-tabs">
+
+    <input type="radio" name="fitness-tabs"
+           id="fitness-description" checked>
+    <input type="radio" name="fitness-tabs"
+           id="fitness-testing">
+
+    <div class="fitness-tab-buttons">
+      <label for="fitness-description">Description</label>
+      <label for="fitness-testing">What to Test</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="fitness-tab-panel fitness-description-panel">
+
+      <h3>Fitness OS — Build a Better You</h3>
+
+      <p>Fitness OS helps you build a training routine that fits your goals, experience, and available time.</p>
+
+      <p>Create reusable workouts in My Routines, choose a guided Boot Camp, or explore individual exercises. Boot Camp is included with Fitness OS at no extra charge and offers estimated 20-, 30-, and 45-minute sessions with exercises to review before you begin.</p>
+
+      <p>Record completed sets, repetitions, weights, and timed holds where supported. Pause and resume a workout, adjust supported exercises, or end a session early while keeping a record of what you completed. Workout history and progress tracking help you reflect on your training over time.</p>
+
+      <p>The AI Coach offers personalized training guidance using the goals, preferences, and workout information you share with Fitness OS. Ask questions, discuss how a session felt, and explore possible next steps. AI coaching has a usage allowance; your routines, workout logging, and history remain available when that allowance is used up.</p>
+
+      <p>You can also save private practice recordings and review them alongside your training. Automated video form analysis is not currently available.</p>
+
+      <p>Fitness OS is being developed for people with different backgrounds, abilities, and levels of training experience. This beta will help us understand where the app feels clear and useful—and where it needs to improve.</p>
+
+      <p>AI guidance can be inaccurate and does not replace professional medical advice or an individualized assessment by a qualified trainer.</p>
+
+      <p><strong>Build a better you, at your own pace.</strong></p>
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="fitness-tab-panel fitness-testing-panel">
+
+      <h3>Help Us Test Fitness OS</h3>
+
+      <p>Thank you for helping test Fitness OS. We want to learn whether the app is understandable and useful for people with different experience levels and abilities. You do not need to complete a demanding workout to provide valuable feedback.</p>
+
+      <h4>First Impressions and Navigation</h4>
+      <ul>
+        <li>Create an account and explore before asking for help.</li>
+        <li>Is it obvious where to start a workout?</li>
+        <li>Can you explain the difference between My Routines, Boot Camp, and the Exercise Library?</li>
+        <li>Is it clear that Boot Camp is included at no extra charge?</li>
+        <li>Note any screen where you feel lost or unsure what to tap next.</li>
+      </ul>
+
+      <h4>Workout Flow</h4>
+      <ul>
+        <li>Create a short routine, edit its targets, and reorder exercises.</li>
+        <li>Review a Boot Camp and explore available exercise swaps.</li>
+        <li>Log sets, repetitions, weights, or timed holds where available.</li>
+        <li>Pause, switch tabs, and find your workout again.</li>
+        <li>Finish a workout—or end early—and check that your completed work appears correctly in history.</li>
+        <li>Return later and repeat a saved routine.</li>
+      </ul>
+
+      <h4>AI Coach</h4>
+      <ul>
+        <li>Ask about choosing a workout, adjusting an exercise, or understanding your progress.</li>
+        <li>Check whether responses reflect the information you actually provided.</li>
+        <li>Report confusing, inaccurate, overly confident, or unsuitable advice.</li>
+        <li>Is the AI usage allowance easy to understand?</li>
+      </ul>
+
+      <h4>Recordings and Reliability</h4>
+      <ul>
+        <li>If comfortable, record a short practice clip, save it, play it back, and delete it.</li>
+        <li>Recording currently supports personal review, not automated form analysis.</li>
+        <li>Try closing and reopening the app during a workout.</li>
+        <li>If a connection fails, check whether retrying works without losing or duplicating records.</li>
+        <li>Test password-reset email delivery.</li>
+      </ul>
+
+      <h4>Accessibility and Comfort</h4>
+      <ul>
+        <li>Are text and buttons readable and easy to use?</li>
+        <li>Try larger phone text settings or VoiceOver if you normally use them.</li>
+        <li>Tell us where instructions, exercise choices, or targets don't fit your needs. Don't push through discomfort for testing.</li>
+      </ul>
+
+      <h4>When Reporting Feedback</h4>
+
+      <p>Include your app version/build number, iPhone model, what you were trying to do, what happened, and what you expected. Screenshots are helpful, but avoid sharing passwords, reset codes, or private recordings.</p>
+
+      <p>Our highest priorities are crashes, missing or duplicated workout data, getting stuck, and unclear navigation.</p>
+
+      <p><strong>What one change would make your next workout easier?</strong></p>
+
+    </div>
+
+  </div>
+</details>
+</section>
+<!-- FITNESS OS TAB STYLING -->
+
+<style>
+.fitness-more {
+  margin-top: 28px;
+  border: 1px solid rgba(213,173,114,.3);
+  border-radius: 15px;
+  overflow: hidden;
+  background: #141e2b;
+}
+
+.fitness-more > summary {
+  cursor: pointer;
+  padding: 17px 22px;
+  color: #d5ad72;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.fitness-more > summary:hover {
+  background: #202c3b;
+}
+
+.fitness-more > summary:focus-visible,
+.fitness-tab-buttons label:focus-visible {
+  outline: 2px solid #d5ad72;
+  outline-offset: -2px;
+}
+
+.fitness-tabs {
+  padding: 18px 22px 26px;
+}
+
+.fitness-tabs input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.fitness-tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.fitness-tab-buttons label {
+  cursor: pointer;
+  padding: 11px 19px;
+  border-radius: 9px;
+  color: #adb8c5;
+  background: #253244;
+  font-weight: 600;
+}
+
+#fitness-description:checked ~ .fitness-tab-buttons
+label[for="fitness-description"],
+#fitness-testing:checked ~ .fitness-tab-buttons
+label[for="fitness-testing"] {
+  background: #d5ad72;
+  color: #10151e;
+}
+
+.fitness-tab-panel {
+  display: none;
+  color: #c4ccd6;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+#fitness-description:checked ~ .fitness-description-panel,
+#fitness-testing:checked ~ .fitness-testing-panel {
+  display: block;
+}
+
+.fitness-tab-panel h3 {
+  color: #f6f3ed;
+  font-size: 23px;
+}
+
+.fitness-tab-panel h4 {
+  color: #d5ad72;
+  margin: 27px 0 8px;
+  font-size: 17px;
+}
+
+.fitness-tab-panel p {
+  margin: 0 0 17px;
+}
+
+.fitness-tab-panel ul {
+  padding-left: 23px;
+  margin: 0 0 18px;
+}
+
+.fitness-tab-panel li {
+  margin-bottom: 8px;
+}
+
+.fitness-tab-panel strong {
+  color: #d5ad72;
+}
+
+@media (max-width: 600px) {
+  .fitness-tabs {
+    padding: 14px;
+  }
+
+  .fitness-tab-buttons label {
+    flex: 1;
+    text-align: center;
+  }
+}
+</style>
+
+<style>
+  .fitness-feature {
+    margin-top: 65px;
+    padding: 38px;
+    background: linear-gradient(
+      135deg,
+      #1c2532 0%,
+      #152438 60%,
+      #10151e 100%
+    );
+    border: 1px solid rgba(213,173,114,0.25);
+    border-radius: 24px;
+  }
+
+  .fitness-header {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+  }
+
+  .fitness-icon {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  .fitness-header h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #f6f3ed;
+  }
+
+  .fitness-tagline {
+    color: #d5ad72;
+    font-size: 18px;
+    margin: 5px 0 12px;
+  }
+
+  .fitness-status {
+    display: inline-block;
+    color: #d5ad72;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .fitness-description {
+    color: #adb8c5;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin-top: 25px;
+  }
+
+  .fitness-footer {
+    color: #d5ad72;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 17px;
+  
+  }
+
+  @media (max-width: 600px) {
+    .fitness-feature {
+      padding: 25px;
+    }
+
+    .fitness-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+    }
+
+    .fitness-header h2 {
+      font-size: 27px;
+    }
+   }
+</style>
+</section>
+
+<!-- REACTION LAB SHOWCASE -->
+<div id="reaction-lab" style="
+  width:100%;
+  max-width:1050px;
+  margin:35px auto 45px;
+  box-sizing:border-box;
+">
+
+  <!-- REACTION LAB TILE -->
+  <div class="app-gallery" style="
+    margin:0 0 22px;
+  ">
+
+    <article class="gallery-card" style="
+      display:flex;
+      flex-direction:column;
+      max-width:255px;
+      width:100%;
+      box-sizing:border-box;
+    ">
+
+      <img
+        src="/Reaction%20Lab%20Reactor%20Hub.png"
+        alt="Reaction Lab by TOS Creations"
+        class="gallery-icon"
+        loading="lazy"
+      >
+
+      <h3>Reaction Lab</h3>
+
+      <p>
+        Enter a futuristic world where every reaction
+        counts! Explore four high-tech chambers
+        featuring 12 challenges that test your
+        reflexes, memory, timing, precision,
+        and problem-solving skills.
+      </p>
+
+      <p>
+        Manipulate gravity, control magnetic fields,
+        navigate moving energy barriers, and
+        discover challenges that are easy to learn
+        but exciting to master.
+      </p>
+
+      <span class="gallery-status" style="
+        display:block;
+        margin-top:auto;
+        padding-top:24px;
+        color:#d5ad72;
+        font-size:13px;
+        font-weight:700;
+        letter-spacing:.5px;
+      ">
+        IN DEVELOPMENT
+      </span>
+
+      <p style="
+        color:#d5ad72;
+        font-size:12px;
+        font-weight:600;
+        margin:12px 0 0;
+      ">
+        Four Chambers. Twelve Challenges.
+      </p>
+
+    </article>
+  </div>
+
+  <!-- REACTION LAB EXPANDABLE DETAILS -->
+  <details style="
+    width:100%;
+    background:#151f2c;
+    border:1px solid rgba(213,173,114,.35);
+    border-radius:14px;
+    padding:18px 22px;
+    box-sizing:border-box;
+  ">
+
+    <summary style="
+      color:#d5ad72;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
+      line-height:1.6;
+    ">
+      Explore Reaction Lab Details
+    </summary>
+
+    <div style="
+      color:#b6c0cc;
+      line-height:1.75;
+      padding:20px 4px 4px;
+    ">
+
+      <!-- DESCRIPTION -->
+      <details style="margin-bottom:20px;">
+        <summary style="
+          color:#d5ad72;
+          font-weight:700;
+          cursor:pointer;
+        ">
+          Description
+        </summary>
+
+        <p>
+          Reaction Lab is an interactive 3D challenge
+          game that tests reflexes, memory, timing,
+          precision, and problem-solving skills.
+        </p>
+
+        <p>
+          Explore a futuristic experimental facility
+          with four unique chambers and 12 playable
+          challenges. Each chamber presents a
+          different experience through interactive
+          machinery, energy systems, and experimental
+          technology.
+        </p>
+
+        <p>
+          Challenge your reaction speed, master
+          memory sequences, navigate moving energy
+          barriers, manipulate gravity, control
+          magnetic fields, and solve physics puzzles.
+        </p>
+
+        <p>
+          Designed with mobile devices and computers
+          in mind, Reaction Lab aims to combine
+          intuitive controls with increasingly
+          challenging gameplay.
+        </p>
+
+        <p style="
+          color:#d5ad72;
+          font-style:italic;
+          font-weight:600;
+        ">
+          Think Fast. React Faster.
+          Challenge the Impossible.
+        </p>
+      </details>
+
+      <!-- CHAMBERS -->
+      <details>
+        <summary style="
+          color:#d5ad72;
+          font-weight:700;
+          cursor:pointer;
+        ">
+          Explore the Four Chambers &amp; Twelve Challenges
+        </summary>
+
+        <h3 style="color:#d5ad72;">
+          Chamber 01 — Reaction Lab
+        </h3>
+
+        <p>
+          Test your reflexes and split-second
+          decision-making.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Static Targets:</strong>
+            React quickly and accurately to
+            appearing targets.
+          </li>
+          <li>
+            <strong>Moving Targets:</strong>
+            Track and hit targets in motion.
+          </li>
+          <li>
+            <strong>Signal Override:</strong>
+            Interpret changing signals and decide
+            whether to tap, hold, or wait.
+          </li>
+        </ul>
+
+        <h3 style="color:#d5ad72;">
+          Chamber 02 — The Think Tank
+        </h3>
+
+        <p>
+          Challenge memory, observation,
+          and cognitive abilities.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Neural Sequence:</strong>
+            Memorize and reproduce sequences
+            activated through futuristic devices.
+          </li>
+          <li>
+            <strong>Letter Recall:</strong>
+            Remember sequences of holographically
+            projected letters.
+          </li>
+          <li>
+            <strong>Reality Swap:</strong>
+            Observe floating objects and identify
+            their hidden position changes.
+          </li>
+        </ul>
+
+        <h3 style="color:#d5ad72;">
+          Chamber 03 — Focus &amp; Timing Lab
+        </h3>
+
+        <p>
+          Master precision, anticipation,
+          and concentration.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Mechanical Timing:</strong>
+            Time reactions through moving mechanical
+            openings and changing conditions.
+          </li>
+          <li>
+            <strong>Laser Matrix:</strong>
+            Launch energy pulses through shifting
+            laser gates.
+          </li>
+          <li>
+            <strong>Pulse Catch:</strong>
+            Synchronize charged pulses with
+            moving energy rings.
+          </li>
+        </ul>
+
+        <h3 style="color:#d5ad72;">
+          Chamber 04 — Anomaly Lab
+        </h3>
+
+        <p>
+          Experiment with gravity, magnetism,
+          and unusual physics challenges.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Gravity Shift:</strong>
+            Reverse gravity to guide objects
+            through a futuristic apparatus.
+          </li>
+          <li>
+            <strong>Magnetic Chaos:</strong>
+            Manipulate attraction and repulsion
+            to direct objects into receiving zones.
+          </li>
+          <li>
+            <strong>Portal Paradox:</strong>
+            Adjust portals and trajectories
+            to solve physics puzzles.
+          </li>
+        </ul>
+
+        <p style="
+          color:#d5ad72;
+          font-family:Georgia,serif;
+          font-style:italic;
+          font-size:19px;
+          margin-top:28px;
+        ">
+          Four Chambers. Twelve Challenges.
+          Endless Possibilities.
+        </p>
+
+      </details>
+
+    </div>
+  </details>
+
+  <p style="
+    text-align:center;
+    color:#98a7b8;
+    font-size:12px;
+    letter-spacing:1px;
+    margin:18px auto 0;
+  ">
+    CURRENTLY IN ACTIVE DEVELOPMENT
+  </p>
+
+</div>
+<!-- END REACTION LAB SHOWCASE -->
+
+  <!-- TOS CREATIONS GAME ROOM -->
+  <section id="apps" class="section">
+    <h2>In Developement/Currently Designing</h2>
+    <p class="section-intro">
+      Explore what we're creating.
+    </p>
+
+    <div class="app-card">
+
+<section class="game-room-feature" id="game-room">
+
+  <div class="game-room-heading">
+
+    <img
+      src="game-room-icon.png"
+      alt="The Dart Club and Game Lounge icon"
+      class="game-room-icon"
+      loading="lazy"
+    >
+
+    <div>
+      <h2>The Dart Club &amp; Game Lounge</h2>
+      <p class="game-room-tagline">
+        Your club. Your next bullseye.
+      </p>
+      <span class="game-room-status">IN TESTFLIGHT</span>
+    </div>
+
+  </div>
+
+  
+<p class="game-room-intro">
+  Step inside The Dart Club &amp; Game Lounge, a
+  digital entertainment experience featuring six
+  distinct games, each with its own lounge and atmosphere.
+</p>
+
+
+  <div class="game-room-grid">
+    <div class="game-room-game">
+      <h3>🎯 Darts</h3>
+      <p>Sharpen your aim in The Dart Club, with live competition planned as the community grows.</p>
+    </div>
+
+    <div class="game-room-game">
+      <h3>🎱 Pool</h3>
+      <p>Enjoy a dedicated billiards experience with online play options.</p>
+    </div>
+
+    <div class="game-room-game">
+      <h3>🏒 Air Hockey</h3>
+      <p>Challenge a computer opponent and switch to a neon after-midnight atmosphere.</p>
+    </div>
+
+    <div class="game-room-game">
+      <h3>🎳 Bowling</h3>
+      <p>Hit the lanes with a classic bowling experience and optional neon nighttime styling.</p>
+    </div>
+    
+
+
+<!-- CURLING -->
+<div class="game-room-game">
+  <h3>🥌 Curling</h3>
+  <p>
+    Take to the ice in a game of strategy and precision.
+    Aim your stones, control their direction and speed,
+    and try to finish closest to the target.
+  </p>
+</div>
+
+<!-- PINBALL -->
+<div class="game-room-game">
+  <h3>🕹️ Pinball</h3>
+  <p>
+    Enjoy classic arcade-style action with responsive
+    flippers, fast-moving balls, and high-score challenges.
+    Keep the ball in play and improve your skills
+    with every round.
+  </p>
+</div>
+
+
+
+  </div>
+
+  
+<p class="game-room-footer">
+  Six games. Distinct lounges. One place to play.
+</p>
+
+<a
+  href="https://testflight.apple.com/join/kPDAGxbx"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:12px 22px;
+    background:#d5ad72;
+    color:#10151e;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    text-align:center;
+  "
+>
+  Join Game Lounge Beta ↗
+</a>
+
+<a href="/game-lounge/"
+   style="
+     display:inline-flex;
+     align-items:center;
+     justify-content:center;
+     min-height:48px;
+     padding:12px 22px;
+     border:1px solid #d5ad72;
+     border-radius:10px;
+     color:#d5ad72;
+     font-weight:700;
+     text-decoration:none;
+     text-align:center;
+     margin-left:8px;
+   ">
+  Support
+</a>
+
+<a
+  href="/game-lounge/privacy.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:12px 22px;
+    border:1px solid #d5ad72;
+    border-radius:10px;
+    color:#d5ad72;
+    font-weight:700;
+    text-decoration:none;
+    text-align:center;
+    margin-left:8px;
+  "
+>
+  Privacy Policy
+</a>
+
+<!-- GAME LOUNGE EXPLORE DETAILS -->
+<details id="game-lounge-details" style="
+  margin-top:30px;
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:14px;
+  background:rgba(8,16,27,.32);
+  overflow:hidden;
+">
+
+  <summary style="
+    cursor:pointer;
+    color:#d5ad72;
+    font-weight:700;
+    padding:18px 22px;
+  ">
+    Explore Game Lounge Details
+  </summary>
+
+  <div style="
+    padding:8px 22px 24px;
+    color:#b6c0cc;
+    line-height:1.7;
+  ">
+
+    <style>
+      #game-lounge-details input[type="radio"] {
+        position:absolute;
+        opacity:0;
+        width:1px;
+        height:1px;
+      }
+
+      #game-lounge-details .gl-tab-label {
+        display:inline-block;
+        padding:11px 18px;
+        margin:4px 8px 16px 0;
+        border:1px solid #d5ad7266;
+        border-radius:9px;
+        color:#d5ad72;
+        cursor:pointer;
+        font-weight:700;
+      }
+
+      #gl-description:checked ~ .gl-tabs
+        label[for="gl-description"],
+      #gl-testing:checked ~ .gl-tabs
+        label[for="gl-testing"] {
+        background:#d5ad72;
+        color:#10151e;
+      }
+
+      #game-lounge-details .gl-panel {
+        display:none;
+      }
+
+      #gl-description:checked ~ #gl-description-panel,
+      #gl-testing:checked ~ #gl-testing-panel {
+        display:block;
+      }
+
+      #game-lounge-details input:focus-visible
+        + label {
+        outline:2px solid white;
+      }
+
+      #game-lounge-details h3 {
+        color:#f6f3ed;
+        margin:16px 0 8px;
+      }
+
+      #game-lounge-details li {
+        margin-bottom:11px;
+      }
+    </style>
+
+    <input
+      type="radio"
+      id="gl-description"
+      name="game-lounge-tab"
+      checked
+    >
+
+    <input
+      type="radio"
+      id="gl-testing"
+      name="game-lounge-tab"
+    >
+
+    <div class="gl-tabs">
+      <label class="gl-tab-label" for="gl-description">
+        Description
+      </label>
+
+      <label class="gl-tab-label" for="gl-testing">
+        What to Test
+      </label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="gl-panel" id="gl-description-panel">
+
+      <h3>Six Games. Six Distinct Lounges.</h3>
+
+      <p>
+        Welcome to The Dart Club & Game Lounge,
+        a digital entertainment experience
+        bringing four classic games together
+        in one application.
+      </p>
+
+      <p>
+        Each game offers its own atmosphere,
+        controls, and challenges.
+        Move between the lounges and discover
+        your favorite way to play.
+      </p>
+
+      <h3>🎯 The Dart Club</h3>
+      <p>
+        Sharpen your aim and test your accuracy.
+        Enjoy classic darts gameplay, daily
+        challenges, and private online matches
+        with invited players.
+      </p>
+
+      <h3>🎱 Pool</h3>
+      <p>
+        Line up your shots and enjoy a
+        dedicated billiards experience
+        focused on aiming, ball movement,
+        and satisfying gameplay.
+      </p>
+
+      <h3>🏒 Air Hockey</h3>
+      <p>
+        Challenge a computer opponent
+        in fast-paced air hockey.
+        Enjoy the traditional atmosphere
+        or switch to optional Midnight
+        Neon mode for an after-dark
+        arcade experience.
+      </p>
+
+      <h3>🎳 Bowling</h3>
+      <p>
+
+Step onto the lanes for a classic bowling experience. Switch to Midnight Neon mode for a different visual atmosphere while enjoying the same game.
+
+
+      </p>
+
+
+<h3>🥌 Curling</h3>
+<p>
+  Take to the ice in a game of strategy and precision.
+  Aim your stones, control their direction and speed,
+  and try to finish closest to the target.
+</p>
+
+<h3>🕹️ Pinball</h3>
+<p>
+  Enjoy classic arcade-style action with responsive
+  flippers, fast-moving balls, and high-score challenges.
+  Keep the ball in play and improve your skills
+  with every round.
+</p>
+
+
+      <p style="
+        color:#d5ad72;
+        font-style:italic;
+        margin-top:22px;
+      ">
+        Six games. Distinct lounges.
+        One place to play.
+      </p>
+
+    </div>
+
+    <!-- WHAT TO TEST -->
+    <div class="gl-panel" id="gl-testing-panel">
+
+      <h3>Help Us Improve the Game Lounge</h3>
+
+      <p>
+        The Dart Club & Game Lounge is currently
+        in TestFlight. Your feedback helps us
+        improve the experience before release.
+      </p>
+
+      <ul>
+        <li>
+          <strong>All four games:</strong>
+          Play Darts, Pool, Bowling,
+          and Air Hockey.
+        </li>
+
+        <li>
+          <strong>Controls:</strong>
+          Test aiming, dragging, shooting,
+          and overall responsiveness.
+        </li>
+
+        <li>
+          <strong>Scoring:</strong>
+          Check points, turns, wins,
+          results, and restarting games.
+        </li>
+
+        <li>
+          <strong>Sound:</strong>
+          Test sound effects, volume
+          settings, and mute controls.
+        </li>
+
+        <li>
+          <strong>Navigation:</strong>
+          Open games, return to the
+          lounge, and change settings.
+        </li>
+
+        <li>
+          <strong>Midnight Neon:</strong>
+          Switch between classic and neon
+          modes in Air Hockey and Bowling.
+          Check visual appearance and
+          gameplay in both environments.
+        </li>
+
+        <li>
+          <strong>Display and performance:</strong>
+          Look for overlapping buttons,
+          text that doesn't fit,
+          slowdowns, freezes, or crashes.
+        </li>
+
+        <li>
+          <strong>Private online Darts:</strong>
+          Create or join a room with another
+          tester. Check connection reliability,
+          turns, scoring synchronization,
+          and reconnecting after interruptions.
+        </li>
+        
+<h3>Curling</h3>
+<ul>
+  <li>Test aiming and releasing curling stones.</li>
+  <li>Check that stone speed and direction respond correctly.</li>
+  <li>Watch for realistic movement, collisions, and stopping.</li>
+  <li>Verify scoring and which stone is closest to the target.</li>
+  <li>Check round transitions and restarting a game.</li>
+  <li>Report unexpected movement, scoring errors, or freezing.</li>
+</ul>
+
+<h3>Pinball</h3>
+<ul>
+  <li>Test launching the ball and controlling the flippers.</li>
+  <li>Check ball movement, collisions, and rebounds.</li>
+  <li>Verify scoring when the ball hits targets and bumpers.</li>
+  <li>Check ball loss, new-ball behavior, and game-over conditions.</li>
+  <li>Test restarting a game and beginning a new round.</li>
+  <li>Report stuck balls, missed inputs, scoring errors, or lag.</li>
+</ul>
+
+      </ul>
+
+      <p>
+        When reporting an issue, include your
+        device model, the game you were playing,
+        what happened, and the steps needed
+        to reproduce it. Screenshots are helpful.
+      </p>
+
+      <p>
+        Send feedback to
+        <a href="mailto:toscreations71@gmail.com"
+           style="color:#d5ad72;">
+          toscreations71@gmail.com
+        </a>.
+      </p>
+
+    </div>
+
+  </div>
+</details>
+<!-- END GAME LOUNGE EXPLORE DETAILS -->
+
+
+</section>
+
+<style>
+
+.game-room-feature {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 38px;
+  border-radius: 24px;
+  border: 1px solid rgba(213,173,114,0.25);
+
+    background: linear-gradient(
+      135deg,
+      #1c2532 0%,
+      #152438 60%,
+      #10151e 100%
+  );
+}
+
+
+.game-room-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.game-room-icon {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.game-room-heading h2 {
+  color: #f6f3ed;
+  font-size: clamp(25px, 3vw, 32px);
+  margin: 0;
+}
+
+.game-room-tagline {
+  color: #d5ad72;
+  font-size: 18px;
+  margin: 8px 0 12px;
+}
+
+.game-room-status {
+  color: #d5ad72;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.game-room-intro {
+  margin: 28px 0;
+  color: #adb8c5;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+.game-room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.game-room-game {
+  background: rgba(10,17,27,.55);
+  border: 1px solid rgba(213,173,114,.14);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.game-room-game h3 {
+  color: #f6f3ed;
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.game-room-game p {
+  color: #adb8c5;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+}
+
+.game-room-footer {
+  color: #d5ad72;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .game-room-feature {
+    padding: 24px;
+  }
+
+  .game-room-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+  }
+
+  .game-room-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
+/* Make scrapbook demo cards wider on phones */
+@media (max-width: 600px) {
+
+  #scrapbook-demos {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 6px !important;
+    box-sizing: border-box;
+  }
+
+  /* Stack the two demos at full available width */
+  #scrapbook-demos > div[style*="display:grid"] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  /* Match card widths */
+  #scrapbook-demos > div[style*="display:grid"] > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+
+  /* Keep covers and buttons inside each card */
+  #scrapbook-demos img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #scrapbook-demos a {
+    box-sizing: border-box;
+  }
+}
+
+</style>
+  
+<!-- TOS CREATIONS GAME ROOM -->
+  <section id="apps" class="section">
+   
+ <!-- BALLOON BREAKSHIFT SHOWCASE -->
+<div id="balloon-breakshift" style="
+  max-width:1050px;
+  width:100%;
+  margin:35px auto 45px;
+  padding:28px 22px;
+  text-align:center;
+  background:linear-gradient(145deg,#222d3a,#121923);
+  border:1px solid rgba(213,173,114,.3);
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+  box-sizing:border-box;
+">
+
+  <p style="
+    color:#d5ad72;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin:0 0 12px;
+  ">
+    IN TESTFLIGHT
+  </p>
+
+  <h3 style="
+    color:#f6f3ed;
+    font-family:Georgia,serif;
+    font-size:clamp(27px,4vw,38px);
+    margin:0 0 10px;
+  ">
+    Balloon Breakshift
+  </h3>
+
+  <p style="
+    color:#d5ad72;
+    font-weight:600;
+    font-size:17px;
+    margin:0 0 25px;
+  ">
+    Match. Pop. Break. Watch the board come alive!
+  </p>
+
+  
+<!-- GAME ARTWORK -->
+<img
+  src="/Balloon Breakshift.png"
+  alt="Balloon Breakshift concept artwork with colorful balloons, power boosts, rockets, and obstacles"
+  loading="lazy"
+  style="
+    display:block;
+    width:100%;
+    max-width:790px;
+    height:auto;
+    margin:0 auto 26px;
+    border-radius:12px;
+  "
+>
+   
+  <p style="
+    color:#b6c0cc;
+    line-height:1.8;
+    max-width:760px;
+    margin:0 auto 18px;
+  ">
+    Balloon Breakshift is a colorful, strategy-driven
+    puzzle game from TOS Creations that brings a new
+    twist to traditional match-three gameplay.
+  </p>
+
+  <p style="
+    color:#b6c0cc;
+    line-height:1.8;
+    max-width:760px;
+    margin:0 auto 18px;
+  ">
+    Match vibrant balloons, create powerful combinations,
+    and unleash rockets, rainbow blasts, and explosive
+    chain reactions. Break through glass, wooden crates,
+    stone, and reinforced metal as you advance through
+    increasingly challenging levels.
+  </p>
+
+  <p style="
+    color:#b6c0cc;
+    line-height:1.8;
+    max-width:760px;
+    margin:0 auto 18px;
+  ">
+    But there's a twist: the board doesn't always stay put!
+    Neglected rows and columns can collapse, sending
+    balloons falling away and introducing unexpected
+    obstacles. New balloons drop into place, creating
+    fresh opportunities and surprising combinations.
+  </p>
+
+  <p style="
+    color:#d5ad72;
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:19px;
+    margin:25px auto 12px;
+  ">
+    Easy to learn. Challenging to master. Always changing.
+  </p>
+
+  <p style="
+    color:#98a7b8;
+    font-size:12px;
+    letter-spacing:1px;
+    margin:14px 0 0;
+  ">
+    CONCEPT ARTWORK · IN ACTIVE DEVELOPMENT
+  </p>
+
+<!-- BALLOON BREAKSHIFT TESTFLIGHT -->
+<a
+  href="https://testflight.apple.com/join/RygMnsrg"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    max-width:600px;
+    min-height:52px;
+    margin:24px auto 12px;
+    padding:13px 20px;
+    background:#d5ad72;
+    color:#10151e;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    text-align:center;
+    box-sizing:border-box;
+  "
+>
+  Join Balloon Breakshift Beta ↗
+</a>
+<!-- END TESTFLIGHT LINK -->
+
+<!-- BALLOON BREAKSHIFT LINKS -->
+<div class="balloon-breakshift-links" style="
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin:24px auto 10px;
+  max-width:600px;
+">
+
+  <a
+    href="/Balloon-Break-Shift/"
+    style="
+      display:flex;
+      flex:1 1 180px;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      background:#253244;
+color:#d5ad72;
+border:1px solid #8c7351;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+      box-sizing:border-box;
+    "
+  >
+    Support
+  </a>
+
+  <a
+    href="/Balloon-Break-Shift/privacy.html"
+    style="
+      display:flex;
+      flex:1 1 180px;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 18px;
+      background:#253244;
+color:#d5ad72;
+border:1px solid #8c7351;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+      box-sizing:border-box;
+    "
+  >
+    Privacy Policy
+  </a>
+
+</div>
+<!-- END BALLOON BREAKSHIFT LINKS -->
+
+<!-- BALLOON BREAKSHIFT DETAILS -->
+<details style="
+  max-width:760px;
+  margin:26px auto 5px;
+  background:rgba(8,16,27,.35);
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:14px;
+  padding:18px;
+  text-align:left;
+">
+
+  <summary style="
+    color:#d5ad72;
+    font-weight:700;
+    cursor:pointer;
+    line-height:1.6;
+  ">
+    Explore Balloon Breakshift Details
+  </summary>
+
+  <div style="
+    color:#b6c0cc;
+    line-height:1.75;
+    padding:15px 4px 4px;
+  ">
+
+    <details style="margin-bottom:15px;">
+      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
+        Description
+      </summary>
+
+      <p>
+        Balloon Breakshift is a colorful,
+        strategy-driven match-three puzzle
+        adventure where every move can
+        change the board.
+      </p>
+
+      <p>
+        Match vibrant balloons, create
+        rockets, rainbow and burst powers,
+        break challenging obstacles, and
+        discover unexpected chain reactions.
+      </p>
+
+      <p>
+        Randomized layouts, evolving levels,
+        daily rewards, and changing board
+        mechanics create new challenges
+        as you progress.
+      </p>
+
+      <p style="color:#d5ad72;font-style:italic;">
+        Easy to learn. Challenging to master.
+        Always changing.
+      </p>
+    </details>
+
+    <details>
+      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
+        What to Test
+      </summary>
+
+      <h3 style="color:#d5ad72;">Gameplay & Matching</h3>
+      <ul>
+        <li>Match three or more balloons using taps or swipes.</li>
+        <li>Try matches of four, five, and six or more balloons.</li>
+        <li>Check swapping, falling animations, and responsiveness.</li>
+        <li>Report incorrect matches or stuck balloons.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Power Boosters</h3>
+      <ul>
+        <li>Test Rockets, Rainbow Balloons, Burst Balloons, and Wild Rockets.</li>
+        <li>Confirm powers activate and animate correctly.</li>
+        <li>Use boosters earned through daily rewards.</li>
+        <li>Check that stored boosters do not consume regular moves.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Obstacles & Levels</h3>
+      <ul>
+        <li>Break glass, wood, stone, and reinforced metal.</li>
+        <li>Check obstacle damage, explosions, and bonus points.</li>
+        <li>Test Continue Round and Next Level.</li>
+        <li>From Level 4, watch for collapse warnings and collapsing rows or columns.</li>
+        <li>Check that balloons refill the board correctly.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Daily Rewards & Saving</h3>
+      <ul>
+        <li>Claim a daily reward and check booster inventory.</li>
+        <li>Close and reopen the game to verify saved progress.</li>
+        <li>Check level, score, inventory, and board restoration.</li>
+        <li>Verify rewards cannot be claimed repeatedly on the same day.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Sound & Music</h3>
+      <ul>
+        <li>Test music and sound effects.</li>
+        <li>Adjust volume and mute settings.</li>
+        <li>Confirm settings are remembered.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Power Shop</h3>
+      <ul>
+        <li>Open and close the shop.</li>
+        <li>Review available bonus-pack previews.</li>
+        <li>Confirm the shop does not disrupt gameplay.</li>
+        <li>Real-money purchases are disabled in this beta.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Please Report</h3>
+      <p>
+        Crashes, freezing, lag, unusual battery
+        drain, missing graphics, overlapping
+        buttons, sound issues, lost progress,
+        unexpected scoring, or boosters that
+        do not work.
+      </p>
+
+      <p>
+        Tell us what you enjoyed, too!
+        Include your iPhone model, iOS version,
+        and screenshots when possible.
+      </p>
+
+      <p style="color:#d5ad72;font-weight:700;">
+        Thank you for helping improve Balloon Breakshift!
+      </p>
+    </details>
+
+  </div>
+</details>
+<!-- END BALLOON BREAKSHIFT DETAILS -->
+
+</div>
+<!-- END BALLOON BREAKSHIFT SHOWCASE -->
+ <h3>In Developement & Currently Designing</h3>
+    <p class="section-intro">
+      Explore what we're creating.
+    </p>     
+<!-- REVIVAL CREEK FEATURE CARD -->
+<div class="revival-creek-card" style="
+  width:100%;
+  max-width:1050px;
+  margin:35px auto 45px;
+  padding:28px 22px;
+  background:linear-gradient(145deg,#222d3a,#121923);
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+  box-sizing:border-box;
+">
+
+<p>
+<p style="
+  text-align:center;
+  color:#d5ad72;
+  font-size:18px;
+  font-weight:600;
+  margin:25px auto 12px;
+">
+  Details coming soon for
+</p>
+
+            
+<h2 style="
+  text-align:center;
+  color:#f6f3ed;
+  font-size:32px;
+  margin:10px auto 30px;
+">
+  Revival Creek Homesteader!
+</h2>
+
+  
+<!-- REVIVAL CREEK HOMESTEADER SHOWCASE -->
+<div style="
+  max-width:1050px;
+  margin:35px auto 45px;
+  text-align:center;
+">
+
+  <img
+    src="/revival-creek-concept.png"
+    alt="Revival Creek Homesteader concept artwork showing an abandoned town transformed into a thriving community"
+    loading="lazy"
+    style="
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:16px;
+      border:1px solid rgba(213,173,114,.25);
+      box-shadow:0 18px 40px rgba(0,0,0,.35);
+    "
+  >
+
+  <p style="
+    color:#d5ad72;
+    font-family:Georgia,serif;
+    font-size:clamp(18px,2.5vw,24px);
+    font-style:italic;
+    line-height:1.6;
+    margin:25px auto 12px;
+    max-width:800px;
+  ">
+    A forgotten town. A new beginning.
+    What this community becomes is up to you.
+  </p>
+
+  <p style="
+    color:#98a7b8;
+    font-size:12px;
+    letter-spacing:1px;
+    margin:12px 0 0;
+  ">
+    CONCEPT ARTWORK · IN DEVELOPMENT
+  </p>
+
+<!-- REVIVAL CREEK DEVELOPMENT JOURNEY LINK -->
+<a
+  href="/revival-creek/journey.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    max-width:850px;
+    min-height:55px;
+    margin:28px auto 10px;
+    padding:14px 20px;
+    background:#d5ad72;
+    color:#10151e;
+    border-radius:11px;
+    font-size:16px;
+    font-weight:700;
+    text-decoration:none;
+    text-align:center;
+    box-sizing:border-box;
+  "
+>
+  Explore Revival Creek's Development Journey ↗
+</a>
+<!-- END DEVELOPMENT JOURNEY LINK -->
+
+</div>
+  </div>
+<!-- END REVIVAL CREEK FEATURE CARD -->
+<!-- END REVIVAL CREEK SHOWCASE -->
+
+<!-- BREAKPOINT RUN FEATURE CARD -->
+<div class="breakpoint-run-card" style="
+  width:100%;
+  max-width:1050px;
+  margin:35px auto 45px;
+  padding:28px 22px;
+  background:linear-gradient(145deg,#222d3a,#121923);
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+  box-sizing:border-box;
+">
+
+  <p style="
+    text-align:center;
+    color:#d5ad72;
+    font-size:18px;
+    font-weight:600;
+    margin:25px auto 12px;
+  ">
+    Introducing
+  </p>
+
+  <h2 style="
+    text-align:center;
+    color:#f6f3ed;
+    font-size:32px;
+    margin:10px auto 30px;
+  ">
+    Breakpoint Run!
+  </h2>
+
+  <!-- BREAKPOINT RUN SHOWCASE -->
+  <div style="
+    max-width:1050px;
+    margin:35px auto 45px;
+    text-align:center;
+  ">
+
+    <!-- CONCEPT ARTWORK -->
+    <img
+      src="/breakpoint-run-concept.png"
+      alt="Breakpoint Run concept artwork featuring high-speed parkour across city rooftops and streets"
+      loading="lazy"
+      style="
+        display:block;
+        width:100%;
+        height:auto;
+        border-radius:16px;
+        border:1px solid rgba(213,173,114,.25);
+        box-shadow:0 18px 40px rgba(0,0,0,.35);
+      "
+    >
+
+    <!-- GAME DESCRIPTION -->
+    <p style="
+      color:#b6c0cc;
+      line-height:1.8;
+      max-width:850px;
+      margin:25px auto 18px;
+    ">
+      Breakpoint Run is a fast-paced urban parkour racing
+      game from TOS Creations. Race from one side of a
+      sprawling city to the other, navigating rooftops,
+      streets, alleys, walls, and challenging obstacles.
+    </p>
+
+    <p style="
+      color:#b6c0cc;
+      line-height:1.8;
+      max-width:850px;
+      margin:0 auto 18px;
+    ">
+      Sprint, jump, slide, vault, and discover alternate
+      routes as you race against the clock. Every obstacle
+      presents a new challenge, and every shortcut could
+      lead to a faster escape.
+    </p>
+
+    <p style="
+      color:#b6c0cc;
+      line-height:1.8;
+      max-width:850px;
+      margin:0 auto 18px;
+    ">
+      Being developed with Unreal Engine 5, Breakpoint Run
+      aims to bring realistic urban environments,
+      responsive movement, and exciting replayability
+      to iPhone and Android.
+    </p>
+
+    <!-- TAGLINE -->
+    <p style="
+      color:#d5ad72;
+      font-family:Georgia,serif;
+      font-size:clamp(18px,2.5vw,24px);
+      font-style:italic;
+      line-height:1.6;
+      margin:25px auto 12px;
+      max-width:850px;
+    ">
+      Every Second. Every Decision. Every Escape.
+    </p>
+
+    <!-- STATUS -->
+    <p style="
+      color:#98a7b8;
+      font-size:12px;
+      letter-spacing:1px;
+      margin:12px 0 0;
+    ">
+      CONCEPT ARTWORK · IN ACTIVE DEVELOPMENT
+    </p>
+
+    <!-- BREAKPOINT RUN DEVELOPMENT JOURNEY LINK -->
+    <a
+      href="/breakpoint-run/journey.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        max-width:850px;
+        min-height:55px;
+        margin:28px auto 10px;
+        padding:14px 20px;
+        background:#d5ad72;
+        color:#10151e;
+        border-radius:11px;
+        font-size:16px;
+        font-weight:700;
+        text-decoration:none;
+        text-align:center;
+        box-sizing:border-box;
+      "
+    >
+      Explore Breakpoint Run's Development Journey ↗
+    </a>
+    <!-- END DEVELOPMENT JOURNEY LINK -->
+
+  </div>
+  <!-- END BREAKPOINT RUN SHOWCASE -->
+
+</div>
+<!-- END BREAKPOINT RUN FEATURE CARD -->
+
+</p>
+ 
+
+
+  <!-- ================================================= -->
+<!-- TOS CREATIONS DIGITAL BOOKSHELF                   -->
+<!-- ================================================= -->
+
+<section class="bookshelf-showcase" id="digital-bookshelf">
+
+  <div class="bookshelf-heading">
+    <p class="bookshelf-eyebrow">
+      TOS CREATIONS PRESENTS
+    </p>
+
+    <h2>Beyond the App Store</h2>
+
+    <p>Every story deserves a beautiful beginning.</p>
+  </div>
+
+  <!-- TWO FEATURED BOOKS -->
+  <div class="digital-bookshelf">
+
+    <!-- ROAD TO FOREVER -->
+    <div class="showcase-book">
+      <div class="book-cover">
+        <img
+          src="book-previews/road-to-forever-cover.png"
+          alt="Our Road to Forever scrapbook cover"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <!-- WAIT FOR JULIUS -->
+    <div class="showcase-book">
+      <div class="book-cover">
+        <img
+          src="book-previews/julius-cover.png"
+          alt="The Wait for Julius scrapbook cover"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+  </div>
+
+  <!-- THICK RUSTIC WOODEN SHELF -->
+  <div class="bookshelf-wood" aria-hidden="true"></div>
+
+  <!-- BOOK DESCRIPTIONS -->
+  <div class="bookshelf-details">
+
+    <div class="book-details">
+      <h3>Our Road to Forever</h3>
+
+      <p>
+        A journey of love, memories, and the
+        moments that lead to forever.
+      </p>
+
+      <span class="book-preview-label">
+        
+      </span>
+    </div>
+
+    <div class="book-details">
+      <h3>The Wait for Julius</h3>
+
+      <p>
+        A little boy. A whole new adventure.
+        Big dreams, little feet, and a lifetime of love.
+      </p>
+
+      <span class="book-preview-label">
+        
+      </span>
+    </div>
+
+  </div>
+
+  <p class="bookshelf-closing">
+    More than apps. Life's stories.
+  </p>
+
+<!-- INTERACTIVE SCRAPBOOK DEMOS -->
+<section id="scrapbook-demos" style="
+  max-width:1050px;
+  margin:45px auto 55px;
+  padding:24px 6px;
+  text-align:center;
+  background:linear-gradient(145deg,#222d3a,#121923);
+  border:1px solid rgba(213,173,114,.3);
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+">
+
+  <p style="
+    color:#d5ad72;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:10px;
+  ">
+    INTERACTIVE SCRAPBOOK EXPERIENCE
+  </p>
+
+  <h2 style="
+    color:#f6f3ed;
+    font-family:Georgia,serif;
+    font-size:clamp(25px,4vw,36px);
+    margin:0 0 12px;
+  ">
+    Imagine What Your Story Could Become
+  </h2>
+
+  <p style="
+    color:#b6c0cc;
+    max-width:650px;
+    margin:0 auto 25px;
+    line-height:1.7;
+  ">
+    Every memory deserves a place to live.
+    Explore an interactive scrapbook and discover
+    how photographs, stories, and special moments
+    can come together in a beautiful digital book.
+  </p>
+
+  
+<!-- SCRAPBOOK DEMO BOOK CARDS -->
+<div class="scrapbook-demo-grid" style="
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+  gap:24px;
+max-width:100%;
+width:100%;
+margin:0 auto;
+align-items:stretch;
+">
+
+  <!-- OUR WEDDING DAY -->
+  <div class="scrapbook-demo-card" style="
+    padding:15px;
+    border:1px solid rgba(213,173,114,.25);
+    border-radius:14px;
+    background:rgba(0,0,0,.15);
+    display:flex;
+    flex-direction:column;
+  ">
+
+    <a href="/wedding-demo/" style="
+      display:block;
+      text-decoration:none;
+    ">
+      <img
+        src="/wedding-demo/00_wedding_cover.png"
+        alt="Our Wedding Day interactive scrapbook demo"
+        style="
+          width:100%;
+          aspect-ratio:1/1;
+          object-fit:cover;
+          display:block;
+          border-radius:8px;
+          box-shadow:0 12px 25px rgba(0,0,0,.35);
+        "
+      >
+    </a>
+
+    <h3 style="
+      color:#f6f3ed;
+      font-family:Georgia,serif;
+      font-size:23px;
+      margin:18px 0 5px;
+    ">
+      Our Wedding Day
+    </h3>
+
+    <p style="
+      color:#b6c0cc;
+      font-size:14px;
+      margin:0 0 18px;
+      line-height:1.6;
+    ">
+      A love story told one beautiful page at a time.
+    </p>
+
+    <a href="/wedding-demo/" style="
+      display:block;
+      margin-top:auto;
+      padding:13px 18px;
+      background:#d5ad72;
+      color:#10151e;
+      border-radius:9px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+    ">
+      Open Demo Book →
+    </a>
+
+  </div>
+
+  <!-- THE ADVENTURES WE TOOK -->
+  <div class="scrapbook-demo-card" style="
+    padding:15px;
+    border:1px solid rgba(213,173,114,.25);
+    border-radius:14px;
+    background:rgba(0,0,0,.15);
+    display:flex;
+    flex-direction:column;
+  ">
+
+    <a href="/adventures-demo/" style="
+      display:block;
+      text-decoration:none;
+    ">
+      <img
+        src="/adventures-demo/00_adventures_cover.png"
+        alt="The Adventures We Took interactive scrapbook demo"
+        style="
+          width:100%;
+          aspect-ratio:1/1;
+          object-fit:cover;
+          display:block;
+          border-radius:8px;
+          box-shadow:0 12px 25px rgba(0,0,0,.35);
+        "
+      >
+    </a>
+
+    <h3 style="
+      color:#f6f3ed;
+      font-family:Georgia,serif;
+      font-size:23px;
+      margin:18px 0 5px;
+    ">
+      The Adventures We Took
+    </h3>
+
+    <p style="
+      color:#b6c0cc;
+      font-size:14px;
+      margin:0 0 18px;
+      line-height:1.6;
+    ">
+      Roads traveled, places discovered,
+      and memories made together.
+    </p>
+
+    <a href="/adventures-demo/" style="
+      display:block;
+      margin-top:auto;
+      padding:13px 18px;
+      background:#d5ad72;
+      color:#10151e;
+      border-radius:9px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+    ">
+      Open Demo Book →
+    </a>
+
+  </div>
+
+</div>
+<!-- END SCRAPBOOK DEMO BOOK CARDS -->
+
+
+  <p style="
+    color:#8996a5;
+    font-size:12px;
+    margin:20px 0 0;
+  ">
+    Fictional demonstration created for TOS Creations.
+  </p>
+
+</section>
+<!-- END INTERACTIVE SCRAPBOOK DEMOS -->
+
+</section>
+
+<!-- ================================================= -->
+<!-- DIGITAL BOOKSHELF STYLING                         -->
+<!-- ================================================= -->
+
+<style>
+
+  .bookshelf-showcase {
+    margin-top: 90px;
+    padding: 60px 35px;
+
+    background: radial-gradient(
+      ellipse at top,
+      #1c3041 0%,
+      #10151e 75%
+    );
+
+    border-radius: 25px;
+    border: 1px solid rgba(213,173,114,0.15);
+    overflow: hidden;
+  }
+
+  .bookshelf-heading {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .bookshelf-eyebrow {
+    color: #d5ad72;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .bookshelf-heading h2 {
+    color: #f6f3ed;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 15px 0;
+  }
+
+  .bookshelf-heading p {
+    color: #adb8c5;
+  }
+
+  /* BOOKS STANDING ON THE SHELF */
+
+  .digital-bookshelf {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px;
+    align-items: end;
+
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .showcase-book {
+    text-align: center;
+    min-width: 0;
+  }
+
+  /* REALISTIC HARDCOVER EFFECT */
+
+  .book-cover {
+    position: relative;
+
+    width: min(100%, 260px);
+    margin: 0 auto;
+
+    border-left: 8px solid #51301e;
+    border-radius: 5px 12px 12px 5px;
+
+    box-shadow:
+      inset 5px 0 8px rgba(0,0,0,0.35),
+      -10px 10px 0 rgba(0,0,0,0.25),
+      0 18px 30px rgba(0,0,0,0.4);
+
+    transform-origin: bottom center;
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .book-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* KEEP THE HOVER ANIMATION */
+
+  .book-cover:hover {
+    transform: translateY(-12px) rotate(-2deg);
+
+    box-shadow:
+      -12px 15px 0 rgba(0,0,0,0.2),
+      0 25px 40px rgba(0,0,0,0.5);
+  }
+
+  /* THICK RUSTIC WOODEN SHELF */
+
+  .bookshelf-wood {
+    position: relative;
+
+    height: 48px;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    border-radius: 5px 5px 12px 12px;
+
+    background:
+      repeating-linear-gradient(
+        174deg,
+        transparent 0px,
+        rgba(30,12,4,0.14) 3px,
+        transparent 6px,
+        transparent 23px
+      ),
+      linear-gradient(
+        180deg,
+        #b17a49 0%,
+        #8a532c 12%,
+        #603718 35%,
+        #45230f 70%,
+        #281409 100%
+      );
+
+    border-top: 5px solid #c28a52;
+    border-bottom: 5px solid #241208;
+
+    box-shadow:
+      inset 0 3px 5px rgba(255,220,160,0.15),
+      inset 0 -8px 12px rgba(0,0,0,0.35),
+      0 16px 22px rgba(0,0,0,0.55);
+  }
+
+  /* DESCRIPTIONS BELOW THE SHELF */
+
+  .bookshelf-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px;
+
+    max-width: 850px;
+    margin: 35px auto 0;
+
+    text-align: center;
+  }
+
+  .book-details {
+    min-width: 0;
+  }
+
+  .book-details h3 {
+    color: #f6f3ed;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 10px 0 15px;
+  }
+
+  .book-details p {
+    color: #adb8c5;
+    font-size: 15px;
+    line-height: 1.7;
+
+    max-width: 330px;
+    margin: 0 auto 18px;
+  }
+
+  .book-preview-label {
+    display: inline-block;
+    color: #d5ad72;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .bookshelf-closing {
+    text-align: center;
+    color: #d5ad72;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    margin-top: 45px;
+    font-size: 18px;
+  }
+
+  /* MOBILE RESPONSIVENESS */
+
+  @media (max-width: 600px) {
+
+    .bookshelf-showcase {
+      padding: 45px 18px;
+    }
+
+    .digital-bookshelf {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .book-cover {
+      width: 100%;
+    }
+
+    .bookshelf-details {
+      gap: 16px;
+    }
+
+    .book-details h3 {
+      font-size: 18px;
+    }
+
+    .book-details p {
+      font-size: 13px;
+    }
+  }
+
+  /* ACCESSIBILITY */
+
+  @media (prefers-reduced-motion: reduce) {
+    .book-cover {
+      transition: none;
+    }
+
+    .book-cover:hover {
+      transform: none;
+    }
+  }
+
+/* Scrapbook demo mobile layout */
+@media (max-width: 600px) {
+
+  #scrapbook-demos .scrapbook-demo-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-grid > div {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-grid a[href$="-demo/"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Match scrapbook demo cards to Game Lounge details */
+@media (max-width: 600px) {
+
+  #scrapbook-demos .scrapbook-demo-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 20px !important;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 15px !important;
+
+    border: 1px solid rgba(213,173,114,.30) !important;
+    border-radius: 14px !important;
+    background: rgba(8,16,27,.32) !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,.18);
+    box-sizing: border-box;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  #scrapbook-demos .scrapbook-demo-card a[href$="-demo/"] {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Reduce bookshelf outer padding on iPhone */
+@media (max-width: 600px) {
+  .bookshelf-showcase {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+/* Game Lounge buttons — mobile alignment */
+@media (max-width: 600px) {
+
+  /* Only the three links in the Game Lounge card */
+  a[href="https://testflight.apple.com/join/kPDAGxbx"],
+  a[href="/game-lounge/"],
+  a[href="/game-lounge/privacy.html"] {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px;
+    margin: 10px 0 !important;
+    padding: 12px 16px !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+}
+
+/* My Books buttons — mobile alignment */
+@media (max-width: 600px) {
+
+  /* Make all three My Books buttons fill the same width */
+  a[href="https://apps.apple.com/us/app/my-books-creative-library/id6816745312"] {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px;
+    margin: 0 0 10px !important;
+    padding: 12px 16px !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+  
+/* My Books lower buttons — mobile only */
+@media (max-width: 600px) {
+
+  a[href="https://testflight.apple.com/join/b2xG65HU"]
+    ~ a[href="my-books/"],
+
+  a[href="https://testflight.apple.com/join/b2xG65HU"]
+    ~ a[href="my-books/privacy.html"] {
+
+    display: inline-flex !important;
+    width: calc(50% - 6px) !important;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 8px !important;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+}
+
+
+</style>
+
+<!-- SHARE YOUR IDEA -->
+<section id="share-your-idea" style="
+  width:100%;
+  max-width:1050px;
+  margin:45px auto;
+  padding:32px 22px;
+  text-align:center;
+  background:linear-gradient(145deg,#222d3a,#121923);
+  border:1px solid rgba(213,173,114,.3);
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+  box-sizing:border-box;
+">
+
+  <p style="
+    color:#d5ad72;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin:0 0 12px;
+  ">
+    TOS CREATIONS · WHERE IDEAS BEGIN
+  </p>
+
+  <h2 style="
+    color:#f6f3ed;
+    font-family:Georgia,serif;
+    font-size:clamp(27px,4vw,38px);
+    margin:0 0 18px;
+  ">
+    What Would You Love to See Come to Life?
+  </h2>
+
+  <p style="
+    color:#b6c0cc;
+    max-width:720px;
+    line-height:1.8;
+    margin:0 auto 18px;
+  ">
+    Have an idea for an app, game, website,
+    or digital experience? Sometimes the
+    best creations begin with a simple thought.
+  </p>
+
+  <p style="
+    color:#b6c0cc;
+    max-width:720px;
+    line-height:1.8;
+    margin:0 auto 25px;
+  ">
+    Share your imagination with TOS Creations.
+    We're always interested in exploring
+    new possibilities.
+  </p>
+
+  <div style="
+    max-width:600px;
+    margin:0 auto 25px;
+    padding:20px;
+    background:rgba(8,16,27,.35);
+    border:1px solid rgba(213,173,114,.2);
+    border-radius:12px;
+  ">
+    <p style="
+      color:#d5ad72;
+      font-weight:700;
+      margin:0 0 10px;
+    ">
+      Private Submissions. Your Choice.
+    </p>
+
+    <p style="
+      color:#b6c0cc;
+      font-size:14px;
+      line-height:1.7;
+      margin:0;
+    ">
+      Ideas are reviewed privately.
+      You choose whether your idea may
+      be considered for public featuring.
+      Nothing is published automatically.
+    </p>
+  </div>
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLScwANUnr-4AtnBnELT_0kJORSaMTzFu7IkQ4xDbqpN8GDppAw/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      max-width:100%;
+      padding:14px 28px;
+      background:#d5ad72;
+      color:#10151e;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+      box-sizing:border-box;
+    "
+  >
+    Share Your Idea ↗
+  </a>
+
+  <p style="
+    color:#98a7b8;
+    font-size:13px;
+    line-height:1.7;
+    max-width:650px;
+    margin:22px auto 0;
+  ">
+    Submitting an idea does not guarantee
+    development, publication, compensation,
+    or a response.
+  </p>
+
+</section>
+<!-- END SHARE YOUR IDEA -->
+
+  <section id="about" class="section">
+    <h2>About TOS Creations</h2>
+
+    <p>
+      TOS Creations is an independent app development brand built on creativity, curiosity, and the belief that technology should be both useful and personal.</p>
+<p>
+What started with a passion for bringing ideas to life has grown into a collection of digital experiences designed to entertain, inspire, organize, and connect. From interactive games and music applications to fitness tools and creative scrapbooks.</p> <p> Every project begins with a simple question: What if we could make this experience better, more enjoyable, or more meaningful?
+
+At TOS Creations, we believe the best ideas don't always come from following trends. Sometimes they come from everyday experiences, personal challenges, family moments, or simply imagining something that doesn't exist yet.
+
+Our approach is straightforward: build with purpose, pay attention to the details, keep learning, and never stop exploring what's possible.
+
+Some creations are designed to make life easier. Others are made purely for fun. And some are built to preserve the moments that matter most.</p>
+
+ 
+<p style="
+  color: #d5ad72;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+">
+  Different ideas. Different experiences. One common purpose:
+  Making technology feel more personal.
+</p>
+
+
+<p style="
+  color: #f6f3ed;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 8px;
+">
+  TOS Creations — Apps Made Personal.
+</p>
+
+
+  </section>
+
+  <section id="support" class="section">
+    <h2>Support</h2>
+
+    <p>
+      Need assistance with one of our applications?
+      Visit the application's dedicated support page
+      for information, troubleshooting, and contact options.
+    </p>
+      
+    <a class="button" href="my-books/">
+    My Books Support
+    </a>
+    <a class="button" href="crossword-jigsaw/">
+    Crossword Support
+    </a>
+    <a class="button" href="music-mashup/">
+    Music Mashup Support
+    </a>
+    <a class="button" href="retro-games/">
+    Retro Games Support
+    </a>
+    <a class="button" href="my-music-os/">
+    My Music OS Support
+    </a>
+    <a class="button" href="fitness-os/">
+    Fitness OS Support
+    </a>
+    <a class="button" href="game-lounge/">
+    Dart Club Support
+    </a>
+    <a class="button" href="Balloon-Break-Shift/">
+    Balloon Breakshift
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2026 TOS Creations. All rights reserved.
+  </footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bc924d3e737d4b2183dcc829ddff9e5b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
