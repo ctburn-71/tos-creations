@@ -936,7 +936,7 @@ label[for="my-books-testing"] {
 <style>
   .app-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 22px;
     margin-top: 30px;
   }
@@ -986,7 +986,8 @@ label[for="my-books-testing"] {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    
+}
+
 /* CROSSWORD JIGSAW SUPPORT LINKS */
 
 
@@ -1027,7 +1028,6 @@ label[for="my-books-testing"] {
   outline-offset: 3px;
 }
 
-  }
 
   @media (prefers-reduced-motion: reduce) {
     .gallery-card {
@@ -1036,6 +1036,45 @@ label[for="my-books-testing"] {
     .gallery-card:hover {
       transform: none;
     }
+  }
+
+  /* SECOND ROW: same tiles, spacing, and buttons as first row */
+  @media (max-width: 1050px) {
+    .app-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .app-gallery { grid-template-columns: minmax(0, 1fr); }
+  }
+  .app-gallery .gallery-card { min-width: 0; }
+  .gallery-card .tile-action {
+    display:flex; width:100%; min-height:44px; padding:10px 6px;
+    align-items:center; justify-content:center; text-align:center;
+    background:#d5ad72; color:#10151e; border-radius:9px;
+    font-size:11px; font-weight:700; text-decoration:none;
+    box-sizing:border-box; margin-top:14px;
+  }
+  .gallery-card .tile-links {
+    display:flex; flex-wrap:nowrap; gap:6px; width:100%; margin-top:14px;
+  }
+  .gallery-card .tile-links a {
+    display:flex; flex:1 1 0; min-width:0; min-height:40px;
+    padding:9px 4px; align-items:center; justify-content:center;
+    border:1px solid #8c7351; border-radius:8px;
+    background:#253244; color:#d5ad72;
+    font-size:11px; font-weight:700; text-decoration:none;
+    text-align:center; box-sizing:border-box;
+  }
+  .gallery-card .tile-links a:hover { background:#34465b; }
+  .gallery-card .tile-placeholder {
+    display:flex; align-items:center; justify-content:center;
+    width:100px; height:100px; border-radius:22px;
+    background:linear-gradient(135deg,#26384b,#121923);
+    border:1px solid rgba(213,173,114,.35);
+    font-size:45px; margin-bottom:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+  }
+  .gallery-card .tile-footer {
+    color:#d5ad72; font-size:12px; font-weight:600; margin:10px 0 0;
   }
 </style>
 
@@ -1061,8 +1100,8 @@ label[for="my-books-testing"] {
 
   
 <!-- CROSSWORD JIGSAW LINKS -->
-<div class="crossword-links"
-  
+<div class="crossword-actions">
+
   <!-- APP STORE BUTTON -->
 <a
   href="https://apps.apple.com/us/app/crossword-jigsaw/id6822561017"
@@ -1102,8 +1141,7 @@ label[for="my-books-testing"] {
   </a>
 
 </div>
-
-</style>
+</div>
 </article>
 
 
@@ -1437,8 +1475,53 @@ label[for="my-books-testing"] {
 </div>
   </article>
 
+
+  <!-- BALLOON BREAKSHIFT -->
+  <article class="gallery-card" id="balloon-breakshift">
+    <img src="/Balloon%20Breakshift.png" alt="Balloon Breakshift artwork" class="gallery-icon" loading="lazy" style="object-fit:contain;background:#10151e;">
+    <h3>Balloon Breakshift</h3>
+    <p>Match colorful balloons, unleash rockets and rainbow blasts, and overcome changing obstacles in a strategy-driven puzzle adventure.</p>
+    <span class="gallery-status">IN TESTFLIGHT</span>
+    <a class="tile-action" href="https://testflight.apple.com/join/RygMnsrg" target="_blank" rel="noopener noreferrer">Join Balloon Breakshift Beta ↗</a>
+    <div class="tile-links">
+      <a href="/Balloon-Break-Shift/">Support</a>
+      <a href="/Balloon-Break-Shift/privacy.html">Privacy Policy</a>
+    </div>
+  </article>
+
+  <!-- FITNESS OS -->
+  <article class="gallery-card" id="fitness-os">
+    <img src="fitness-os-icon.png" alt="Fitness OS app icon" class="gallery-icon" loading="lazy">
+    <h3>Fitness OS</h3>
+    <p>Build a Better You. Plan workouts, track progress, and explore personalized AI-supported fitness coaching.</p>
+    <span class="gallery-status">IN TESTFLIGHT</span>
+    <a class="tile-action" href="https://testflight.apple.com/join/aj5GQsMA" target="_blank" rel="noopener noreferrer">Join Fitness OS Beta ↗</a>
+    <div class="tile-links">
+      <a href="fitness-os/">Support</a>
+      <a href="fitness-os/privacy.html">Privacy Policy</a>
+    </div>
+  </article>
+
+  <!-- REACTION LAB -->
+  <article class="gallery-card" id="reaction-lab">
+    <img src="/Reaction%20Lab%20Reactor%20Hub.png" alt="Reaction Lab concept artwork" class="gallery-icon" loading="lazy" style="object-fit:contain;background:#10151e;">
+    <h3>Reaction Lab</h3>
+    <p>Explore four futuristic chambers and twelve challenges testing reflexes, memory, timing, precision, and physics-based problem-solving.</p>
+    <span class="gallery-status">IN DEVELOPMENT</span>
+    <p class="tile-footer">Four Chambers. Twelve Challenges.</p>
+  </article>
+
+  <!-- THE FIXIT PROJECT -->
+  <article class="gallery-card" id="fixit-project">
+    <div class="tile-placeholder" role="img" aria-label="Workshop tools">🔧</div>
+    <h3>Fix It! — The Workshop</h3>
+    <p>Inspect broken equipment, discover what's wrong, work with tools, and experience the satisfaction of bringing it back to life.</p>
+    <span class="gallery-status">IN DEVELOPMENT</span>
+    <p class="tile-footer">Take It Apart. Figure It Out. Make It Work.</p>
+  </article>
+
 </div>
-    
+
 <!-- CROSSWORD JIGSAW DETAILS -->
 
 <details class="crossword-details" id="crossword-details">
@@ -2625,237 +2708,140 @@ label[for="my-music-testing"] {
 
 </style>
 
-<!-- TOS CREATIONS ANDROID BETA SIGNUP -->
-<section id="android-beta" style="
-  max-width:1050px;
-  margin:45px auto;
-  padding:32px 26px;
-  border:1px solid rgba(213,173,114,.3);
-  border-radius:18px;
-  background:linear-gradient(145deg,#202e40,#121923);
-  text-align:center;
-  box-sizing:border-box;
+<!-- BALLOON BREAKSHIFT DETAILS — COMPACT TILE EXPANSION -->
+<details style="
+  width:100%;
+  margin:18px 0 0;
+  background:rgba(8,16,27,.35);
+  border:1px solid rgba(213,173,114,.30);
+  border-radius:14px;
+  padding:18px;
+  text-align:left;
 ">
 
-  <p style="
+  <summary style="
     color:#d5ad72;
-    font-size:12px;
-    letter-spacing:2px;
     font-weight:700;
+    cursor:pointer;
+    line-height:1.6;
   ">
-    GOOGLE PLAY · CLOSED TESTING
-  </p>
-
-  <h2 style="
-    color:#f6f3ed;
-    font-family:Georgia,serif;
-    font-size:clamp(27px,4vw,38px);
-    margin:14px 0;
-  ">
-    Become an Android Beta Tester
-  </h2>
-
-  <p style="
-    color:#b6c0cc;
-    line-height:1.7;
-    max-width:720px;
-    margin:0 auto 24px;
-  ">
-    Interested in testing TOS Creations apps on Android?
-    Help us improve our games before public release.
-    Apply to join our Google Play closed-testing program.
-  </p>
+    Explore Balloon Breakshift Details
+  </summary>
 
   <div style="
-    background:rgba(8,16,27,.35);
-    border:1px solid rgba(213,173,114,.2);
-    border-radius:12px;
-    padding:20px;
-    margin:0 auto 24px;
-    max-width:550px;
+    color:#b6c0cc;
+    line-height:1.75;
+    padding:15px 4px 4px;
   ">
-    <p style="color:#f6f3ed;font-weight:700;margin:0 0 8px;">
-      Currently Inviting Testers
-    </p>
 
-    <p style="color:#d5ad72;margin:0;line-height:1.8;">
-      Crossword Jigsaw
-      <span style="color:#b6c0cc;"> · </span>
-      TOS Retro Games
-      <span style="color:#b6c0cc;"> · </span>
-      Fitness OS
-      <span style="color:#b6c0cc;"> · </span>
-      Dart Club & Game Lounge
-    </p>
+    <details style="margin-bottom:15px;">
+      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
+        Description
+      </summary>
+
+      <p>
+        Balloon Breakshift is a colorful,
+        strategy-driven match-three puzzle
+        adventure where every move can
+        change the board.
+      </p>
+
+      <p>
+        Match vibrant balloons, create
+        rockets, rainbow and burst powers,
+        break challenging obstacles, and
+        discover unexpected chain reactions.
+      </p>
+
+      <p>
+        Randomized layouts, evolving levels,
+        daily rewards, and changing board
+        mechanics create new challenges
+        as you progress.
+      </p>
+
+      <p style="color:#d5ad72;font-style:italic;">
+        Easy to learn. Challenging to master.
+        Always changing.
+      </p>
+    </details>
+
+    <details>
+      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
+        What to Test
+      </summary>
+
+      <h3 style="color:#d5ad72;">Gameplay & Matching</h3>
+      <ul>
+        <li>Match three or more balloons using taps or swipes.</li>
+        <li>Try matches of four, five, and six or more balloons.</li>
+        <li>Check swapping, falling animations, and responsiveness.</li>
+        <li>Report incorrect matches or stuck balloons.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Power Boosters</h3>
+      <ul>
+        <li>Test Rockets, Rainbow Balloons, Burst Balloons, and Wild Rockets.</li>
+        <li>Confirm powers activate and animate correctly.</li>
+        <li>Use boosters earned through daily rewards.</li>
+        <li>Check that stored boosters do not consume regular moves.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Obstacles & Levels</h3>
+      <ul>
+        <li>Break glass, wood, stone, and reinforced metal.</li>
+        <li>Check obstacle damage, explosions, and bonus points.</li>
+        <li>Test Continue Round and Next Level.</li>
+        <li>From Level 4, watch for collapse warnings and collapsing rows or columns.</li>
+        <li>Check that balloons refill the board correctly.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Daily Rewards & Saving</h3>
+      <ul>
+        <li>Claim a daily reward and check booster inventory.</li>
+        <li>Close and reopen the game to verify saved progress.</li>
+        <li>Check level, score, inventory, and board restoration.</li>
+        <li>Verify rewards cannot be claimed repeatedly on the same day.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Sound & Music</h3>
+      <ul>
+        <li>Test music and sound effects.</li>
+        <li>Adjust volume and mute settings.</li>
+        <li>Confirm settings are remembered.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Power Shop</h3>
+      <ul>
+        <li>Open and close the shop.</li>
+        <li>Review available bonus-pack previews.</li>
+        <li>Confirm the shop does not disrupt gameplay.</li>
+        <li>Real-money purchases are disabled in this beta.</li>
+      </ul>
+
+      <h3 style="color:#d5ad72;">Please Report</h3>
+      <p>
+        Crashes, freezing, lag, unusual battery
+        drain, missing graphics, overlapping
+        buttons, sound issues, lost progress,
+        unexpected scoring, or boosters that
+        do not work.
+      </p>
+
+      <p>
+        Tell us what you enjoyed, too!
+        Include your iPhone model, iOS version,
+        and screenshots when possible.
+      </p>
+
+      <p style="color:#d5ad72;font-weight:700;">
+        Thank you for helping improve Balloon Breakshift!
+      </p>
+    </details>
+
   </div>
-
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLScV7EEDZDfDQcedGPhKMA1uRLs2q3oNflg1aoWVPpUJN4XDrQ/viewform"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      max-width:100%;
-      min-height:48px;
-      padding:13px 24px;
-      border-radius:10px;
-      background:#d5ad72;
-      color:#10151e;
-      text-decoration:none;
-      font-weight:700;
-      text-align:center;
-      box-sizing:border-box;
-    "
-  >
-    Apply for Android Beta Testing ↗
-  </a>
-
-  <p style="
-    color:#98a7b8;
-    font-size:13px;
-    line-height:1.6;
-    margin:20px auto 0;
-    max-width:650px;
-  ">
-    Participation is free. Selected testers will receive
-    instructions for joining their chosen Google Play
-    closed tests. Availability may vary.
-  </p>
-
-</section>
-<!-- END ANDROID BETA SIGNUP -->
-
-
-
-    <!-- FITNESS OS - IN TESTFLIGHT -->
-
-<section class="fitness-feature">
-
-  <div class="fitness-header">
-    <img
-      src="fitness-os-icon.png"
-      alt="Fitness OS app icon"
-      class="fitness-icon"
-    >
-
-    <div>
-      <h2>Fitness OS</h2>
-      <p class="fitness-tagline">Build a Better You.</p>
-      <span class="fitness-status">IN TESTFLIGHT</span>
-    </div>
-  </div>
-
-  <p class="fitness-description">
-    Fitness OS is an intelligent fitness experience
-    designed to bring workouts, personalized coaching,
-    nutrition, and progress tracking together in one place.
-  </p>
-
-  <p class="fitness-description">
-    Built around individual progress, Fitness OS combines
-    practical fitness tools with AI-supported guidance
-    to help users work toward their personal goals.
-  </p>
-
-  <p class="fitness-footer">
-    Something stronger is taking shape.
-  </p>
-
-
-    <!-- FITNESS OS TESTFLIGHT -->
-
-
-<!-- FITNESS OS LINKS -->
-
-<div class="fitness-links">
-
-  <a
-    href="https://testflight.apple.com/join/aj5GQsMA"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="fitness-link-primary"
-  >
-    Join Fitness OS Beta ↗
-  </a>
-
-  <a
-    href="fitness-os/"
-    class="fitness-link-secondary"
-  >
-    Support
-  </a>
-
-  <a
-    href="fitness-os/privacy.html"
-    class="fitness-link-secondary"
-  >
-    Privacy Policy
-  </a>
-
-</div>
-
-<style>
-.fitness-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.fitness-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 12px 22px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background .2s ease, transform .2s ease;
-}
-
-.fitness-link-primary {
-  background: #d5ad72;
-  color: #10151e;
-}
-
-.fitness-link-primary:hover {
-  background: #e7c79a;
-  transform: translateY(-2px);
-}
-
-.fitness-link-secondary {
-  color: #d5ad72;
-  background: #1c2532;
-  border: 1px solid rgba(213,173,114,.45);
-}
-
-.fitness-link-secondary:hover {
-  background: #29384a;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  .fitness-links a {
-    width: 100%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fitness-links a {
-    transition: none;
-  }
-
-  .fitness-links a:hover {
-    transform: none;
-  }
-}
-</style>
-
-
+</details>
+<!-- END BALLOON BREAKSHIFT DETAILS -->
 <!-- FITNESS OS EXPANDABLE DETAILS -->
 
 <details class="fitness-more">
@@ -2957,7 +2943,6 @@ label[for="my-music-testing"] {
 
   </div>
 </details>
-</section>
 <!-- FITNESS OS TAB STYLING -->
 
 <style>
@@ -3155,80 +3140,14 @@ label[for="fitness-testing"] {
     }
    }
 </style>
-</section>
 
-<!-- REACTION LAB SHOWCASE -->
-<div id="reaction-lab" style="
-  width:100%;
-  max-width:1050px;
-  margin:35px auto 45px;
-  box-sizing:border-box;
-">
 
-  <!-- REACTION LAB TILE -->
-  <div class="app-gallery" style="
-    margin:0 0 22px;
-  ">
-
-    <article class="gallery-card" style="
-      display:flex;
-      flex-direction:column;
-      max-width:255px;
-      width:100%;
-      box-sizing:border-box;
-    ">
-
-      <img
-        src="/Reaction%20Lab%20Reactor%20Hub.png"
-        alt="Reaction Lab by TOS Creations"
-        class="gallery-icon"
-        loading="lazy"
-      >
-
-      <h3>Reaction Lab</h3>
-
-      <p>
-        Enter a futuristic world where every reaction
-        counts! Explore four high-tech chambers
-        featuring 12 challenges that test your
-        reflexes, memory, timing, precision,
-        and problem-solving skills.
-      </p>
-
-      <p>
-        Manipulate gravity, control magnetic fields,
-        navigate moving energy barriers, and
-        discover challenges that are easy to learn
-        but exciting to master.
-      </p>
-
-      <span class="gallery-status" style="
-        display:block;
-        margin-top:auto;
-        padding-top:24px;
-        color:#d5ad72;
-        font-size:13px;
-        font-weight:700;
-        letter-spacing:.5px;
-      ">
-        IN DEVELOPMENT
-      </span>
-
-      <p style="
-        color:#d5ad72;
-        font-size:12px;
-        font-weight:600;
-        margin:12px 0 0;
-      ">
-        Four Chambers. Twelve Challenges.
-      </p>
-
-    </article>
-  </div>
-
-  <!-- REACTION LAB EXPANDABLE DETAILS -->
+<!-- REACTION LAB DETAILS -->
+<div id="reaction-lab-details">
+<!-- REACTION LAB EXPANDABLE DETAILS -->
   <details style="
     width:100%;
+    margin-top:18px;
     background:#151f2c;
     border:1px solid rgba(213,173,114,.35);
     border-radius:14px;
@@ -3434,28 +3353,24 @@ label[for="fitness-testing"] {
     </div>
   </details>
 
-  <p style="
-    text-align:center;
-    color:#98a7b8;
-    font-size:12px;
-    letter-spacing:1px;
-    margin:18px auto 0;
-  ">
-    CURRENTLY IN ACTIVE DEVELOPMENT
-  </p>
-
 </div>
-<!-- END REACTION LAB SHOWCASE -->
+<!-- END REACTION LAB DETAILS -->
 
-  <!-- TOS CREATIONS GAME ROOM -->
-  <section id="apps" class="section">
-    <h2>In Developement/Currently Designing</h2>
-    <p class="section-intro">
-      Explore what we're creating.
-    </p>
 
-    <div class="app-card">
+<!-- THE FIXIT PROJECT DETAILS -->
+<details id="fixit-details" class="crossword-details">
+  <summary>Explore Fix It! — The Workshop Details</summary>
+  <div class="crossword-detail-content" style="color:#adb8c5;line-height:1.8;">
+    <h3 style="color:#d5ad72;">Take It Apart. Figure It Out. Make It Work.</h3>
+    <p>Fix It! — The Workshop is a realistic repair and problem-solving project from TOS Creations. Inspect equipment, diagnose faults, use appropriate tools, make repairs, and test the results.</p>
+    <p>The project is still in development. Its repair experiences, guidance, and realism are being refined before formal testing. No public download or TestFlight link is being offered at this stage.</p>
+  </div>
+</details>
 
+</section>
+
+<!-- TOS CREATIONS GAME ROOM — LARGE FEATURE -->
+<section class="game-lounge-container" style="max-width:1100px;margin:36px auto;padding:0 24px;">
 <section class="game-room-feature" id="game-room">
 
   <div class="game-room-heading">
@@ -3705,7 +3620,7 @@ label[for="fitness-testing"] {
       <p>
         Welcome to The Dart Club & Game Lounge,
         a digital entertainment experience
-        bringing four classic games together
+        bringing six classic games together
         in one application.
       </p>
 
@@ -3791,9 +3706,9 @@ Step onto the lanes for a classic bowling experience. Switch to Midnight Neon mo
 
       <ul>
         <li>
-          <strong>All four games:</strong>
+          <strong>All six games:</strong>
           Play Darts, Pool, Bowling,
-          and Air Hockey.
+          Air Hockey, Curling, and Pinball.
         </li>
 
         <li>
@@ -3842,6 +3757,9 @@ Step onto the lanes for a classic bowling experience. Switch to Midnight Neon mo
           turns, scoring synchronization,
           and reconnecting after interruptions.
         </li>
+      </ul>
+
+
         
 <h3>Curling</h3>
 <ul>
@@ -3862,8 +3780,6 @@ Step onto the lanes for a classic bowling experience. Switch to Midnight Neon mo
   <li>Test restarting a game and beginning a new round.</li>
   <li>Report stuck balls, missed inputs, scoring errors, or lag.</li>
 </ul>
-
-      </ul>
 
       <p>
         When reporting an issue, include your
@@ -4038,347 +3954,11 @@ Step onto the lanes for a classic bowling experience. Switch to Midnight Neon mo
 
 </style>
   
-<!-- TOS CREATIONS GAME ROOM -->
-  <section id="apps" class="section">
-   
- <!-- BALLOON BREAKSHIFT SHOWCASE -->
-<div id="balloon-breakshift" style="
-  max-width:1050px;
-  width:100%;
-  margin:35px auto 45px;
-  padding:28px 22px;
-  text-align:center;
-  background:linear-gradient(145deg,#222d3a,#121923);
-  border:1px solid rgba(213,173,114,.3);
-  border-radius:18px;
-  box-shadow:0 18px 35px rgba(0,0,0,.25);
-  box-sizing:border-box;
-">
+</section>
+<!-- END TOS CREATIONS GAME ROOM -->
 
-  <p style="
-    color:#d5ad72;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:2px;
-    margin:0 0 12px;
-  ">
-    IN TESTFLIGHT
-  </p>
-
-  <h3 style="
-    color:#f6f3ed;
-    font-family:Georgia,serif;
-    font-size:clamp(27px,4vw,38px);
-    margin:0 0 10px;
-  ">
-    Balloon Breakshift
-  </h3>
-
-  <p style="
-    color:#d5ad72;
-    font-weight:600;
-    font-size:17px;
-    margin:0 0 25px;
-  ">
-    Match. Pop. Break. Watch the board come alive!
-  </p>
-
-  
-<!-- GAME ARTWORK -->
-<img
-  src="/Balloon Breakshift.png"
-  alt="Balloon Breakshift concept artwork with colorful balloons, power boosts, rockets, and obstacles"
-  loading="lazy"
-  style="
-    display:block;
-    width:100%;
-    max-width:790px;
-    height:auto;
-    margin:0 auto 26px;
-    border-radius:12px;
-  "
->
-   
-  <p style="
-    color:#b6c0cc;
-    line-height:1.8;
-    max-width:760px;
-    margin:0 auto 18px;
-  ">
-    Balloon Breakshift is a colorful, strategy-driven
-    puzzle game from TOS Creations that brings a new
-    twist to traditional match-three gameplay.
-  </p>
-
-  <p style="
-    color:#b6c0cc;
-    line-height:1.8;
-    max-width:760px;
-    margin:0 auto 18px;
-  ">
-    Match vibrant balloons, create powerful combinations,
-    and unleash rockets, rainbow blasts, and explosive
-    chain reactions. Break through glass, wooden crates,
-    stone, and reinforced metal as you advance through
-    increasingly challenging levels.
-  </p>
-
-  <p style="
-    color:#b6c0cc;
-    line-height:1.8;
-    max-width:760px;
-    margin:0 auto 18px;
-  ">
-    But there's a twist: the board doesn't always stay put!
-    Neglected rows and columns can collapse, sending
-    balloons falling away and introducing unexpected
-    obstacles. New balloons drop into place, creating
-    fresh opportunities and surprising combinations.
-  </p>
-
-  <p style="
-    color:#d5ad72;
-    font-family:Georgia,serif;
-    font-style:italic;
-    font-size:19px;
-    margin:25px auto 12px;
-  ">
-    Easy to learn. Challenging to master. Always changing.
-  </p>
-
-  <p style="
-    color:#98a7b8;
-    font-size:12px;
-    letter-spacing:1px;
-    margin:14px 0 0;
-  ">
-    CONCEPT ARTWORK · IN ACTIVE DEVELOPMENT
-  </p>
-
-<!-- BALLOON BREAKSHIFT TESTFLIGHT -->
-<a
-  href="https://testflight.apple.com/join/RygMnsrg"
-  target="_blank"
-  rel="noopener noreferrer"
-  style="
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    max-width:600px;
-    min-height:52px;
-    margin:24px auto 12px;
-    padding:13px 20px;
-    background:#d5ad72;
-    color:#10151e;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    text-align:center;
-    box-sizing:border-box;
-  "
->
-  Join Balloon Breakshift Beta ↗
-</a>
-<!-- END TESTFLIGHT LINK -->
-
-<!-- BALLOON BREAKSHIFT LINKS -->
-<div class="balloon-breakshift-links" style="
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin:24px auto 10px;
-  max-width:600px;
-">
-
-  <a
-    href="/Balloon-Break-Shift/"
-    style="
-      display:flex;
-      flex:1 1 180px;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      background:#253244;
-color:#d5ad72;
-border:1px solid #8c7351;
-      border-radius:10px;
-      font-weight:700;
-      text-decoration:none;
-      text-align:center;
-      box-sizing:border-box;
-    "
-  >
-    Support
-  </a>
-
-  <a
-    href="/Balloon-Break-Shift/privacy.html"
-    style="
-      display:flex;
-      flex:1 1 180px;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:12px 18px;
-      background:#253244;
-color:#d5ad72;
-border:1px solid #8c7351;
-      border-radius:10px;
-      font-weight:700;
-      text-decoration:none;
-      text-align:center;
-      box-sizing:border-box;
-    "
-  >
-    Privacy Policy
-  </a>
-
-</div>
-<!-- END BALLOON BREAKSHIFT LINKS -->
-
-<!-- BALLOON BREAKSHIFT DETAILS -->
-<details style="
-  max-width:760px;
-  margin:26px auto 5px;
-  background:rgba(8,16,27,.35);
-  border:1px solid rgba(213,173,114,.30);
-  border-radius:14px;
-  padding:18px;
-  text-align:left;
-">
-
-  <summary style="
-    color:#d5ad72;
-    font-weight:700;
-    cursor:pointer;
-    line-height:1.6;
-  ">
-    Explore Balloon Breakshift Details
-  </summary>
-
-  <div style="
-    color:#b6c0cc;
-    line-height:1.75;
-    padding:15px 4px 4px;
-  ">
-
-    <details style="margin-bottom:15px;">
-      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
-        Description
-      </summary>
-
-      <p>
-        Balloon Breakshift is a colorful,
-        strategy-driven match-three puzzle
-        adventure where every move can
-        change the board.
-      </p>
-
-      <p>
-        Match vibrant balloons, create
-        rockets, rainbow and burst powers,
-        break challenging obstacles, and
-        discover unexpected chain reactions.
-      </p>
-
-      <p>
-        Randomized layouts, evolving levels,
-        daily rewards, and changing board
-        mechanics create new challenges
-        as you progress.
-      </p>
-
-      <p style="color:#d5ad72;font-style:italic;">
-        Easy to learn. Challenging to master.
-        Always changing.
-      </p>
-    </details>
-
-    <details>
-      <summary style="color:#d5ad72;font-weight:700;cursor:pointer;">
-        What to Test
-      </summary>
-
-      <h3 style="color:#d5ad72;">Gameplay & Matching</h3>
-      <ul>
-        <li>Match three or more balloons using taps or swipes.</li>
-        <li>Try matches of four, five, and six or more balloons.</li>
-        <li>Check swapping, falling animations, and responsiveness.</li>
-        <li>Report incorrect matches or stuck balloons.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Power Boosters</h3>
-      <ul>
-        <li>Test Rockets, Rainbow Balloons, Burst Balloons, and Wild Rockets.</li>
-        <li>Confirm powers activate and animate correctly.</li>
-        <li>Use boosters earned through daily rewards.</li>
-        <li>Check that stored boosters do not consume regular moves.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Obstacles & Levels</h3>
-      <ul>
-        <li>Break glass, wood, stone, and reinforced metal.</li>
-        <li>Check obstacle damage, explosions, and bonus points.</li>
-        <li>Test Continue Round and Next Level.</li>
-        <li>From Level 4, watch for collapse warnings and collapsing rows or columns.</li>
-        <li>Check that balloons refill the board correctly.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Daily Rewards & Saving</h3>
-      <ul>
-        <li>Claim a daily reward and check booster inventory.</li>
-        <li>Close and reopen the game to verify saved progress.</li>
-        <li>Check level, score, inventory, and board restoration.</li>
-        <li>Verify rewards cannot be claimed repeatedly on the same day.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Sound & Music</h3>
-      <ul>
-        <li>Test music and sound effects.</li>
-        <li>Adjust volume and mute settings.</li>
-        <li>Confirm settings are remembered.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Power Shop</h3>
-      <ul>
-        <li>Open and close the shop.</li>
-        <li>Review available bonus-pack previews.</li>
-        <li>Confirm the shop does not disrupt gameplay.</li>
-        <li>Real-money purchases are disabled in this beta.</li>
-      </ul>
-
-      <h3 style="color:#d5ad72;">Please Report</h3>
-      <p>
-        Crashes, freezing, lag, unusual battery
-        drain, missing graphics, overlapping
-        buttons, sound issues, lost progress,
-        unexpected scoring, or boosters that
-        do not work.
-      </p>
-
-      <p>
-        Tell us what you enjoyed, too!
-        Include your iPhone model, iOS version,
-        and screenshots when possible.
-      </p>
-
-      <p style="color:#d5ad72;font-weight:700;">
-        Thank you for helping improve Balloon Breakshift!
-      </p>
-    </details>
-
-  </div>
-</details>
-<!-- END BALLOON BREAKSHIFT DETAILS -->
-
-</div>
-<!-- END BALLOON BREAKSHIFT SHOWCASE -->
- <h3>In Developement & Currently Designing</h3>
-    <p class="section-intro">
-      Explore what we're creating.
-    </p>     
+<h3 style="max-width:1050px;margin:55px auto 10px;">Our Larger Worlds in Development</h3>
+    <p class="section-intro" style="max-width:1050px;margin:0 auto 20px;">Follow the development journeys of our larger game worlds.</p>     
 <!-- REVIVAL CREEK FEATURE CARD -->
 <div class="revival-creek-card" style="
   width:100%;
@@ -4392,7 +3972,6 @@ border:1px solid #8c7351;
   box-sizing:border-box;
 ">
 
-<p>
 <p style="
   text-align:center;
   color:#d5ad72;
@@ -4638,11 +4217,114 @@ border:1px solid #8c7351;
 </div>
 <!-- END BREAKPOINT RUN FEATURE CARD -->
 
-</p>
- 
 
 
-  <!-- ================================================= -->
+  <!-- TOS CREATIONS ANDROID BETA SIGNUP -->
+<section id="android-beta" style="
+  max-width:1050px;
+  margin:45px auto;
+  padding:32px 26px;
+  border:1px solid rgba(213,173,114,.3);
+  border-radius:18px;
+  background:linear-gradient(145deg,#202e40,#121923);
+  text-align:center;
+  box-sizing:border-box;
+">
+
+  <p style="
+    color:#d5ad72;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:700;
+  ">
+    GOOGLE PLAY · CLOSED TESTING
+  </p>
+
+  <h2 style="
+    color:#f6f3ed;
+    font-family:Georgia,serif;
+    font-size:clamp(27px,4vw,38px);
+    margin:14px 0;
+  ">
+    Become an Android Beta Tester
+  </h2>
+
+  <p style="
+    color:#b6c0cc;
+    line-height:1.7;
+    max-width:720px;
+    margin:0 auto 24px;
+  ">
+    Interested in testing TOS Creations apps on Android?
+    Help us improve our games before public release.
+    Apply to join our Google Play closed-testing program.
+  </p>
+
+  <div style="
+    background:rgba(8,16,27,.35);
+    border:1px solid rgba(213,173,114,.2);
+    border-radius:12px;
+    padding:20px;
+    margin:0 auto 24px;
+    max-width:550px;
+  ">
+    <p style="color:#f6f3ed;font-weight:700;margin:0 0 8px;">
+      Currently Inviting Testers
+    </p>
+
+    <p style="color:#d5ad72;margin:0;line-height:1.8;">
+      Crossword Jigsaw
+      <span style="color:#b6c0cc;"> · </span>
+      TOS Retro Games
+      <span style="color:#b6c0cc;"> · </span>
+      Fitness OS
+      <span style="color:#b6c0cc;"> · </span>
+      Dart Club & Game Lounge
+    </p>
+  </div>
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLScV7EEDZDfDQcedGPhKMA1uRLs2q3oNflg1aoWVPpUJN4XDrQ/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      max-width:100%;
+      min-height:48px;
+      padding:13px 24px;
+      border-radius:10px;
+      background:#d5ad72;
+      color:#10151e;
+      text-decoration:none;
+      font-weight:700;
+      text-align:center;
+      box-sizing:border-box;
+    "
+  >
+    Apply for Android Beta Testing ↗
+  </a>
+
+  <p style="
+    color:#98a7b8;
+    font-size:13px;
+    line-height:1.6;
+    margin:20px auto 0;
+    max-width:650px;
+  ">
+    Participation is free. Selected testers will receive
+    instructions for joining their chosen Google Play
+    closed tests. Availability may vary.
+  </p>
+
+</section>
+<!-- END ANDROID BETA SIGNUP -->
+
+
+
+    
+<!-- ================================================= -->
 <!-- TOS CREATIONS DIGITAL BOOKSHELF                   -->
 <!-- ================================================= -->
 
