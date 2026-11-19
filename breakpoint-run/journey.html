@@ -442,6 +442,372 @@
           And a much bigger journey ahead.
         </p>
 
+<!-- NOVEMBER 17–18 DEVELOPMENT UPDATE -->
+
+<h3>November 17–18 — Transforming the City</h3>
+
+<p>
+  With the first playable city established, development
+  turned toward creating a believable modern American
+  downtown rather than a collection of gray blockout
+  structures.
+</p>
+
+<p>
+  Architectural improvements included:
+</p>
+
+<ul>
+  <li>Brick apartment buildings with detailed windows and entrances</li>
+  <li>Commercial storefronts, awnings, and signage</li>
+  <li>Modern offices and industrial architecture</li>
+  <li>Rooftop equipment, railings, and architectural details</li>
+  <li>Sidewalks, curbs, crosswalks, and road markings</li>
+  <li>Streetlights, traffic signals, and urban fixtures</li>
+  <li>Improved building materials, textures, and weathering</li>
+</ul>
+
+<p>
+  The first district received its architectural update
+  before the approved visual treatment expanded across
+  the remaining three playable blocks.
+</p>
+
+<p>
+  Testing revealed that a city could look detailed
+  from above but still feel empty from street level.
+</p>
+
+<p>
+  Surrounding buildings, additional streets,
+  varied rooflines, parked vehicles, and distant
+  skyline structures were introduced to make
+  the playable course feel part of a larger city.
+</p>
+
+<p>
+  The first eastern city sightline was completed
+  and approved as a foundation for expansion.
+</p>
+
+<p class="gold">
+  The goal is a believable city that preserves
+  the freedom to choose streets, rooftops,
+  walls, and alternate routes.
+</p>
+
+<h3>November 18 — A New Development Home</h3>
+
+<p>
+  As the city became more detailed, Unreal Engine's
+  resource demands grew.
+</p>
+
+<p>
+  Development had begun on a Mac with 16 GB of
+  memory. Larger scenes, shader processing, and
+  editor operations occasionally created memory
+  pressure and instability.
+</p>
+
+<p>
+  The project was transferred between two Macs
+  using local network file sharing.
+</p>
+
+<p>
+  The new primary development machine became
+  a 14-inch MacBook Pro with an Apple M6 processor
+  and 32 GB of unified memory.
+</p>
+
+<p>
+  Unreal Engine 5.8.4 successfully opened the
+  transferred project. The city, traversal routes,
+  character movement, and race timer were verified.
+</p>
+
+<p>
+  OpenAI Codex was reconnected through Unreal's
+  Model Context Protocol integration.
+</p>
+
+<p class="gold">
+  The move was completed without rebuilding the
+  project or losing the existing city.
+</p>
+
+<h3>November 18 — Bringing the Runner to Life</h3>
+
+<p>
+  Breakpoint Run had initially been experienced
+  primarily from a first-person perspective.
+</p>
+
+<p>
+  That changed with the introduction of Manny,
+  a visible animated character using Unreal
+  Engine's existing character assets.
+</p>
+
+<p>
+  The third-person foundation introduced:
+</p>
+
+<ul>
+  <li>A visible full-body player character</li>
+  <li>A camera following behind the runner</li>
+  <li>Animated walking and running</li>
+  <li>Jumping, falling, and landing animations</li>
+  <li>Integration with existing parkour movement</li>
+  <li>Camera refinements for comfortable control</li>
+  <li>Preserved race timing and finish detection</li>
+</ul>
+
+<p>
+  For the first time, players could watch
+  Manny navigate the city rather than simply
+  experience movement through the camera.
+</p>
+
+<h3>Making the City Safe to Explore</h3>
+
+<p>
+  Early third-person testing revealed several
+  important environmental problems.
+</p>
+
+<p>
+  Manny could move beyond an unprotected city
+  boundary and fall into empty space.
+</p>
+
+<p>
+  Invisible boundaries, a safety surface,
+  and automatic recovery were introduced.
+  Falling outside the playable area now returns
+  the character to the starting location
+  without stopping the race timer.
+</p>
+
+<p>
+  Additional testing found decorative buildings
+  with missing collision, allowing Manny to
+  pass through solid-looking walls.
+</p>
+
+<p>
+  Targeted collision repairs corrected the
+  affected structures while preserving the
+  established parkour routes.
+</p>
+
+<p class="statement">
+  A believable environment must not only look
+  realistic. It must behave correctly when
+  players interact with it.
+</p>
+
+<h3>Making Movement Feel Natural</h3>
+
+<p>
+  With Manny visible, development focused
+  on making the character's actions look
+  as natural as they felt during gameplay.
+</p>
+
+<p>
+  Animation improvements included:
+</p>
+
+<ul>
+  <li>Speed-responsive sprinting</li>
+  <li>Stationary crouching</li>
+  <li>Crouched walking</li>
+  <li>Momentum-based sliding</li>
+  <li>Smoother transitions between movement states</li>
+  <li>Preserved jumping and landing animations</li>
+</ul>
+
+<p>
+  Manual review revealed that the first
+  crouch-walking animation had unnatural
+  leg movement and noticeable foot drifting.
+</p>
+
+<p>
+  The animation was rebuilt with an improved
+  stride, steadier positioning, and better
+  foot movement.
+</p>
+
+<p>
+  The revised crouch-walk passed personal review.
+</p>
+
+<h3>Visible Vaulting, Ledge Catching, and Mantling</h3>
+
+<p>
+  The next animation stage focused on
+  moving across obstacles rather than simply
+  running around them.
+</p>
+
+<p>
+  Visible vaulting, ledge-catching, and
+  mantling animations were introduced.
+</p>
+
+<p>
+  One early problem prevented Manny from
+  visibly reaching for a ledge while airborne.
+</p>
+
+<p>
+  Investigation showed that ledge detection
+  was occurring only when the jump button
+  was first pressed.
+</p>
+
+<p>
+  Detection was refined so that holding the
+  jump button allowed Manny to recognize
+  and catch a reachable ledge during the jump.
+</p>
+
+<p>
+  A dedicated test ledge was added to verify
+  the interaction.
+</p>
+
+<p class="gold">
+  Manny could now jump toward a ledge,
+  reach out, catch it, pull himself onto
+  the surface, and return to running.
+</p>
+
+<h3>Learning to Run on Walls</h3>
+
+<p>
+  Development then moved to one of the game's
+  more ambitious movement features: wall-running.
+</p>
+
+<p>
+  Dedicated left-side and right-side testing
+  lanes were created with approach ramps,
+  gaps, walls, and landing areas.
+</p>
+
+<p>
+  The first implementation required the
+  character to build speed, jump alongside
+  a suitable wall, and maintain forward movement.
+</p>
+
+<p>
+  Although initial automated checks passed,
+  manual testing found activation too difficult.
+</p>
+
+<p>
+  Approach distances, angles, and speed
+  requirements were adjusted to make
+  wall-running easier to trigger without
+  introducing additional controls.
+</p>
+
+<p>
+  The next challenge was making the movement
+  visually believable.
+</p>
+
+<p>
+  Early versions caused Manny to glide
+  along the wall or intersect its surface.
+</p>
+
+<p>
+  Improvements introduced:
+</p>
+
+<ul>
+  <li>Better body orientation and wall alignment</li>
+  <li>More natural leaning</li>
+  <li>Alternating leg movement</li>
+  <li>Improved foot placement</li>
+  <li>Lightweight foot-contact adjustments</li>
+  <li>Smoother animation transitions</li>
+  <li>More realistic running cadence</li>
+  <li>Corrections for arm clipping during tested exits</li>
+</ul>
+
+<p>
+  Several manual reviews were needed.
+  At one point, Manny's legs were moving
+  much too quickly to look natural.
+</p>
+
+<p>
+  Animation timing was gradually adjusted
+  until the movement became more believable.
+</p>
+
+<p class="gold">
+  By the end of November 18, the provisional
+  left-side and right-side wall-running
+  foundation had been approved for continued
+  development.
+</p>
+
+<h3>November 18 — A Playable Foundation Takes Shape</h3>
+
+<p>
+  By November 18, Breakpoint Run had progressed
+  well beyond its original gray city blockout.
+</p>
+
+<p>
+  Its playable foundation included a more
+  detailed four-block urban environment,
+  surrounding skyline structures, a visible
+  third-person runner, timed escape gameplay,
+  and multiple forms of parkour traversal.
+</p>
+
+<p>
+  Players could experience running, jumping,
+  crouching, sliding, vaulting, ledge catching,
+  mantling, and provisional wall-running.
+</p>
+
+<p>
+  Personal gameplay testing continued to
+  reveal problems that automated checks
+  alone could not fully capture.
+</p>
+
+<p>
+  Animation quality, collision behavior,
+  street-level immersion, and the feel
+  of each movement remained essential
+  parts of the development process.
+</p>
+
+<p>
+  Mobile controls, physical-device performance
+  testing, further city expansion, and
+  additional animation refinement remain ahead.
+</p>
+
+<p class="statement">
+  By November 18, Breakpoint Run was no longer
+  simply a city being constructed.
+  It was becoming a city worth running through.
+</p>
+
+<!-- END NOVEMBER 17–18 DEVELOPMENT UPDATE -->
+
       </div>
     </details>
 
@@ -449,81 +815,97 @@
 
   </section>
 
-  <!-- DEVELOPMENT STATUS -->
-  <section class="card">
-    <h2>Development Progress</h2>
+ 
+<!-- DEVELOPMENT STATUS -->
+<section class="card">
+  <h2>Development Progress</h2>
 
-    <p class="gold">As of November 15, 2026</p>
+  <p class="gold">As of November 18, 2026</p>
 
-    <h3>Created and Tested in the Early Prototype</h3>
+  <h3>Completed or Implemented in the Current Prototype</h3>
 
-    <ul>
-      <li>Unreal Engine project and Codex editor connection</li>
-      <li>Four-block city traversal level with rooftop and street routes</li>
-      <li>Eight buildings with rooftop access</li>
-      <li>Player character, sprinting, and camera control</li>
-      <li>Jumping, crouching, sliding, vaulting, and short mantling</li>
-      <li>Race start, finish zone, and functioning timer</li>
-      <li>Early manual test runs, including a 16.19-second completion</li>
-    </ul>
+  <ul>
+    <li>Four-block city with multiple traversal routes</li>
+    <li>Architectural visual passes across the playable city</li>
+    <li>Initial surrounding skyline and environmental detail</li>
+    <li>Visible third-person runner with follow camera</li>
+    <li>Sprinting, jumping, crouching, and sliding</li>
+    <li>Vaulting, ledge catching, and mantling</li>
+    <li>Provisional wall-running on both sides</li>
+    <li>Character and parkour animations</li>
+    <li>Race timer, start, and finish detection</li>
+    <li>Collision repairs and out-of-bounds recovery</li>
+    <li>Migration to the 32 GB development Mac</li>
+    <li>Codex MCP integration restored after migration</li>
+  </ul>
 
-    <h3>In Development or Planned</h3>
+  <h3>Continuing Development</h3>
 
-    <ul>
-      <li>More sophisticated rooftop and vertical traversal</li>
-      <li>Wall-running and additional movement refinements</li>
-      <li>Realistic city architecture, lighting, and animation</li>
-      <li>Expanded routes and varied obstacles</li>
-      <li>Touchscreen controls for iPhone and Android</li>
-      <li>Optimization and testing on physical mobile devices</li>
-      <li>Further race challenges, replayability, and progression systems</li>
-    </ul>
+  <ul>
+    <li>Improving city realism and atmosphere</li>
+    <li>Refining provisional parkour animations</li>
+    <li>Expanding and validating wall-running opportunities</li>
+    <li>Connecting streets, rooftops, and vertical routes</li>
+    <li>Developing intuitive touchscreen controls</li>
+    <li>Optimizing graphics and performance for mobile</li>
+    <li>Testing on physical iPhone and Android devices</li>
+  </ul>
 
-    <p class="muted">
-      The initial city is a gameplay blockout.
-      Concept artwork and planned mechanics
-      should not be mistaken for completed
-      features or final mobile performance.
-    </p>
-  </section>
+  <p class="muted">
+    Breakpoint Run remains an early playable prototype.
+    Implemented movement systems and visual pilots
+    will continue to be refined and tested.
+    Mobile performance has not yet been validated
+    on physical phones.
+  </p>
+</section>
 
-  <!-- FUTURE PLANS -->
-  <section class="card">
-    <h2>Future Plans</h2>
 
-    <p>
-      The next priorities are to make traversal
-      more fluid, expand meaningful route choice,
-      and strengthen the experience of racing
-      through the city before replacing blockout
-      structures with detailed urban environments.
-    </p>
+  
+<!-- FUTURE PLANS -->
+<section class="card">
+  <h2>Future Plans</h2>
 
-    <p>
-      Mobile remains the primary design target.
-      Responsive, context-sensitive touch controls
-      and real-device performance testing will
-      be central to later development.
-    </p>
+  <p>
+    Breakpoint Run's next stages will continue
+    refining the experience of racing through
+    a believable modern city.
+  </p>
 
-    <p>
-      Desktop testing will continue as part of
-      the creation process.
-    </p>
+  <p>
+    Development will focus on improving the
+    realism of character animations, expanding
+    wall-running opportunities, and making
+    movement between streets, rooftops,
+    and vertical routes increasingly fluid.
+  </p>
 
-    <p>
-      As the course expands, the aim is to reward
-      players who learn its obstacles, discover
-      shortcuts, and improve their times through
-      skill rather than relying on a single
-      predetermined path.
-    </p>
+  <p>
+    Architectural improvements will continue
+    throughout the city while preserving the
+    alternate routes and obstacles that make
+    each race interesting.
+  </p>
 
-    <p class="statement">
-      One city. Countless possibilities.
-      How fast can you escape?
-    </p>
-  </section>
+  <p>
+    Mobile remains the primary platform focus.
+    Touchscreen controls, graphics optimization,
+    and physical-device testing are important
+    upcoming milestones.
+  </p>
+
+  <p>
+    Each improvement will be implemented,
+    tested, and reviewed before becoming
+    part of the larger gameplay experience.
+  </p>
+
+  <p class="statement">
+    The challenge is not simply to finish.
+    It is to learn the city, discover faster
+    routes, and improve with every attempt.
+  </p>
+</section>
 
   <!-- CLOSING MESSAGE -->
   <section class="card" style="text-align:center;">
