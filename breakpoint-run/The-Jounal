@@ -176,3 +176,256 @@ It was something that could be played, tested, improved, and enjoyed.
 **Development continues — Week 1**
 
 *Every Second. Every Decision. Every Escape.*
+
+# Week 1 — November 15–21, 2026
+**From the First City to a Real Parkour Experience**
+
+*Development update through November 18, 2026*
+
+### November 17–18 — Transforming the City
+
+With the first playable city established and the basic movement mechanics functioning, development turned toward making the environment feel like a believable modern American downtown.
+
+The original four-block layout had been constructed using simple gray geometry. This provided an excellent foundation for testing running, jumping, sliding, and navigating obstacles, but it did not yet resemble the realistic city envisioned for Breakpoint Run.
+
+The next stage introduced a series of architectural improvements.
+
+Major additions included:
+
+- Brick apartment buildings with detailed windows and entrances
+- Commercial storefronts, awnings, and signage
+- Modern office buildings and industrial architecture
+- Rooftop equipment, railings, and architectural details
+- Sidewalks, curbs, crosswalks, and road markings
+- Streetlights, traffic signals, and urban fixtures
+- Building materials with improved texture, depth, and weathering
+
+Development began with a single district. Once its appearance was reviewed and approved, the architectural treatment expanded across the remaining three playable blocks.
+
+An important lesson emerged during testing: buildings could look realistic from above while the environment still felt empty when experienced from the player's perspective.
+
+That led to another stage of development focused on city immersion.
+
+Surrounding buildings, additional streets, varied rooflines, parked vehicles, and distant skyline structures were introduced to create the feeling of a larger city beyond the playable course.
+
+The first eastern city sightline was completed and approved as the foundation for future expansion.
+
+The goal was never simply to place more buildings around the player.
+
+It was to create the experience of racing through a believable city while preserving the multiple streets, rooftops, walls, and alternative paths that make Breakpoint Run unique.
+
+### November 18 — A New Development Home
+
+As the city became more detailed, the demands of Unreal Engine became increasingly noticeable.
+
+Development had initially taken place on a Mac with 16 GB of memory. Larger environments, shader processing, and editor operations occasionally created memory pressure and instability.
+
+Rather than risk losing progress or unnecessarily limiting the game's visual ambitions, development was transferred to a more capable machine.
+
+The entire Breakpoint Run project was copied directly between two Macs using local network file sharing.
+
+The new primary development environment became a 14-inch MacBook Pro with an Apple M6 processor and 32 GB of unified memory.
+
+After the transfer, Unreal Engine 5.8.4 successfully opened the existing project.
+
+The latest city environment, playable routes, character movement, and race timing were verified.
+
+OpenAI Codex was then reconnected to Unreal Engine through its Model Context Protocol integration, restoring the development workflow already established on the original Mac.
+
+The transition was completed without rebuilding the project or losing the existing city.
+
+This became another important milestone: Breakpoint Run now had a development environment better suited to the increasingly ambitious work ahead.
+
+### November 18 — Bringing the Runner to Life
+
+One of the most exciting developments came with the introduction of a visible third-person character.
+
+Until this point, Breakpoint Run had been tested primarily from a first-person perspective.
+
+Players could run, jump, slide, vault, and climb, but they could not actually see the character performing those movements.
+
+That changed with the introduction of Manny, an animated character using Unreal Engine's existing character assets.
+
+The third-person foundation introduced:
+
+- A visible full-body player character
+- A camera following behind the runner
+- Animated walking and running
+- Jumping, falling, and landing animations
+- Character movement connected to the existing parkour system
+- Camera adjustments designed to preserve comfortable controls
+- Continued operation of the race timer and finish detection
+
+For the first time, the player could watch the character moving through the streets and across the rooftops.
+
+This was an important visual milestone, but testing also revealed new challenges.
+
+During one early run, Manny accidentally moved beyond the protected city boundary and fell into empty space.
+
+Investigation revealed that part of the playable ground lacked proper perimeter protection.
+
+Invisible boundaries, a safety surface, and an automatic recovery system were introduced. Falling outside the playable environment would return the character to the starting area without stopping the race timer.
+
+Additional testing revealed that certain decorative buildings lacked collision, allowing Manny to pass through solid-looking walls.
+
+Targeted collision repairs corrected the affected structures without interfering with existing parkour routes.
+
+These discoveries reinforced an important development principle: an environment must not only look believable, but also behave correctly when players interact with it.
+
+### November 18 — Making Movement Feel Natural
+
+With Manny visible on screen, attention shifted toward making his movements look as natural as they felt.
+
+The first animation improvements focused on sprinting, crouching, and sliding.
+
+Existing animations were adapted to respond to the character's actual movement speed, while provisional animations were introduced for actions that did not yet have dedicated clips.
+
+Early development included:
+
+- Speed-responsive sprinting animation
+- Stationary crouching poses
+- Crouched walking
+- Momentum-based sliding
+- Smooth transitions between movement states
+- Preserved jumping and landing animations
+
+Manual gameplay testing became especially valuable during this stage.
+
+The first crouch-walking animation produced unnatural leg movement and noticeable foot drifting.
+
+The animation was rebuilt with an improved stride, steadier body positioning, and better foot movement.
+
+After further testing, the revised crouch-walk was approved.
+
+The next stage introduced visible animations for vaulting, ledge catching, and mantling.
+
+These movements were particularly important because the entire game was built around navigating obstacles rather than simply running around them.
+
+A player needed to be able to approach a barrier, jump over it, grab a reachable ledge, and climb onto a higher surface.
+
+One early issue prevented Manny from visibly reaching for ledges while airborne.
+
+Investigation discovered that the game checked for a ledge only at the moment the jump button was first pressed.
+
+The detection system was refined so that holding the jump button allowed the character to recognize and catch a reachable ledge during the jump.
+
+A dedicated test ledge was introduced to verify the interaction.
+
+The result was one of the most exciting moments of the development journey so far.
+
+Manny could leap toward the ledge, reach out, catch it, pull himself onto the surface, and return to running.
+
+For the first time, the movement began to resemble the fluid parkour experience originally imagined for Breakpoint Run.
+
+### November 18 — Learning to Run on Walls
+
+With sprinting, sliding, vaulting, and ledge catching working, development moved to another major parkour feature: wall-running.
+
+The objective was to allow players to use suitable vertical surfaces as alternative routes across the city.
+
+A dedicated testing area was created with left-side and right-side wall-running lanes, approach ramps, gaps, and landing areas.
+
+The initial system required the character to build speed, jump alongside a designated wall, and maintain forward movement.
+
+Although the first automated tests passed, manual gameplay revealed that activating the movement was too difficult.
+
+The detection system was refined to allow more forgiving approach distances, angles, and speeds.
+
+This made wall-running easier to activate without introducing additional control buttons.
+
+The next challenge was visual.
+
+Initially, Manny appeared to glide along the wall, with his body intersecting the surface rather than his feet making believable contact.
+
+Further refinement introduced:
+
+- Improved body orientation relative to the wall
+- A natural lean away from the wall
+- Alternating leg movement
+- Foot placement aligned with the wall surface
+- Lightweight foot-contact adjustments
+- Smoother animation entry and exit transitions
+- More natural running cadence
+- Corrections for arm clipping during tested wall-run exits
+
+Several rounds of manual review were needed.
+
+At one point, Manny's legs moved so quickly that the animation looked more comical than athletic.
+
+The animation timing was gradually adjusted until the movement became slower and more believable.
+
+By the end of the session, the provisional wall-running foundation had been approved for continued development.
+
+The animations will receive additional refinement as the game progresses, but the underlying mechanic now provides another possible way for players to navigate the city.
+
+### November 18 — A Playable Foundation Takes Shape
+
+By November 18, Breakpoint Run had progressed well beyond its original gray city blockout.
+
+The project now included a four-block urban environment, an expanding city skyline, a visible third-person runner, multiple parkour mechanics, and a functioning timed escape challenge.
+
+Players could already experience much of the game's intended movement system, including running, jumping, crouching, sliding, vaulting, ledge catching, mantling, and provisional wall-running.
+
+There were also important lessons.
+
+Automated testing helped identify technical problems, but personal gameplay testing revealed issues that automated checks could not fully capture.
+
+Animations that technically worked did not always look natural. Collision that passed basic checks did not necessarily protect every accessible building. And a city that appeared detailed from above did not always feel immersive at street level.
+
+Each discovery helped guide the next improvement.
+
+The development approach remained consistent: build a manageable feature, test it, review the results, correct what needed attention, and preserve what already worked.
+
+The larger vision also remained unchanged.
+
+Breakpoint Run is being designed primarily for iPhone and Android, with realistic city environments, intuitive controls, and multiple ways to complete a fast-paced urban escape.
+
+Mobile controls, physical-device performance testing, further city development, and more refined animations remain ahead.
+
+But the foundation is becoming recognizable.
+
+What began as an idea for racing across a city has become an early playable experience where movement, momentum, timing, and route choices are beginning to come together.
+
+*By November 18, Breakpoint Run was no longer simply a city being constructed. It was becoming a city worth running through.*
+
+---
+
+## Development Progress — November 18, 2026
+
+**Completed or implemented in the current prototype:**
+
+- Initial four-block city and multiple traversal routes
+- Architectural visual passes across the playable city
+- Initial surrounding skyline and environmental immersion
+- Visible third-person character and follow camera
+- Sprinting, jumping, crouching, and sliding
+- Vaulting, ledge catching, and mantling
+- Provisional left- and right-side wall-running
+- Character movement and parkour animations
+- Race start, finish detection, and elapsed-time tracking
+- Player collision repairs and out-of-bounds recovery
+- Migration to the 32 GB development Mac
+
+**Continuing development:**
+
+- Improving the realism and atmosphere of the city
+- Refining provisional parkour animations
+- Expanding and validating wall-running opportunities
+- Connecting streets, rooftops, and vertical escape routes
+- Developing intuitive touchscreen controls
+- Optimizing graphics and performance for mobile devices
+- Testing on physical iPhone and Android devices
+
+---
+
+## The Journey Continues
+
+Breakpoint Run is still in its early stages, but its purpose is becoming clearer with every development milestone.
+
+The challenge is not simply to run through a city.
+
+It is to learn the environment, overcome obstacles, discover alternate routes, and find faster ways to reach the other side.
+
+As the city grows and the movement system improves, the goal remains to create a game that is easy to approach, exciting to play, and rewarding to master.
+
+**Every Second. Every Decision. Every Escape.**
